@@ -16,6 +16,11 @@ form {
     @include shift(1.5);
   }
 }
+
+label {
+  display: none;  
+}
+
 .sign-up input {
   float: left;
   border: none;

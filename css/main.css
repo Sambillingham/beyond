@@ -649,7 +649,12 @@ form:last-child {
   }
 }
 
-/* line 19, ../sass/partials/_sign-up.scss */
+/* line 20, ../sass/partials/_sign-up.scss */
+label {
+  display: none;
+}
+
+/* line 24, ../sass/partials/_sign-up.scss */
 .sign-up input {
   float: left;
   border: none;
@@ -658,7 +663,7 @@ form:last-child {
   border-bottom: solid 8px #FEC64E;
 }
 
-/* line 28, ../sass/partials/_sign-up.scss */
+/* line 33, ../sass/partials/_sign-up.scss */
 .sign-up__name,
 .sign-up__email {
   width: 40%;
@@ -680,33 +685,33 @@ form:last-child {
   color: #FEC64E;
 }
 @media screen and (max-width: 800px) {
-  /* line 28, ../sass/partials/_sign-up.scss */
+  /* line 33, ../sass/partials/_sign-up.scss */
   .sign-up__name,
   .sign-up__email {
     width: 100%;
   }
 }
 
-/* line 41, ../sass/partials/_sign-up.scss */
+/* line 46, ../sass/partials/_sign-up.scss */
 .sign-up__name {
   margin: 0 1% 0 0;
 }
 
-/* line 45, ../sass/partials/_sign-up.scss */
+/* line 50, ../sass/partials/_sign-up.scss */
 .sign-up__submit {
   color: #FDFFF4;
   background-color: #0E61C4;
   width: 19%;
 }
 @media screen and (max-width: 800px) {
-  /* line 45, ../sass/partials/_sign-up.scss */
+  /* line 50, ../sass/partials/_sign-up.scss */
   .sign-up__submit {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  /* line 54, ../sass/partials/_sign-up.scss */
+  /* line 59, ../sass/partials/_sign-up.scss */
   .sign-up .sign-up__submit {
     border: none;
   }
