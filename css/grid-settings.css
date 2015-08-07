@@ -12,7 +12,7 @@ Error: Undefined variable: "$golden".
 7: $max-width: 1080px;
 8: 
 9: // Define your breakpoints
-10: $tablet: new-breakpoint(max-width 768px 8);
+10: $tablet: new-breakpoint(max-width 800px 12);
 11: $mobile: new-breakpoint(max-width 480px 4);
 
 Backtrace:
@@ -92,4 +92,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$golden\".\A         on line 7 of /Users/sam/sites/beyond/sass/neat/settings/_grid.scss\A         from line 6 of /Users/sam/sites/beyond/sass/neat/_neat-helpers.scss\A         from line 1 of /Users/sam/sites/beyond/sass/grid-settings.scss\A \A 2: \A 3: // Change the grid settings\A 4: $column: 90px;\A 5: $gutter: 30px;\A 6: $grid-columns: 12;\A 7: $max-width: 1080px;\A 8: \A 9: // Define your breakpoints\A 10: $tablet: new-breakpoint(max-width 768px 8);\A 11: $mobile: new-breakpoint(max-width 480px 4);"; }
+  content: "Error: Undefined variable: \"$golden\".\A         on line 7 of /Users/sam/sites/beyond/sass/neat/settings/_grid.scss\A         from line 6 of /Users/sam/sites/beyond/sass/neat/_neat-helpers.scss\A         from line 1 of /Users/sam/sites/beyond/sass/grid-settings.scss\A \A 2: \A 3: // Change the grid settings\A 4: $column: 90px;\A 5: $gutter: 30px;\A 6: $grid-columns: 12;\A 7: $max-width: 1080px;\A 8: \A 9: // Define your breakpoints\A 10: $tablet: new-breakpoint(max-width 800px 12);\A 11: $mobile: new-breakpoint(max-width 480px 4);"; }

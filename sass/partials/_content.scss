@@ -1,7 +1,6 @@
 .about {
   @include outer-container();
-
-  padding: 100px 0;
+  padding: 100px $gutter;
 
   color: $beyond-salmon;
 }
@@ -9,17 +8,39 @@
 .about__primary,
 .about__secondary {
   @include span-columns(5);
+
+  @include media($tablet) {
+    @include span-columns(9);
+    @include shift(1.5);
+  }
 }
 
 .about__secondary {
   @include shift(1);
+
+  @include media($tablet) {
+    margin-top: 50px;
+    @include shift(1.5);
+  }
 }
 
 .sign-up {
   @include outer-container();
-  padding: 100px 0;
+  padding: 100px $gutter;
+
+  @include media($tablet) {
+    padding: 0 $gutter 100px;
+  }
 }
 
+form {
+  @include span-columns(12);
+
+  @include media($tablet) {
+    @include span-columns(9);
+    @include shift(1.5);
+  }
+}
 .sign-up input {
   float: left;
   border: none;
@@ -36,6 +57,10 @@
   @include placeholder {
     color: $beyond-yellow;
   }
+
+  @include media($tablet) {
+    width: 100%;
+  }
 }
 
 .sign-up__name {
@@ -46,6 +71,15 @@
   color: #FDFFF4;
   background-color: $beyond-blue;
   width: 19%;
+
+  @include media($tablet) {
+    width: 100%;
+  }
+}
+.sign-up .sign-up__submit {
+  @include media($tablet) {
+    border: none;
+  }
 }
 
 .info {
@@ -59,10 +93,18 @@
 
   position: relative;
   overflow: hidden;
+
+  @include media($tablet) {
+    width: 100%;
+  }
 }
 
 .info__block--extra {
   height: 400px;
+
+  @include media($tablet){
+    height: 300px;
+  }
 }
 
 .info__partners {
@@ -77,16 +119,29 @@
 
 .info__block__inside {
   padding: 50px 0 0 0;
-  @include calc(max-width, $max-width/ 2);
+  width: 500px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .info__block__inside--left {
   padding-right: $column;
   float: right;
+  @include media($tablet){
+    padding: 50px 0;
+    float: none;
+    text-align: center;
+  }
 }
+
 .info__block__inside--right {
   padding-left: $column;
   float: left;
+  @include media($tablet){
+    padding: 50px 0;
+    float: none;
+    text-align: center;
+  }
 }
 
 .partner-logo {
@@ -96,16 +151,22 @@
 .partner__girls-in-tech {
   width: 90px;
   margin-top: -5px;
+  margin-left: -5px;
+  max-width: 30%;
 
 }
 
 .partner__makers-academy {
   width: 300px;
+  max-width: 65%;
+
   margin: 0 0 5px 15px;
 }
 
 .partner__code-first-girls {
   width: 200px;
+  max-width: 65%;
+
   margin: 0 0 10px 15px;
 }
 
@@ -127,6 +188,12 @@
   font-size: 1.3em;
   line-height: 1.3;
   font-style: normal;
+
+  @include media($tablet){
+    font-size: 1.1em;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
 }
 
 .info__map {
@@ -137,6 +204,7 @@
 
 .info__map__graphic {
   width: 500px;
+  max-width: 90%;
   position: absolute;
   top: 50%;
   left: 50%;

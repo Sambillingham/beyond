@@ -478,7 +478,7 @@ header {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  padding: 75px 0 0 0;
+  padding: 75px 30px 0 30px;
 }
 /* line 20, ../sass/bourbon/addons/_clearfix.scss */
 .hero::after {
@@ -494,7 +494,7 @@ header {
 }
 
 /* line 13, ../sass/partials/_header.scss */
-.hero__beyond-logo {
+.hero__beyond-logo img {
   float: left;
   margin: 0 30px 0 0;
   width: 220px;
@@ -509,30 +509,49 @@ header {
   font-size: 18px;
 }
 
-/* line 28, ../sass/partials/_header.scss */
+/* line 27, ../sass/partials/_header.scss */
 .hero__social {
   float: right;
 }
 
-/* line 33, ../sass/partials/_header.scss */
+/* line 31, ../sass/partials/_header.scss */
 .hero__social__icon {
   width: 40px;
   margin: 0 0 0 10px;
 }
 
-/* line 38, ../sass/partials/_header.scss */
+/* line 36, ../sass/partials/_header.scss */
 .banner {
   position: relative;
   left: 50%;
   margin: 0 0 0 -1300px;
 }
 
+@media screen and (max-width: 800px) {
+  /* line 43, ../sass/partials/_header.scss */
+  .hero {
+    text-align: center;
+  }
+
+  /* line 47, ../sass/partials/_header.scss */
+  .hero__beyond-logo img,
+  .hero__important-info,
+  .hero__social {
+    margin: 0;
+    float: none;
+  }
+
+  /* line 53, ../sass/partials/_header.scss */
+  .hero__social {
+    margin-top: 30px;
+  }
+}
 /* line 1, ../sass/partials/_content.scss */
 .about {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  padding: 100px 0;
+  padding: 100px 30px;
   color: #FD7465;
 }
 /* line 20, ../sass/bourbon/addons/_clearfix.scss */
@@ -542,7 +561,7 @@ header {
   display: table;
 }
 
-/* line 9, ../sass/partials/_content.scss */
+/* line 8, ../sass/partials/_content.scss */
 .about__primary,
 .about__secondary {
   float: left;
@@ -555,18 +574,41 @@ header {
 .about__secondary:last-child {
   margin-right: 0;
 }
-
-/* line 14, ../sass/partials/_content.scss */
-.about__secondary {
-  margin-left: 8.51064%;
+@media screen and (max-width: 800px) {
+  /* line 8, ../sass/partials/_content.scss */
+  .about__primary,
+  .about__secondary {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 74.46809%;
+    margin-left: 12.76596%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  .about__primary:last-child,
+  .about__secondary:last-child {
+    margin-right: 0;
+  }
 }
 
 /* line 18, ../sass/partials/_content.scss */
+.about__secondary {
+  margin-left: 8.51064%;
+}
+@media screen and (max-width: 800px) {
+  /* line 18, ../sass/partials/_content.scss */
+  .about__secondary {
+    margin-top: 50px;
+    margin-left: 12.76596%;
+  }
+}
+
+/* line 27, ../sass/partials/_content.scss */
 .sign-up {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  padding: 100px 0;
+  padding: 100px 30px;
 }
 /* line 20, ../sass/bourbon/addons/_clearfix.scss */
 .sign-up::after {
@@ -574,8 +616,40 @@ header {
   content: "";
   display: table;
 }
+@media screen and (max-width: 800px) {
+  /* line 27, ../sass/partials/_content.scss */
+  .sign-up {
+    padding: 0 30px 100px;
+  }
+}
 
-/* line 23, ../sass/partials/_content.scss */
+/* line 36, ../sass/partials/_content.scss */
+form {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+form:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 800px) {
+  /* line 36, ../sass/partials/_content.scss */
+  form {
+    float: left;
+    display: block;
+    margin-right: 2.12766%;
+    width: 74.46809%;
+    margin-left: 12.76596%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  form:last-child {
+    margin-right: 0;
+  }
+}
+
+/* line 44, ../sass/partials/_content.scss */
 .sign-up input {
   float: left;
   border: none;
@@ -584,7 +658,7 @@ header {
   border-bottom: solid 8px #FEC64E;
 }
 
-/* line 32, ../sass/partials/_content.scss */
+/* line 53, ../sass/partials/_content.scss */
 .sign-up__name,
 .sign-up__email {
   width: 40%;
@@ -605,17 +679,37 @@ header {
 .sign-up__name:-ms-input-placeholder, .sign-up__email:-ms-input-placeholder {
   color: #FEC64E;
 }
+@media screen and (max-width: 800px) {
+  /* line 53, ../sass/partials/_content.scss */
+  .sign-up__name,
+  .sign-up__email {
+    width: 100%;
+  }
+}
 
-/* line 41, ../sass/partials/_content.scss */
+/* line 66, ../sass/partials/_content.scss */
 .sign-up__name {
   margin: 0 1% 0 0;
 }
 
-/* line 45, ../sass/partials/_content.scss */
+/* line 70, ../sass/partials/_content.scss */
 .sign-up__submit {
   color: #FDFFF4;
   background-color: #0E61C4;
   width: 19%;
+}
+@media screen and (max-width: 800px) {
+  /* line 70, ../sass/partials/_content.scss */
+  .sign-up__submit {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* line 79, ../sass/partials/_content.scss */
+  .sign-up .sign-up__submit {
+    border: none;
+  }
 }
 
 /* line 20, ../sass/bourbon/addons/_clearfix.scss */
@@ -625,7 +719,7 @@ header {
   display: table;
 }
 
-/* line 55, ../sass/partials/_content.scss */
+/* line 89, ../sass/partials/_content.scss */
 .info__block {
   width: 50%;
   float: left;
@@ -633,73 +727,106 @@ header {
   position: relative;
   overflow: hidden;
 }
+@media screen and (max-width: 800px) {
+  /* line 89, ../sass/partials/_content.scss */
+  .info__block {
+    width: 100%;
+  }
+}
 
-/* line 64, ../sass/partials/_content.scss */
+/* line 102, ../sass/partials/_content.scss */
 .info__block--extra {
   height: 400px;
 }
+@media screen and (max-width: 800px) {
+  /* line 102, ../sass/partials/_content.scss */
+  .info__block--extra {
+    height: 300px;
+  }
+}
 
-/* line 68, ../sass/partials/_content.scss */
+/* line 110, ../sass/partials/_content.scss */
 .info__partners {
   color: #FEC64E;
   background-color: #0E61C4;
 }
 
-/* line 73, ../sass/partials/_content.scss */
+/* line 115, ../sass/partials/_content.scss */
 .info__sponsors {
   color: #0E61C4;
   background-color: #FEC64E;
 }
 
-/* line 78, ../sass/partials/_content.scss */
+/* line 120, ../sass/partials/_content.scss */
 .info__block__inside {
   padding: 50px 0 0 0;
-  max-width: -webkit-calc(540px);
-  max-width: calc(540px);
+  width: 500px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-/* line 83, ../sass/partials/_content.scss */
+/* line 127, ../sass/partials/_content.scss */
 .info__block__inside--left {
   padding-right: 90px;
   float: right;
 }
+@media screen and (max-width: 800px) {
+  /* line 127, ../sass/partials/_content.scss */
+  .info__block__inside--left {
+    padding: 50px 0;
+    float: none;
+    text-align: center;
+  }
+}
 
-/* line 87, ../sass/partials/_content.scss */
+/* line 137, ../sass/partials/_content.scss */
 .info__block__inside--right {
   padding-left: 90px;
   float: left;
 }
+@media screen and (max-width: 800px) {
+  /* line 137, ../sass/partials/_content.scss */
+  .info__block__inside--right {
+    padding: 50px 0;
+    float: none;
+    text-align: center;
+  }
+}
 
-/* line 92, ../sass/partials/_content.scss */
+/* line 147, ../sass/partials/_content.scss */
 .partner-logo {
   float: left;
 }
 
-/* line 96, ../sass/partials/_content.scss */
+/* line 151, ../sass/partials/_content.scss */
 .partner__girls-in-tech {
   width: 90px;
   margin-top: -5px;
+  margin-left: -5px;
+  max-width: 30%;
 }
 
-/* line 102, ../sass/partials/_content.scss */
+/* line 159, ../sass/partials/_content.scss */
 .partner__makers-academy {
   width: 300px;
+  max-width: 65%;
   margin: 0 0 5px 15px;
 }
 
-/* line 107, ../sass/partials/_content.scss */
+/* line 166, ../sass/partials/_content.scss */
 .partner__code-first-girls {
   width: 200px;
+  max-width: 65%;
   margin: 0 0 10px 15px;
 }
 
-/* line 112, ../sass/partials/_content.scss */
+/* line 173, ../sass/partials/_content.scss */
 .info__venue {
   background: linear-gradient(rgba(255, 0, 0, 0.35), rgba(255, 0, 0, 0.35)), url(http://placehold.it/500x500) no-repeat center;
   background-size: cover;
 }
 
-/* line 117, ../sass/partials/_content.scss */
+/* line 178, ../sass/partials/_content.scss */
 .info__venue__address {
   position: absolute;
   top: 50%;
@@ -712,17 +839,26 @@ header {
   line-height: 1.3;
   font-style: normal;
 }
+@media screen and (max-width: 800px) {
+  /* line 178, ../sass/partials/_content.scss */
+  .info__venue__address {
+    font-size: 1.1em;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+}
 
-/* line 132, ../sass/partials/_content.scss */
+/* line 199, ../sass/partials/_content.scss */
 .info__map {
   padding: 20px 0;
   background-color: #FED5D0;
   text-align: center;
 }
 
-/* line 138, ../sass/partials/_content.scss */
+/* line 205, ../sass/partials/_content.scss */
 .info__map__graphic {
   width: 500px;
+  max-width: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -734,10 +870,11 @@ header {
 footer {
   text-align: center;
   color: #2670CA;
-  padding: 30px 0;
+  padding: 30px 40px;
+  line-height: 2em;
 }
 
-/* line 7, ../sass/partials/_footer.scss */
+/* line 8, ../sass/partials/_footer.scss */
 footer a {
   color: #FF341A;
   text-decoration: none;

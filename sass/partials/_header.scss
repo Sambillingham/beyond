@@ -7,10 +7,10 @@ header {
 .hero {
   @include outer-container();
   @include clearfix();
-  padding: 75px 0 0 0;
+  padding: 75px $gutter 0 $gutter;
 }
 
-.hero__beyond-logo {
+.hero__beyond-logo img {
   float: left;
   margin: 0 30px 0 0;
   width: 220px;
@@ -24,12 +24,10 @@ header {
   line-height: 1.4;
   font-size: 18px;
 }
-
 .hero__social {
   float: right;
 
 }
-
 .hero__social__icon {
   width: 40px;
   margin: 0 0 0 10px;
@@ -41,5 +39,19 @@ header {
   margin: 0 0 0 -1300px;
 }
 
-.hero__important-info {
+@include media($tablet) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero__beyond-logo img,
+  .hero__important-info,
+  .hero__social {
+    margin: 0;
+    float: none;
+  }
+  .hero__social  {
+    margin-top: 30px;
+  }
+
 }
