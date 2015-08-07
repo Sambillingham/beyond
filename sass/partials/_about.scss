@@ -1,0 +1,25 @@
+.about {
+  @include outer-container();
+  padding: 100px $gutter;
+
+  color: $beyond-salmon;
+}
+
+.about__primary,
+.about__secondary {
+  @include span-columns(5);
+
+  @include media($tablet) {
+    @include span-columns(9);
+    @include shift(1.5);
+  }
+}
+
+.about__secondary {
+  @include shift(1);
+
+  @include media($tablet) {
+    margin-top: 50px;
+    @include shift(1.5);
+  }
+}

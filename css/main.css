@@ -546,7 +546,7 @@ header {
     margin-top: 30px;
   }
 }
-/* line 1, ../sass/partials/_content.scss */
+/* line 1, ../sass/partials/_about.scss */
 .about {
   max-width: 1080px;
   margin-left: auto;
@@ -561,7 +561,7 @@ header {
   display: table;
 }
 
-/* line 8, ../sass/partials/_content.scss */
+/* line 8, ../sass/partials/_about.scss */
 .about__primary,
 .about__secondary {
   float: left;
@@ -575,7 +575,7 @@ header {
   margin-right: 0;
 }
 @media screen and (max-width: 800px) {
-  /* line 8, ../sass/partials/_content.scss */
+  /* line 8, ../sass/partials/_about.scss */
   .about__primary,
   .about__secondary {
     float: left;
@@ -591,19 +591,19 @@ header {
   }
 }
 
-/* line 18, ../sass/partials/_content.scss */
+/* line 18, ../sass/partials/_about.scss */
 .about__secondary {
   margin-left: 8.51064%;
 }
 @media screen and (max-width: 800px) {
-  /* line 18, ../sass/partials/_content.scss */
+  /* line 18, ../sass/partials/_about.scss */
   .about__secondary {
     margin-top: 50px;
     margin-left: 12.76596%;
   }
 }
 
-/* line 27, ../sass/partials/_content.scss */
+/* line 2, ../sass/partials/_sign-up.scss */
 .sign-up {
   max-width: 1080px;
   margin-left: auto;
@@ -617,13 +617,13 @@ header {
   display: table;
 }
 @media screen and (max-width: 800px) {
-  /* line 27, ../sass/partials/_content.scss */
+  /* line 2, ../sass/partials/_sign-up.scss */
   .sign-up {
     padding: 0 30px 100px;
   }
 }
 
-/* line 36, ../sass/partials/_content.scss */
+/* line 11, ../sass/partials/_sign-up.scss */
 form {
   float: left;
   display: block;
@@ -635,7 +635,7 @@ form:last-child {
   margin-right: 0;
 }
 @media screen and (max-width: 800px) {
-  /* line 36, ../sass/partials/_content.scss */
+  /* line 11, ../sass/partials/_sign-up.scss */
   form {
     float: left;
     display: block;
@@ -649,7 +649,7 @@ form:last-child {
   }
 }
 
-/* line 44, ../sass/partials/_content.scss */
+/* line 19, ../sass/partials/_sign-up.scss */
 .sign-up input {
   float: left;
   border: none;
@@ -658,7 +658,7 @@ form:last-child {
   border-bottom: solid 8px #FEC64E;
 }
 
-/* line 53, ../sass/partials/_content.scss */
+/* line 28, ../sass/partials/_sign-up.scss */
 .sign-up__name,
 .sign-up__email {
   width: 40%;
@@ -680,33 +680,33 @@ form:last-child {
   color: #FEC64E;
 }
 @media screen and (max-width: 800px) {
-  /* line 53, ../sass/partials/_content.scss */
+  /* line 28, ../sass/partials/_sign-up.scss */
   .sign-up__name,
   .sign-up__email {
     width: 100%;
   }
 }
 
-/* line 66, ../sass/partials/_content.scss */
+/* line 41, ../sass/partials/_sign-up.scss */
 .sign-up__name {
   margin: 0 1% 0 0;
 }
 
-/* line 70, ../sass/partials/_content.scss */
+/* line 45, ../sass/partials/_sign-up.scss */
 .sign-up__submit {
   color: #FDFFF4;
   background-color: #0E61C4;
   width: 19%;
 }
 @media screen and (max-width: 800px) {
-  /* line 70, ../sass/partials/_content.scss */
+  /* line 45, ../sass/partials/_sign-up.scss */
   .sign-up__submit {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 800px) {
-  /* line 79, ../sass/partials/_content.scss */
+  /* line 54, ../sass/partials/_sign-up.scss */
   .sign-up .sign-up__submit {
     border: none;
   }
@@ -719,86 +719,90 @@ form:last-child {
   display: table;
 }
 
-/* line 89, ../sass/partials/_content.scss */
+/* line 6, ../sass/partials/_info.scss */
 .info__block {
   width: 50%;
   float: left;
-  height: 300px;
+  min-height: 300px;
   position: relative;
   overflow: hidden;
 }
 @media screen and (max-width: 800px) {
-  /* line 89, ../sass/partials/_content.scss */
+  /* line 6, ../sass/partials/_info.scss */
   .info__block {
     width: 100%;
   }
 }
 
-/* line 102, ../sass/partials/_content.scss */
-.info__block--extra {
+/* line 19, ../sass/partials/_info.scss */
+.info__block--large {
   height: 400px;
 }
 @media screen and (max-width: 800px) {
-  /* line 102, ../sass/partials/_content.scss */
-  .info__block--extra {
+  /* line 19, ../sass/partials/_info.scss */
+  .info__block--large {
     height: 300px;
   }
 }
 
-/* line 110, ../sass/partials/_content.scss */
+/* line 27, ../sass/partials/_info.scss */
 .info__partners {
   color: #FEC64E;
   background-color: #0E61C4;
 }
 
-/* line 115, ../sass/partials/_content.scss */
+/* line 32, ../sass/partials/_info.scss */
 .info__sponsors {
   color: #0E61C4;
   background-color: #FEC64E;
 }
 
-/* line 120, ../sass/partials/_content.scss */
+/* line 37, ../sass/partials/_info.scss */
 .info__block__inside {
   padding: 50px 0 0 0;
   width: 500px;
   max-width: 80%;
-  margin: 0 auto;
+}
+@media screen and (max-width: 800px) {
+  /* line 37, ../sass/partials/_info.scss */
+  .info__block__inside {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
-/* line 127, ../sass/partials/_content.scss */
+/* line 48, ../sass/partials/_info.scss */
 .info__block__inside--left {
   padding-right: 90px;
   float: right;
 }
 @media screen and (max-width: 800px) {
-  /* line 127, ../sass/partials/_content.scss */
+  /* line 48, ../sass/partials/_info.scss */
   .info__block__inside--left {
     padding: 50px 0;
     float: none;
-    text-align: center;
   }
 }
 
-/* line 137, ../sass/partials/_content.scss */
+/* line 58, ../sass/partials/_info.scss */
 .info__block__inside--right {
   padding-left: 90px;
   float: left;
 }
 @media screen and (max-width: 800px) {
-  /* line 137, ../sass/partials/_content.scss */
+  /* line 58, ../sass/partials/_info.scss */
   .info__block__inside--right {
     padding: 50px 0;
     float: none;
-    text-align: center;
   }
 }
 
-/* line 147, ../sass/partials/_content.scss */
-.partner-logo {
+/* line 68, ../sass/partials/_info.scss */
+.info__partners__logo {
   float: left;
 }
 
-/* line 151, ../sass/partials/_content.scss */
+/* line 72, ../sass/partials/_info.scss */
 .partner__girls-in-tech {
   width: 90px;
   margin-top: -5px;
@@ -806,27 +810,27 @@ form:last-child {
   max-width: 30%;
 }
 
-/* line 159, ../sass/partials/_content.scss */
+/* line 81, ../sass/partials/_info.scss */
 .partner__makers-academy {
   width: 300px;
-  max-width: 65%;
-  margin: 0 0 5px 15px;
+  max-width: 67%;
+  margin: 0 0 10px 3%;
 }
 
-/* line 166, ../sass/partials/_content.scss */
+/* line 88, ../sass/partials/_info.scss */
 .partner__code-first-girls {
   width: 200px;
-  max-width: 65%;
-  margin: 0 0 10px 15px;
+  max-width: 67%;
+  margin: 0 0 0 3%;
 }
 
-/* line 173, ../sass/partials/_content.scss */
+/* line 95, ../sass/partials/_info.scss */
 .info__venue {
   background: linear-gradient(rgba(255, 0, 0, 0.35), rgba(255, 0, 0, 0.35)), url(http://placehold.it/500x500) no-repeat center;
   background-size: cover;
 }
 
-/* line 178, ../sass/partials/_content.scss */
+/* line 100, ../sass/partials/_info.scss */
 .info__venue__address {
   position: absolute;
   top: 50%;
@@ -840,7 +844,7 @@ form:last-child {
   font-style: normal;
 }
 @media screen and (max-width: 800px) {
-  /* line 178, ../sass/partials/_content.scss */
+  /* line 100, ../sass/partials/_info.scss */
   .info__venue__address {
     font-size: 1.1em;
     transform: translate(-50%, -50%);
@@ -848,14 +852,14 @@ form:last-child {
   }
 }
 
-/* line 199, ../sass/partials/_content.scss */
+/* line 121, ../sass/partials/_info.scss */
 .info__map {
   padding: 20px 0;
   background-color: #FED5D0;
   text-align: center;
 }
 
-/* line 205, ../sass/partials/_content.scss */
+/* line 127, ../sass/partials/_info.scss */
 .info__map__graphic {
   width: 500px;
   max-width: 90%;
@@ -882,7 +886,7 @@ footer a {
   font-weight: 700;
 }
 
-/* line 16, ../sass/main.scss */
+/* line 18, ../sass/main.scss */
 body {
   background-color: #FFFFFF;
   font-family: 'Varela Round', sans-serif;
@@ -890,7 +894,7 @@ body {
   font-size: 1em;
 }
 
-/* line 23, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 h2, h3 {
   font-family: 'jaapokki-regular';
 }
