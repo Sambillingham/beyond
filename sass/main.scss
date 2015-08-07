@@ -1,4 +1,25 @@
 
 @import "vendor/normalize";
 @import "bourbon/bourbon";
+@import "grid-settings";
 @import "neat/neat";
+
+@import "partials/vars";
+
+@import "mixins";
+@import "partials/type";
+
+@import "partials/header";
+@import "partials/content";
+@import "partials/footer";
+
+body {
+  background-color: #FFFFFF;
+  font-family: 'Varela Round', sans-serif;
+  line-height: 1.5;
+  font-size: 1em;
+}
+
+h2,h3 {
+  font-family: 'jaapokki-regular';
+}

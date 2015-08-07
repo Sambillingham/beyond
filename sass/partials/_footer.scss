@@ -1,0 +1,12 @@
+footer {
+  text-align: center;
+  color: #2670CA;
+  padding: 30px 0;
+}
+
+footer a {
+  color: $steer-red;
+  text-decoration: none;
+  border-bottom: solid 3px $steer-red;
+  font-weight: 700;
+}

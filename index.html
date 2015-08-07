@@ -12,16 +12,18 @@
     </head>
     <body>
       <header>
-        <h1><img src="img/beyond-logo.png" alt="Beyond Conference Puzzle Logo"></h1>
-        <div class="important-info">
-          <time class="important-info__data">23rd November 2015</time>
-          <div class="important-info__location">London</div>
+        <div class="hero">
+          <h1 class="hero__beyond-logo"><img src="img/beyond-logo.svg" alt="Beyond Conference Puzzle Logo"></h1>
+          <div class="hero__important-info">
+            <time class="important-info__data">23rd November 2015</time>
+            <div class="important-info__location">London</div>
+          </div>
+          <div class="hero__social">
+            <a href=""><img class="hero__social__icon" src="img/twitter.svg" alt="Beyond Conf Twitter"></a>
+            <a href=""><img class="hero__social__icon" src="img/mail.svg" alt="Mail Beyond Conf"></a>
+          </div>
         </div>
-        <div class="social">
-          <a href=""><img src="img/twitter.png" alt="Beyond Conf Twitter"></a>
-          <a href=""><img src="img/mail.png" alt="Mail Beyond Conf"></a>
-        </div>
-        <img src="img/top-banner.png" alt="Beyond Conf Puzzle Track">
+        <img src="img/top-banner.png" alt="Beyond Conf Puzzle Track" class="banner">
       </header>
       <section class="about">
         <div class="about__primary">
@@ -36,34 +38,37 @@
       <section class="sign-up">
         <h2>Stay in the know about news and ticket releases</h2>
         <form>
-          <input name="name" type="text" placeholder="Name">
-          <input name="email" type="email" placeholder="Email">
-          <input type="submit" value="Keep me posted">
+          <input class="sign-up__name" name="name" type="text" placeholder="Name">
+          <input class="sign-up__email" name="email" type="email" placeholder="Email">
+          <input class="sign-up__submit" type="submit" value="Keep me posted">
         </form>
       </section>
       <section class="info">
-        <div class="info__partners">
-          <h3>Partners</h3>
-          <img src="img/girls-in-tech.png" alt="">
-          <img src="img/code-first-girls.png" alt="">
-          <img src="img/makers-academy.png" alt="">
+        <div class="info__block info__partners">
+          <div class="info__block__inside info__block__inside--left">
+            <h3>Partners</h3>
+            <img class="partner-logo partner__girls-in-tech" src="img/girls-in-tech.png" alt="">
+            <img class="sponsor-logo partner__makers-academy" src="img/makers-academy.png" alt="">
+            <img class="sponsor-logo partner__code-first-girls" src="img/code-first-girls.png" alt="">
+          </div>
         </div>
-        <div class="info__partners">
-          <h3>Sponsored by</h3>
-          <img src="img/moo.png" alt="">
+        <div class="info__block info__sponsors">
+          <div class="info__block__inside info__block__inside--right">
+
+            <h3>Sponsored by</h3>
+            <img class="sponsor__moo" src="img/moo.png" alt="">
+          </div>
         </div>
-        <div class="info__venue">
-          <div class="info__venue__address">
-            <address>
+        <div class="info__block info__block--extra info__venue">
+            <address class="info__venue__address">
               Milton Court Concert Hall<br>
               Barbican<br>
               Silk Street<br>
               London EC2Y 8DS<br>
             </address>
-          </div>
         </div>
-        <div class="info__map">
-          <img src="img/map.png">
+        <div class="info__block info__block--extra info__map">
+          <img src="img/map.svg" class="info__map__graphic">
         </div>
       </section>
       <footer>
