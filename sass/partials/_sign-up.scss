@@ -1,7 +1,7 @@
 
 .sign-up {
   @include outer-container();
-  padding: 100px $gutter;
+  padding: 0 $gutter 100px;
 
   @include media($tablet) {
     padding: 0 $gutter 100px;
@@ -10,6 +10,7 @@
 
 form {
   @include span-columns(12);
+  @include clearfix();
 
   @include media($tablet) {
     @include span-columns(9);
@@ -18,9 +19,12 @@ form {
 }
 
 label {
-  display: none;  
+  display: none;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
 .sign-up input {
   float: left;
   border: none;
@@ -60,4 +64,26 @@ label {
   @include media($tablet) {
     border: none;
   }
+}
+
+.sign-up__message {
+  @include span-columns(12);
+
+  text-align: center;
+  padding: 15px 0;
+}
+
+
+.sign-up__message--fail {
+  color: $beyond-salmon;
+}
+
+.sign-up__message--success {
+  color: $beyond-blue;
+}
+
+.sign-up__message a {
+  color: beyond-yellow;
+  text-decoration: none;
+  border-bottom: solid 2px $beyond-yellow;
 }
