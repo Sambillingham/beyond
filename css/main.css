@@ -640,6 +640,12 @@ form {
 form:last-child {
   margin-right: 0;
 }
+/* line 20, ../sass/bourbon/addons/_clearfix.scss */
+form::after {
+  clear: both;
+  content: "";
+  display: table;
+}
 @media screen and (max-width: 800px) {
   /* line 11, ../sass/partials/_sign-up.scss */
   form {
@@ -655,12 +661,17 @@ form:last-child {
   }
 }
 
-/* line 20, ../sass/partials/_sign-up.scss */
+/* line 21, ../sass/partials/_sign-up.scss */
 label {
   display: none;
 }
 
-/* line 24, ../sass/partials/_sign-up.scss */
+/* line 25, ../sass/partials/_sign-up.scss */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+/* line 28, ../sass/partials/_sign-up.scss */
 .sign-up input {
   float: left;
   border: none;
@@ -669,7 +680,7 @@ label {
   border-bottom: solid 8px #FEC64E;
 }
 
-/* line 33, ../sass/partials/_sign-up.scss */
+/* line 37, ../sass/partials/_sign-up.scss */
 .sign-up__name,
 .sign-up__email {
   width: 40%;
@@ -868,7 +879,7 @@ label {
 
 /* line 95, ../sass/partials/_info.scss */
 .info__venue {
-  background: linear-gradient(rgba(255, 0, 0, 0.35), rgba(255, 0, 0, 0.35)), url(http://placehold.it/500x500) no-repeat center;
+  background: linear-gradient(rgba(255, 0, 0, 0.35), rgba(255, 0, 0, 0.35)), url(../img/milton-court.png) no-repeat center;
   background-size: cover;
 }
 
