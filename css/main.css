@@ -509,18 +509,24 @@ header {
   font-size: 18px;
 }
 
-/* line 27, ../sass/partials/_header.scss */
+/* line 28, ../sass/partials/_header.scss */
+.date-contraction {
+  vertical-align: super;
+  font-size: 0.8em;
+}
+
+/* line 32, ../sass/partials/_header.scss */
 .hero__social {
   float: right;
 }
 
-/* line 31, ../sass/partials/_header.scss */
+/* line 36, ../sass/partials/_header.scss */
 .hero__social__icon {
   width: 40px;
   margin: 0 0 0 10px;
 }
 
-/* line 36, ../sass/partials/_header.scss */
+/* line 41, ../sass/partials/_header.scss */
 .banner {
   position: relative;
   left: 50%;
@@ -528,12 +534,12 @@ header {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 43, ../sass/partials/_header.scss */
+  /* line 48, ../sass/partials/_header.scss */
   .hero {
     text-align: center;
   }
 
-  /* line 47, ../sass/partials/_header.scss */
+  /* line 52, ../sass/partials/_header.scss */
   .hero__beyond-logo img,
   .hero__important-info,
   .hero__social {
@@ -541,7 +547,7 @@ header {
     float: none;
   }
 
-  /* line 53, ../sass/partials/_header.scss */
+  /* line 58, ../sass/partials/_header.scss */
   .hero__social {
     margin-top: 30px;
   }
@@ -608,7 +614,7 @@ header {
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  padding: 100px 30px;
+  padding: 0 30px 100px;
 }
 /* line 20, ../sass/bourbon/addons/_clearfix.scss */
 .sign-up::after {
