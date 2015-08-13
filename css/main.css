@@ -470,7 +470,7 @@ h3 {
 header {
   background-color: #FDFFF4;
   overflow: hidden;
-  height: 750px;
+  height: 850px;
 }
 
 /* line 7, ../sass/partials/_header.scss */
@@ -494,14 +494,14 @@ header {
 }
 
 /* line 13, ../sass/partials/_header.scss */
-.hero__beyond-logo img {
+.hero__beyond-logo {
   float: left;
   margin: 0 30px 0 0;
   width: 220px;
 }
 
 /* line 19, ../sass/partials/_header.scss */
-.hero__important-info {
+.hero__info {
   float: left;
   font-family: 'jaapokki-regular';
   color: #0E61C4;
@@ -509,7 +509,7 @@ header {
   font-size: 18px;
 }
 
-/* line 28, ../sass/partials/_header.scss */
+/* line 27, ../sass/partials/_header.scss */
 .date-contraction {
   vertical-align: super;
   font-size: 0.8em;
@@ -527,29 +527,59 @@ header {
 }
 
 /* line 41, ../sass/partials/_header.scss */
-.banner {
+.hero__lead {
+  margin: 150px 0 50px;
+  text-align: center;
+  color: #0E61C4;
+  font-family: 'jaapokki-regular';
+  letter-spacing: 0.02em;
+  font-size: 2.6em;
+  line-height: 1.3;
+}
+
+/* line 53, ../sass/partials/_header.scss */
+.beyond-illustration {
   position: relative;
   left: 50%;
-  margin: 0 0 0 -1300px;
+  margin: -150px 0 0 -2560px;
+  width: 5120px;
+  height: 650px;
 }
 
 @media screen and (max-width: 800px) {
-  /* line 48, ../sass/partials/_header.scss */
+  /* line 62, ../sass/partials/_header.scss */
+  header {
+    height: 700px;
+  }
+
+  /* line 65, ../sass/partials/_header.scss */
   .hero {
     text-align: center;
   }
 
-  /* line 52, ../sass/partials/_header.scss */
-  .hero__beyond-logo img,
+  /* line 69, ../sass/partials/_header.scss */
+  .hero__lead {
+    margin: 50px 0 50px;
+    font-size: 1.3em;
+  }
+
+  /* line 74, ../sass/partials/_header.scss */
+  .hero__beyond-logo,
   .hero__important-info,
   .hero__social {
-    margin: 0;
+    margin: 20px 0;
     float: none;
   }
 
-  /* line 58, ../sass/partials/_header.scss */
+  /* line 81, ../sass/partials/_header.scss */
   .hero__social {
     margin-top: 30px;
+  }
+
+  /* line 85, ../sass/partials/_header.scss */
+  .banner {
+    margin: -50px 0 0 -2560px;
+    height: 200px;
   }
 }
 /* line 1, ../sass/partials/_about.scss */

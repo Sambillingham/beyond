@@ -1,7 +1,7 @@
 header {
   background-color: #FDFFF4;
   overflow: hidden;
-  height: 750px;
+  height: 850px;
 }
 
 .hero {
@@ -10,15 +10,14 @@ header {
   padding: 75px $gutter 0 $gutter;
 }
 
-.hero__beyond-logo img {
+.hero__beyond-logo {
   float: left;
   margin: 0 30px 0 0;
   width: 220px;
 }
 
-.hero__important-info {
+.hero__info {
   float: left;
-
   font-family: 'jaapokki-regular';
   color: $beyond-blue;
   line-height: 1.4;
@@ -29,34 +28,63 @@ header {
   vertical-align: super;
   font-size: 0.8em;
 }
+
 .hero__social {
   float: right;
-
 }
+
 .hero__social__icon {
   width: 40px;
   margin: 0 0 0 10px;
 }
 
-.banner {
+.hero__lead {
+  margin: 150px 0 50px;
+
+  text-align: center;
+  color: $beyond-blue;
+  font-family: 'jaapokki-regular';
+  letter-spacing: 0.02em;
+  font-size: 2.6em;
+  line-height: 1.3;
+
+}
+
+.beyond-illustration {
   position: relative;
   left: 50%;
-  margin: 0 0 0 -1300px;
+  margin: -150px 0 0 -2560px;
+  width: 5120px;
+  height: 650px;
 }
 
 @include media($tablet) {
+  header {
+    height: 700px;
+  }
   .hero {
     text-align: center;
   }
 
-  .hero__beyond-logo img,
+  .hero__lead {
+    margin: 50px 0 50px;
+    font-size: 1.3em;
+  }
+
+  .hero__beyond-logo,
   .hero__important-info,
   .hero__social {
-    margin: 0;
+    margin: 20px 0;
     float: none;
   }
+
   .hero__social  {
     margin-top: 30px;
+  }
+
+  .banner {
+    margin: -50px 0 0 -2560px;
+    height: 200px;
   }
 
 }
