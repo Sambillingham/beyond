@@ -2,18 +2,31 @@ header {
   background-color: #FDFFF4;
   overflow: hidden;
   height: 850px;
+
+  @include media($tablet) {
+    height: 700px;
+  }
 }
 
 .hero {
   @include outer-container();
   @include clearfix();
   padding: 75px $gutter 0 $gutter;
+
+  @include media($tablet) {
+    text-align: center;
+  }
 }
 
 .hero__beyond-logo {
   float: left;
   margin: 0 30px 0 0;
   width: 220px;
+
+  @include media($tablet) {
+    float: none;
+    margin: 20px 0;
+  }
 }
 
 .hero__info {
@@ -22,6 +35,11 @@ header {
   color: $beyond-blue;
   line-height: 1.4;
   font-size: 18px;
+
+  @include media($tablet) {
+    float: none;
+    margin: 20px 0;
+  }
 }
 
 .date-contraction {
@@ -31,6 +49,11 @@ header {
 
 .hero__social {
   float: right;
+
+  @include media($tablet) {
+    float: none;
+    margin: 20px 0;
+  }
 }
 
 .hero__social__icon {
@@ -48,6 +71,10 @@ header {
   font-size: 2.6em;
   line-height: 1.3;
 
+  @include media($tablet) {
+    margin: 50px 0 50px;
+    font-size: 1.3em;
+  }
 }
 
 .beyond-illustration {
@@ -56,35 +83,9 @@ header {
   margin: -150px 0 0 -2560px;
   width: 5120px;
   height: 650px;
-}
 
-@include media($tablet) {
-  header {
-    height: 700px;
+  @include media($tablet) {
+      margin: -50px 0 0 -2560px;
+      height: 200px;
   }
-  .hero {
-    text-align: center;
-  }
-
-  .hero__lead {
-    margin: 50px 0 50px;
-    font-size: 1.3em;
-  }
-
-  .hero__beyond-logo,
-  .hero__important-info,
-  .hero__social {
-    margin: 20px 0;
-    float: none;
-  }
-
-  .hero__social  {
-    margin-top: 30px;
-  }
-
-  .banner {
-    margin: -50px 0 0 -2560px;
-    height: 200px;
-  }
-
 }
