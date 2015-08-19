@@ -6,21 +6,14 @@
 .info__block {
   width: 50%;
   float: left;
-  min-height: 300px;
+  min-height: 400px;
 
   position: relative;
   overflow: hidden;
 
   @include media($tablet) {
-    width: 100%;
-  }
-}
-
-.info__block--large {
-  height: 400px;
-
-  @include media($tablet) {
     height: 300px;
+    width: 100%;
   }
 }
 
