@@ -28,7 +28,7 @@ var app = {
           $('.sign-up__message').addClass('sign-up__message--fail').html(message);
         } else {
           console.log(data)
-          $('.sign-up__message').addClass('sign-up__message-success').html(message);
+          $('.sign-up__message').addClass('sign-up__message--success').html(message);
         }
       }
     }); // end AJAX
