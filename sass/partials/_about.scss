@@ -7,7 +7,7 @@
 
 .about__primary,
 .about__secondary {
-  @include span-columns(5);
+  @include span-columns(5.5);
 
   @include media($tablet) {
     @include span-columns(9);
