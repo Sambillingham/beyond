@@ -1,10 +1,10 @@
 
 .sign-up {
   @include outer-container();
-  padding: 0 $gutter 100px;
+  padding: 150px $gutter;
 
   @include media($tablet) {
-    padding: 0 $gutter 100px;
+    padding: 100px $gutter;
   }
 }
 
