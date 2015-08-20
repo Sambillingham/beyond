@@ -444,8 +444,29 @@ h3 {
   margin-right: 0;
 }
 
-.hero__beyond-logo {
-  width: 190px;
+.beyond-illustration {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 40.42553%;
+}
+.beyond-illustration:last-child {
+  margin-right: 0;
+}
+
+.hero__social {
+  float: left;
+}
+@media screen and (max-width: 800px) {
+  .hero__social {
+    float: none;
+    margin: 20px 0;
+  }
+}
+
+.hero__social__icon {
+  width: 50px;
+  margin: 0 10px 0 0;
 }
 
 .hero__info {
@@ -466,21 +487,6 @@ h3 {
 .date-contraction {
   vertical-align: super;
   font-size: 0.7em;
-}
-
-.hero__social {
-  float: left;
-}
-@media screen and (max-width: 800px) {
-  .hero__social {
-    float: none;
-    margin: 20px 0;
-  }
-}
-
-.hero__social__icon {
-  width: 50px;
-  margin: 0 10px 0 0;
 }
 
 .hero__lead {
@@ -505,14 +511,8 @@ h3 {
   text-transform: uppercase;
 }
 
-.beyond-illustration {
-  float: left;
-  display: block;
-  margin-right: 2.12766%;
-  width: 40.42553%;
-}
-.beyond-illustration:last-child {
-  margin-right: 0;
+.hero__beyond-logo {
+  width: 190px;
 }
 
 .about {

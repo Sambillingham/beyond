@@ -7,8 +7,22 @@
   @include span-columns(7);
 }
 
-.hero__beyond-logo {
-  width: 190px;
+.beyond-illustration {
+  @include span-columns(5);
+}
+
+.hero__social {
+  float: left;
+
+  @include media($tablet) {
+    float: none;
+    margin: 20px 0;
+  }
+}
+
+.hero__social__icon {
+  width: 50px;
+  margin: 0 10px 0 0;
 }
 
 .hero__info {
@@ -28,20 +42,6 @@
 .date-contraction {
   vertical-align: super;
   font-size: 0.7em;
-}
-
-.hero__social {
-  float: left;
-
-  @include media($tablet) {
-    float: none;
-    margin: 20px 0;
-  }
-}
-
-.hero__social__icon {
-  width: 50px;
-  margin: 0 10px 0 0;
 }
 
 .hero__lead {
@@ -66,6 +66,6 @@
   text-transform: uppercase;
 }
 
-.beyond-illustration {
-  @include span-columns(5);
+.hero__beyond-logo {
+  width: 190px;
 }
