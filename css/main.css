@@ -830,13 +830,13 @@ input:-webkit-autofill {
   vertical-align: middle;
 }
 
-.info::after {
+.location-info::after {
   clear: both;
   content: "";
   display: table;
 }
 
-.info__block {
+.location-info__content {
   width: 50%;
   float: left;
   min-height: 400px;
@@ -844,18 +844,18 @@ input:-webkit-autofill {
   overflow: hidden;
 }
 @media screen and (max-width: 800px) {
-  .info__block {
+  .location-info__content {
     height: 300px;
     width: 100%;
   }
 }
 
-.info__venue {
+.location-info__venue {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/milton-court.jpg) no-repeat center;
   background-size: cover;
 }
 
-.info__venue__address {
+.location-info__venue__address {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -868,20 +868,20 @@ input:-webkit-autofill {
   font-style: normal;
 }
 @media screen and (max-width: 800px) {
-  .info__venue__address {
+  .location-info__venue__address {
     font-size: 1.1em;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
   }
 }
 
-.info__map {
+.location-info__map {
   padding: 20px 0;
   background-color: #FED5D0;
   text-align: center;
 }
 
-.info__map__graphic {
+.location-info__map__graphic {
   width: 500px;
   max-width: 90%;
   position: absolute;
