@@ -698,7 +698,10 @@ input:-webkit-autofill {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 100px 0;
+  padding: 100px 0 0 0;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
 }
 .speakers::after {
   clear: both;
@@ -758,11 +761,21 @@ input:-webkit-autofill {
 }
 
 .more-speakers {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   clear: both;
   width: 100%;
   background-color: #0E61C4;
   text-align: center;
   padding: 10px;
+  position: absolute;
+  bottom: 0;
+}
+.more-speakers::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .more-speakers__btn {

@@ -2,8 +2,9 @@
   @include outer-container;
   @include clearfix();
   padding: 100px 0 0 0 ;
-  height: 550px;
+  height: 600px;
   overflow: hidden;
+  position: relative;
 }
 
 .speaker {
@@ -59,6 +60,8 @@
   background-color: $beyond-blue;
   text-align: center;
   padding: 10px;
+  position: absolute;
+  bottom: 0;
 }
 
 .more-speakers__btn {

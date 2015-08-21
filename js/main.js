@@ -13,7 +13,11 @@ var app = {
       });
 
       $('.more-speakers__btn').on('click', function(){
-        $('.speakers').animate({'height': 1000}, 500);
+
+        var speakerBlockPadding = parseInt( $('.speakers').css('padding-top'));
+        var speakerBlockHeight = parseInt( $('.speaker').height());
+        var speakerContainerHeight = speakerBlockHeight * 2 + speakerBlockPadding + 46;
+        $('.speakers').animate({'height': speakerContainerHeight }, 500);
         return false;
       });
   },
