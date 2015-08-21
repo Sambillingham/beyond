@@ -3,11 +3,12 @@
   @include fill-parent();
   @include row(table);
   padding: 100px 0;
+  position: relative;
 }
 
 .after-party__feature-image {
   @include span-columns(9);
-  background: url(http://placehold.it/800x400) center no-repeat;
+  background: url(../img/we-work.jpg) center no-repeat;
   background-size: cover;
   height: 400px;
 }
@@ -17,4 +18,36 @@
   @include reset-display;
   background-color: $beyond-salmon;
   height: 400px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.after-paty__info__title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  margin: 130px 0 0 0;
+}
+.after-party__info__sponsor-image {
+  width: 70%;
+}
+
+
+.after-party__info__address {
+
+}
+
+.after-party__info__limited {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  font-size: 0.9em
+}
+.after-party__decoration-overlay {
+  width: 350px;
+  position: absolute;
+  right: 0;
+  top: 100px;
 }
