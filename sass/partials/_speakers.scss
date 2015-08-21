@@ -1,0 +1,66 @@
+.speakers {
+  @include outer-container;
+  @include clearfix();
+  padding: 100px 0;
+}
+
+.speaker {
+  float: left;
+}
+
+.speaker--small {
+  width: 25%;
+}
+
+.speaker--large {
+  width: 50%;
+}
+
+.speaker--red {
+  background-color: $beyond-salmon;
+}
+
+.speaker--blue {
+  background-color: $beyond-blue;
+}
+
+.speaker--yellow {
+  background-color: $beyond-yellow;
+}
+
+.speaker__info {
+  padding: $gutter;
+  height: 150px;
+}
+
+.speaker__title {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.speaker__name {
+  color: #ffffff;
+  margin: 0;
+  font-family: inherit;
+}
+
+.speaker__image {
+  max-width: 100%;
+  display: block;
+}
+
+.more-speakers {
+  clear: both;
+  width: 100%;
+  background-color: $beyond-blue;
+  text-align: center;
+  padding: 10px;
+}
+
+.more-speakers__btn {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'jaapokki-regular';
+  font-size: 1.2em;
+}
