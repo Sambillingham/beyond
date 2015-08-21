@@ -14,6 +14,7 @@
 
 .after-party__info {
   @include span-columns(3);
+  @include reset-display;
   background-color: $beyond-salmon;
   height: 400px;
 }
