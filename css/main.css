@@ -828,6 +828,7 @@ input:-webkit-autofill {
 
 .sponsor__image {
   vertical-align: middle;
+  max-width: 80%;
 }
 
 .location-info::after {
