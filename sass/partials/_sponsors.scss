@@ -1,0 +1,14 @@
+.sponsors {
+  @include outer-container();
+  padding: 100px 0;
+}
+
+.sponsor {
+  @include span-columns(3);
+  text-align: center;
+
+}
+
+.sponsor__image {
+  vertical-align: middle;
+}

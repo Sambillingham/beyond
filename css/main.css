@@ -803,6 +803,33 @@ input:-webkit-autofill {
   height: 400px;
 }
 
+.sponsors {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px 0;
+}
+.sponsors::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.sponsor {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 23.40426%;
+  text-align: center;
+}
+.sponsor:last-child {
+  margin-right: 0;
+}
+
+.sponsor__image {
+  vertical-align: middle;
+}
+
 .info::after {
   clear: both;
   content: "";
