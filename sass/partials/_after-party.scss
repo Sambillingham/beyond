@@ -1,0 +1,19 @@
+.after-party {
+  @include outer-container;
+  @include fill-parent();
+  @include row(table);
+  padding: 100px 0;
+}
+
+.after-party__feature-image {
+  @include span-columns(9);
+  background: url(http://placehold.it/800x400) center no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.after-party__info {
+  @include span-columns(3);
+  background-color: $beyond-salmon;
+  height: 400px;
+}

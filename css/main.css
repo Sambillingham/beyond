@@ -772,6 +772,37 @@ input:-webkit-autofill {
   font-size: 1.2em;
 }
 
+.after-party {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  padding: 100px 0;
+}
+.after-party::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.after-party__feature-image {
+  display: table-cell;
+  width: 75%;
+  background: url(http://placehold.it/800x400) center no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.after-party__info {
+  display: table-cell;
+  width: 25%;
+  background-color: #FD7465;
+  height: 400px;
+}
+
 .info::after {
   clear: both;
   content: "";
