@@ -1,7 +1,9 @@
 .speakers {
   @include outer-container;
   @include clearfix();
-  padding: 100px 0;
+  padding: 100px 0 0 0 ;
+  height: 550px;
+  overflow: hidden;
 }
 
 .speaker {
@@ -51,6 +53,7 @@
 }
 
 .more-speakers {
+  @include outer-container();
   clear: both;
   width: 100%;
   background-color: $beyond-blue;
@@ -59,8 +62,14 @@
 }
 
 .more-speakers__btn {
+
   color: #ffffff;
   text-decoration: none;
   font-family: 'jaapokki-regular';
   font-size: 1.2em;
+}
+
+.speakers__aditional-speakers {
+  // display: none;
+  // height: 500px;
 }

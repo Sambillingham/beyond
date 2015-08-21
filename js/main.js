@@ -1,6 +1,7 @@
 var app = {
   init: function () {
     this.uiActions ();
+
   },
   uiActions: function () {
       var self = this;
@@ -9,6 +10,11 @@ var app = {
       $('.sign-up__submit').on('click', function ( event ) {
         self.mailChimpAjaxRegister(form);
         event.preventDefault();
+      });
+
+      $('.more-speakers__btn').on('click', function(){
+        $('.speakers').animate({'height': 1000}, 500);
+        return false;
       });
   },
   mailChimpAjaxRegister: function (form){
