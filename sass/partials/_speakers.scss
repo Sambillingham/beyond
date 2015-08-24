@@ -2,8 +2,11 @@
   @include outer-container;
   @include clearfix();
   padding: 100px 0 0 0 ;
-  margin-bottom: 50px;
   position: relative;
+
+  @include media($mobile) {
+    padding: 100px $gutter 0;
+  }
 }
 
 .speaker {
@@ -12,10 +15,18 @@
 
 .speaker--small {
   width: 25%;
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
 }
 
 .speaker--large {
   width: 50%;
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
 }
 
 .speaker--red {
@@ -50,19 +61,22 @@
 .speaker__image {
   max-width: 100%;
   display: block;
+  @include media($mobile) {
+    display: none;
+  }
 }
 
 .more-speakers {
-  @include outer-container();
   clear: both;
   width: 100%;
   background-color: $beyond-blue;
   text-align: center;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
+
+  @include media($mobile) {
+    position: static;
+    width: auto;
+  }
 }
 
 .more-speakers__btn {
