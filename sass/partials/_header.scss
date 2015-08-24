@@ -1,6 +1,6 @@
 .header {
   @include outer-container();
-  padding: 75px $gutter 0 $gutter;
+  padding: 75px $gutter 50px $gutter;
 }
 
 .hero {
@@ -75,6 +75,11 @@
   letter-spacing: 0.02em;
   font-size: 3em;
   line-height: 1.3;
+
+  @include media($laptop) {
+    margin: 150px 0 100px;
+    font-size: 2.1em;
+  }
 
   @include media($tablet) {
     margin: 50px 0 50px;

@@ -2,7 +2,7 @@
   @include outer-container;
   @include fill-parent();
   @include row(table);
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
 
 }
@@ -39,7 +39,7 @@
     @include span-columns(4);
     overflow: hidden;
   }
-  
+
   @include reset-display;
 }
 

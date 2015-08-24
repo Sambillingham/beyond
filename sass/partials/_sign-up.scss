@@ -1,7 +1,7 @@
 
 .sign-up {
   @include outer-container();
-  padding: 150px $gutter;
+  padding: 50px $gutter;
 
   @include media($tablet) {
     padding: 100px $gutter;
