@@ -29,15 +29,15 @@
   }
 }
 
-.speaker--red {
+.speaker:nth-child(3n+1) {
   background-color: $beyond-salmon;
 }
 
-.speaker--blue {
+.speaker:nth-child(3n+2){
   background-color: $beyond-blue;
 }
 
-.speaker--yellow {
+.speaker:nth-child(3n+3){
   background-color: $beyond-yellow;
 }
 
