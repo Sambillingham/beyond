@@ -13,6 +13,7 @@
   @include media($mobile) {
     text-align: center;
     @include span-columns(4);
+    @include shift(0);
   }
 }
 

@@ -13,6 +13,11 @@
   background-size: cover;
   height: 400px;
 
+  @include media($tablet) {
+    @include span-columns(6);
+
+  }
+
   @include media($mobile) {
     display: none;
   }
@@ -20,17 +25,22 @@
 
 .after-party__info {
   @include span-columns(3);
-  @include reset-display;
   background-color: $beyond-salmon;
   height: 400px;
   color: #ffffff;
   text-align: center;
   position: relative;
 
+  @include media($tablet) {
+    @include span-columns(6);
+  }
+
   @include media($mobile) {
     @include span-columns(4);
     overflow: hidden;
   }
+  
+  @include reset-display;
 }
 
 .after-paty__info__title {

@@ -17,6 +17,9 @@
 .speaker--small {
   width: 25%;
 
+  @include media($tablet) {
+    width: 33.33%;
+  }
   @include media($mobile) {
     @include span-columns(4);
   }
@@ -25,6 +28,10 @@
 .speaker--large {
   width: 50%;
 
+  @include media($tablet) {
+    width: 33.33%;
+  }
+  
   @include media($mobile) {
     @include span-columns(4);
   }
