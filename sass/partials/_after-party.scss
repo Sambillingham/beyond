@@ -4,6 +4,7 @@
   @include row(table);
   padding: 100px 0;
   position: relative;
+
 }
 
 .after-party__feature-image {
@@ -11,6 +12,10 @@
   background: url(../img/we-work.jpg) center no-repeat;
   background-size: cover;
   height: 400px;
+
+  @include media($mobile) {
+    display: none;
+  }
 }
 
 .after-party__info {
@@ -21,6 +26,11 @@
   color: #ffffff;
   text-align: center;
   position: relative;
+
+  @include media($mobile) {
+    @include span-columns(4);
+    overflow: hidden;
+  }
 }
 
 .after-paty__info__title {
@@ -48,5 +58,9 @@
   width: 350px;
   position: absolute;
   right: 0;
-  top: 100px;
+  top: 0;
+
+  @include media($mobile) {
+    width: 100%;
+  }
 }
