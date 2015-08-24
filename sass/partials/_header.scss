@@ -5,10 +5,19 @@
 
 .hero {
   @include span-columns(7);
+
+  @include media($mobile) {
+    text-align: center;
+    @include span-columns(4);
+  }
 }
 
 .beyond-illustration {
   @include span-columns(5);
+
+  @include media($mobile) {
+    display: none;
+  }
 }
 
 .hero__social {
