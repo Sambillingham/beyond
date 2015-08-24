@@ -52,18 +52,30 @@
 .speaker__info {
   padding: $gutter;
   height: 150px;
+
+  @include media($mobile) {
+    height: auto;
+  }
 }
 
 .speaker__title {
   color: #ffffff;
   margin: 0;
   font-size: 1.3em;
+
+  @include media($laptop) {
+    font-size: 1.1em;
+  }
 }
 
 .speaker__name {
   color: #ffffff;
   margin: 0;
   font-family: inherit;
+
+  @include media($laptop) {
+    font-size: 1em;
+  }
 }
 
 .speaker__image {
