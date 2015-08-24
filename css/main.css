@@ -850,7 +850,6 @@ input:-webkit-autofill {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding: 100px 0;
 }
 .sponsors::after {
   clear: both;
@@ -874,6 +873,9 @@ input:-webkit-autofill {
   max-width: 80%;
 }
 
+.location-info {
+  padding: 100px 0 0 0;
+}
 .location-info::after {
   clear: both;
   content: "";

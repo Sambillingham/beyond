@@ -1,6 +1,7 @@
 
 .location-info {
   @include clearfix();
+  padding: 100px 0 0 0;
 }
 
 .location-info__content {
@@ -43,7 +44,7 @@
   }
 }
 
-.location-info__map {  
+.location-info__map {
   padding: 20px 0;
   background-color: $beyond-pink;
   text-align: center;
