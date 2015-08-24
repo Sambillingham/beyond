@@ -6,6 +6,10 @@
 .hero {
   @include span-columns(7);
 
+  @include media($tablet) {
+    @include span-columns(5.5);
+    @include shift(1.5);
+  }
   @include media($mobile) {
     text-align: center;
     @include span-columns(4);
@@ -14,6 +18,11 @@
 
 .beyond-illustration {
   @include span-columns(5);
+
+  @include media($tablet) {
+    @include span-columns(3.5);
+    padding-top: 5%;
+  }
 
   @include media($mobile) {
     display: none;
@@ -25,6 +34,9 @@
 
   @include media($tablet) {
     float: none;
+  }
+
+  @include media($mobile) {
     margin: 20px 0;
   }
 }
@@ -73,8 +85,14 @@
   color: $beyond-blue;
   font-size: 3em;
   text-transform: uppercase;
+  @include media($tablet) {
+    font-size: 1.8em;
+  }
 }
 
 .hero__beyond-logo {
   width: 190px;
+  @include media($tablet) {
+    width: 120px;
+  }
 }
