@@ -1,6 +1,9 @@
 .header {
   @include outer-container();
   padding: 75px $gutter 50px $gutter;
+  @include media($mobile) {
+    padding-top: 20px;
+  }
 }
 
 .hero {
