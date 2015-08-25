@@ -92,6 +92,6 @@ gulp.task('watch', function() {
     gulp.watch(['index.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
-gulp.task('dev', ['browser-sync', 'watch']);
+gulp.task('dev', ['browser-sync', 'sass', 'watch']);
 gulp.task('build', ['jekyll-prod', 'clean-prod','prod-sass', 'prod-js']);
 gulp.task('default', ['dev']);
