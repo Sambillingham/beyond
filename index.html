@@ -62,19 +62,22 @@
           </div>
           <img class="speaker__image" src="img/speaker-harry-robberts.jpg">
         </div>
-          <div class="speaker speaker--small ">
-            <div class="speaker__info">
-              <h2 class="speaker__title">Talk Title: Coming Soon</h2>
-              <h3 class="speaker__name">Maxim Cramer</h3>
-            </div>
-            <img class="speaker__image" src="img/speaker-maxim-cramer.jpg">
+        <div class="speaker speaker--small ">
+          <div class="speaker__info">
+            <h2 class="speaker__title">Talk Title: Coming Soon</h2>
+            <h3 class="speaker__name">Maxim Cramer</h3>
           </div>
+          <img class="speaker__image" src="img/speaker-maxim-cramer.jpg">
+        </div>
         <div class="speaker speaker--large ">
           <div class="speaker__info">
             <h2 class="speaker__title">Talk Title: Coming Soon</h2>
             <h3 class="speaker__name">Linda Liukas</h3>
           </div>
-          <img class="speaker__image" src="img/speaker-linda-liukas.jpg">
+          <picture>
+             <source srcset="img/speaker-linda-liukas-small.jpg" media="(max-width: 850px)">
+             <img class="speaker__image" src="img/speaker-linda-liukas-large.jpg">
+          </picture>
         </div>
         <div class="speakers__aditional-speakers">
           <div class="speaker speaker--large ">
@@ -82,7 +85,10 @@
               <h2 class="speaker__title">Asking For More</h2>
               <h3 class="speaker__name">Alice Bartlett</h3>
             </div>
-            <img class="speaker__image" src="img/speaker-alice-bartlet.jpg">
+            <picture>
+               <source srcset="img/speaker-alice-bartlet-small.jpg" media="(max-width: 850px)">
+               <img class="speaker__image" src="img/speaker-alice-bartlet-large.jpg">
+            </picture>
           </div>
           <div class="speaker speaker--small ">
             <div class="speaker__info">
@@ -152,6 +158,7 @@
       </footer>
 
       <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/picturefill.min.js"></script>
       <script src="js/main.js"></script>
     </body>
 </html>
