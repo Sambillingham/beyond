@@ -412,6 +412,11 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
 h2 {
   font-size: 1.3em;
   margin: 0 0 35px 0;
