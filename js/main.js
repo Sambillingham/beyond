@@ -13,7 +13,7 @@ var app = {
       });
 
       $('.more-speakers__btn').on('click', function(){
-          $('.speakers__aditional-speakers').slideDown(1000);
+          $('.speakers__aditional-speakers').slideDown(800);
           return false;
       });
   },
