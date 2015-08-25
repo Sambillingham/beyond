@@ -25,7 +25,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('scripts', function() {
-    gulp.src(['js/jquery-1.11.3.min.js', 'js/picturefill.min.js', 'js/svgeezy.min.js', 'js/main.js'])
+    gulp.src(['js/jquery-1.11.3.min.js', 'js/picturefill.min.js', 'js/svgeezy.min.js', 'js/selectivizr-min.js', 'js/main.js'])
         .pipe(concat('all.js'))
         .pipe(gulp.dest('js/'))
         .pipe(rename('main.min.js'))
