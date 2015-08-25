@@ -1,7 +1,7 @@
 var app = {
   init: function () {
     this.uiActions ();
-
+    svgeezy.init(false, 'png');
   },
   uiActions: function () {
       var self = this;
