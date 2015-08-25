@@ -7,6 +7,16 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var prefix = require('gulp-autoprefixer');
+var ghBuild = require('gulp-gh-pages');
+
+gulp.task('jekyll', function (gulpCallBack){
+   var spawn = require('child_process').spawn;
+   var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
+
+   jekyll.on('exit', function(code) {
+       gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
+   });
+});
 
 gulp.task('lint', function() {
     gulp.src('js/main.js')
