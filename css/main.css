@@ -190,7 +190,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -331,8 +330,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -412,11 +409,6 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-
-h1, h2, h3 {
-  font-weight: normal;
-}
-
 h2 {
   font-size: 1.3em;
   margin: 0 0 35px 0;
@@ -1061,6 +1053,7 @@ input:-webkit-autofill {
 }
 
 .location-info__venue {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/milton-court.jpg) no-repeat center;
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/milton-court.jpg) no-repeat center;
   background-size: cover;
 }
@@ -1069,7 +1062,8 @@ input:-webkit-autofill {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   font-family: 'jaapokki-regular';
   color: #fff;
@@ -1080,7 +1074,8 @@ input:-webkit-autofill {
 @media screen and (max-width: 850px) {
   .location-info__venue__address {
     font-size: 1.1em;
-    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
   }
 }
@@ -1097,7 +1092,8 @@ input:-webkit-autofill {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
 }
 

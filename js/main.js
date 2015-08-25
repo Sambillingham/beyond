@@ -1,3 +1,4 @@
+"use strict";
 var app = {
   init: function () {
     this.uiActions ();
@@ -30,10 +31,10 @@ var app = {
         var message = data.responseJSON.msg;
 
         if (data.result !== 'success') {
-          console.log(data)
+          console.log(data);
           $('.sign-up__message').addClass('sign-up__message--fail').html(message);
         } else {
-          console.log(data)
+          console.log(data);
           $('.sign-up__message').addClass('sign-up__message--success').html(message);
         }
       }
