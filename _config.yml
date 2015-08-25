@@ -1,0 +1,7 @@
+# Site settings
+title: Beyond Conference
+baseurl: ""
+url: "http://beyondconf.co"
+
+# Build settings
+markdown: kramdown
