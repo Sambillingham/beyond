@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -13,10 +17,15 @@
         <meta property="og:image" content="img/beyond-og-banner.png">
 
         <!-- Place favicon.ico in the root directory -->
+        {% if jekyll.environment == "production" %}
         <link rel="stylesheet" href="css/main.min.css">
+        {% else %}
+        <link rel="stylesheet" href="css/main.css">
+        {% endif %}
     </head>
-
     <body>
+
+
       <header class="header">
         <div class="hero">
           <div class="hero__social">
@@ -157,6 +166,8 @@
         <p>￼￼￼￼￼￼￼￼￼￼￼￼￼￼Brought to you by <a href="http://steer.me">Steer</a> for people learning to code</p>
       </footer>
 
+      {% if jekyll.environment == "production" %}
+
       <script src="js/main.min.js"></script>
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -168,5 +179,12 @@
         ga('send', 'pageview');
 
       </script>
+      {% else %}
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/picturefill.min.js"></script>
+      <script src="js/svgeezy.min.js"></script>
+      <script src="js/selectivizr-min.js"></script>
+      <script src="js/main.js"></script>
+      {% endif %}
     </body>
 </html>

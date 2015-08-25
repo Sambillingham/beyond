@@ -3,5 +3,7 @@
 sass/bourbon/
 sass/neat/
 node_modules/
-js/all.js
+_site
+.publish/
 css/main.css
+css/main.min.css
