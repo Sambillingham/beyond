@@ -1,6 +1,8 @@
+"use strict";
 var app = {
   init: function () {
     this.uiActions ();
+    svgeezy.init(false, 'png');
   },
   uiActions: function () {
       var self = this;
@@ -9,6 +11,11 @@ var app = {
       $('.sign-up__submit').on('click', function ( event ) {
         self.mailChimpAjaxRegister(form);
         event.preventDefault();
+      });
+
+      $('.more-speakers__btn').on('click', function(){
+          $('.speakers__aditional-speakers').slideDown(800);
+          return false;
       });
   },
   mailChimpAjaxRegister: function (form){
@@ -24,10 +31,10 @@ var app = {
         var message = data.responseJSON.msg;
 
         if (data.result !== 'success') {
-          console.log(data)
+          console.log(data);
           $('.sign-up__message').addClass('sign-up__message--fail').html(message);
         } else {
-          console.log(data)
+          console.log(data);
           $('.sign-up__message').addClass('sign-up__message--success').html(message);
         }
       }
