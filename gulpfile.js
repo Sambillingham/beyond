@@ -12,18 +12,34 @@ var clean = require('gulp-clean');
 
 gulp.task('jekyll', function (gulpCallBack){
    var spawn = require('child_process').spawn;
-   var envVar = process.env
-   envVar['JEKYLL_ENV'] = 'production';
-   var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit', env: envVar});
+   var enviroment = process.env
+   enviroment['JEKYLL_ENV'] = 'production';
+   var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit', env: enviroment});
 
    jekyll.on('exit', function(code) {
        gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
    });
 });
 
-gulp.task('clean-prod', function(){
+gulp.task('clean-prod', ['jekyll'], function(){
   return gulp.src(['_site/css/*', '_site/js/*'], {read: false})
         .pipe(clean());
+});
+
+gulp.task('prod-sass', ['clean-prod'], function() {
+    return sass('sass/', { style: 'compact' })
+        .pipe(prefix("last 3 version", "> 1%", "ie 8"))
+        .pipe(rename('main.min.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('_site/css/'))
+});
+
+gulp.task('prod-js', ['clean-prod'], function() {
+    gulp.src(['js/jquery-1.11.3.min.js', 'js/picturefill.min.js', 'js/svgeezy.min.js', 'js/selectivizr-min.js', 'js/main.js'])
+        .pipe(concat('all.js'))
+        .pipe(rename('main.min.js'))
+        .pipe(uglify({outSourceMap: true}))
+        .pipe(gulp.dest('_site/js/'));
 });
 
 gulp.task('lint', function() {
@@ -57,4 +73,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['watch']);
-gulp.task('build', ['lint', 'scripts', 'sass']);
+gulp.task('build', ['jekyll', 'clean-prod','prod-sass', 'prod-js']);
