@@ -12,7 +12,9 @@ var clean = require('gulp-clean');
 
 gulp.task('jekyll', function (gulpCallBack){
    var spawn = require('child_process').spawn;
-   var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit'});
+   var envVar = process.env
+   envVar['JEKYLL_ENV'] = 'production';
+   var jekyll = spawn('jekyll', ['build'], {stdio: 'inherit', env: envVar});
 
    jekyll.on('exit', function(code) {
        gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
