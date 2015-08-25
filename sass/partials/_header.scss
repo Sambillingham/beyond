@@ -1,32 +1,53 @@
-header {
-  background-color: #FDFFF4;
-  overflow: hidden;
-  height: 850px;
-
-  @include media($tablet) {
-    height: 700px;
+.header {
+  @include outer-container();
+  padding: 75px $gutter 50px $gutter;
+  @include media($mobile) {
+    padding-top: 20px;
   }
 }
 
 .hero {
-  @include outer-container();
-  @include clearfix();
-  padding: 75px $gutter 0 $gutter;
+  @include span-columns(7);
 
   @include media($tablet) {
+    @include span-columns(5.5);
+    @include shift(1.5);
+  }
+  @include media($mobile) {
     text-align: center;
+    @include span-columns(4);
+    @include shift(0);
   }
 }
 
-.hero__beyond-logo {
+.beyond-illustration {
+  @include span-columns(5);
+
+  @include media($tablet) {
+    @include span-columns(3.5);
+    padding-top: 5%;
+  }
+
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.hero__social {
   float: left;
-  margin: 0 30px 0 0;
-  width: 220px;
 
   @include media($tablet) {
     float: none;
+  }
+
+  @include media($mobile) {
     margin: 20px 0;
   }
+}
+
+.hero__social__icon {
+  width: 50px;
+  margin: 0 10px 0 0;
 }
 
 .hero__info {
@@ -34,7 +55,8 @@ header {
   font-family: 'jaapokki-regular';
   color: $beyond-blue;
   line-height: 1.4;
-  font-size: 18px;
+  font-size: 1.2em;
+  margin: 0 0 0 10px;
 
   @include media($tablet) {
     float: none;
@@ -44,32 +66,23 @@ header {
 
 .date-contraction {
   vertical-align: super;
-  font-size: 0.8em;
-}
-
-.hero__social {
-  float: right;
-
-  @include media($tablet) {
-    float: none;
-    margin: 20px 0;
-  }
-}
-
-.hero__social__icon {
-  width: 40px;
-  margin: 0 0 0 10px;
+  font-size: 0.7em;
 }
 
 .hero__lead {
-  margin: 150px 0 50px;
+  margin: 200px 0 100px;
 
-  text-align: center;
   color: $beyond-blue;
   font-family: 'jaapokki-regular';
+  text-transform: uppercase;
   letter-spacing: 0.02em;
-  font-size: 2.6em;
+  font-size: 3em;
   line-height: 1.3;
+
+  @include media($laptop) {
+    margin: 150px 0 100px;
+    font-size: 2.1em;
+  }
 
   @include media($tablet) {
     margin: 50px 0 50px;
@@ -77,15 +90,19 @@ header {
   }
 }
 
-.beyond-illustration {
-  position: relative;
-  left: 50%;
-  margin: -150px 0 0 -2560px;
-  width: 5120px;
-  height: 650px;
-
+.hero__sub-lead {
+  color: $beyond-blue;
+  font-size: 3em;
+  text-transform: uppercase;
   @include media($tablet) {
-      margin: -50px 0 0 -2560px;
-      height: 200px;
+    font-size: 2.5em;
+    margin-bottom: 0;
+  }
+}
+
+.hero__beyond-logo {
+  width: 190px;
+  @include media($tablet) {
+    width: 160px;
   }
 }

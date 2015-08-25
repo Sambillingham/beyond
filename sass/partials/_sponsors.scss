@@ -1,0 +1,23 @@
+.sponsors {
+  @include outer-container();
+  padding: 50px 0;
+}
+
+.sponsor {
+  @include span-columns(3);
+  text-align: center;
+
+  @include media($mobile) {
+    @include span-columns(2);
+    @include shift();
+
+    &:not(:last-of-type){
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.sponsor__image {
+  vertical-align: middle;
+  max-width: 80%;
+}

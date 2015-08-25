@@ -1,0 +1,76 @@
+.after-party {
+  @include outer-container;
+  @include fill-parent();
+  @include row(table);
+  padding: 50px 0;
+  position: relative;
+
+}
+
+.after-party__feature-image {
+  @include span-columns(9);
+  background: url(../img/we-work.jpg) center no-repeat;
+  background-size: cover;
+  height: 400px;
+
+  @include media($tablet) {
+    @include span-columns(6);
+
+  }
+
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.after-party__info {
+  @include span-columns(3);
+  background-color: $beyond-salmon;
+  height: 400px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+
+  @include media($tablet) {
+    @include span-columns(6);
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+    overflow: hidden;
+  }
+
+  @include reset-display;
+}
+
+.after-paty__info__title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  margin: 130px 0 0 0;
+}
+.after-party__info__sponsor-image {
+  width: 70%;
+}
+
+.after-party__info__address {
+
+}
+
+.after-party__info__limited {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  font-size: 0.9em
+}
+.after-party__decoration-overlay {
+  width: 350px;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  @include media($mobile) {
+    width: 100%;
+  }
+}

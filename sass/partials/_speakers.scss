@@ -1,0 +1,112 @@
+.speakers {
+  @include outer-container;
+  @include clearfix();
+  padding: 50px 0 50px 0 ;
+  position: relative;
+
+  @include media($mobile) {
+    padding: 100px $gutter 0;
+  }
+}
+
+.speaker {
+  float: left;
+  background-color: $beyond-blue;
+}
+
+.speaker--small {
+  width: 25%;
+
+  @include media($tablet) {
+    width: 33.33%;
+  }
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+.speaker--large {
+  width: 50%;
+
+  @include media($tablet) {
+    width: 33.33%;
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+.speaker:nth-child(3n+1) {
+  background-color: $beyond-salmon;
+}
+
+.speaker:nth-child(3n+2){
+  background-color: $beyond-blue;
+}
+
+.speaker:nth-child(3n+3){
+  background-color: $beyond-yellow;
+}
+
+.speaker__info {
+  padding: $gutter;
+  height: 150px;
+
+  @include media($mobile) {
+    height: auto;
+  }
+}
+
+.speaker__title {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.3em;
+
+  @include media($laptop) {
+    font-size: 1.1em;
+  }
+}
+
+.speaker__name {
+  color: #ffffff;
+  margin: 0;
+  font-family: inherit;
+
+  @include media($laptop) {
+    font-size: 1em;
+  }
+}
+
+.speaker__image {
+  max-width: 100%;
+  display: block;
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.more-speakers {
+  clear: both;
+  width: 100%;
+  background-color: $beyond-blue;
+  text-align: center;
+  padding: 10px;
+
+  @include media($mobile) {
+    position: static;
+    width: auto;
+  }
+}
+
+.more-speakers__btn {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'jaapokki-regular';
+  font-size: 1.2em;
+}
+
+.speakers__aditional-speakers {
+  display: none;
+  clear: both;
+}

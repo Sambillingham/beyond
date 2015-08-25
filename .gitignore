@@ -2,3 +2,6 @@
 .sass-cache/
 sass/bourbon/
 sass/neat/
+node_modules/
+js/all.js
+css/main.css
