@@ -7,10 +7,10 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var prefix = require('gulp-autoprefixer');
-var ghBuild = require('gulp-gh-pages');
 var clean = require('gulp-clean');
 var browserSync = require('browser-sync');
 var spawn = require('child_process').spawn;
+var ghPages = require('gulp-gh-pages');
 
 gulp.task('jekyll-prod', function (gulpCallBack){
    var enviroment = process.env
@@ -79,6 +79,11 @@ gulp.task('browser-sync', ['sass', 'jekyll-dev'], function() {
             baseDir: '_site'
         }
     });
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./_site/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('watch', function() {
