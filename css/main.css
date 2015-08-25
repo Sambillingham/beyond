@@ -419,6 +419,10 @@ h3 {
   margin: 0 0 50px 0;
 }
 
+h1, h2, h3 {
+  font-weight: normal;
+}
+
 .header {
   max-width: 1200px;
   margin-left: auto;
@@ -429,6 +433,11 @@ h3 {
   clear: both;
   content: "";
   display: table;
+}
+@media screen and (max-width: 600px) {
+  .header {
+    padding-top: 20px;
+  }
 }
 
 .hero {
@@ -561,7 +570,8 @@ h3 {
 }
 @media screen and (max-width: 850px) {
   .hero__sub-lead {
-    font-size: 1.8em;
+    font-size: 2.5em;
+    margin-bottom: 0;
   }
 }
 
@@ -570,7 +580,7 @@ h3 {
 }
 @media screen and (max-width: 850px) {
   .hero__beyond-logo {
-    width: 120px;
+    width: 160px;
   }
 }
 
