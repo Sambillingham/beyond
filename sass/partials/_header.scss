@@ -1,6 +1,9 @@
 .header {
   @include outer-container();
   padding: 75px $gutter 50px $gutter;
+  @include media($mobile) {
+    padding-top: 20px;
+  }
 }
 
 .hero {
@@ -92,13 +95,14 @@
   font-size: 3em;
   text-transform: uppercase;
   @include media($tablet) {
-    font-size: 1.8em;
+    font-size: 2.5em;
+    margin-bottom: 0;
   }
 }
 
 .hero__beyond-logo {
   width: 190px;
   @include media($tablet) {
-    width: 120px;
+    width: 160px;
   }
 }
