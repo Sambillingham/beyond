@@ -5,3 +5,4 @@ url: "http://beyondconf.co"
 
 # Build settings
 markdown: kramdown
+exclude: [readme.md, .gitignore, .jshintrc, gulpfile.js, package.json, sass, node_modules ]
