@@ -8,6 +8,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var prefix = require('gulp-autoprefixer');
 var ghBuild = require('gulp-gh-pages');
+var clean = require('gulp-clean');
 
 gulp.task('jekyll', function (gulpCallBack){
    var spawn = require('child_process').spawn;
@@ -16,6 +17,11 @@ gulp.task('jekyll', function (gulpCallBack){
    jekyll.on('exit', function(code) {
        gulpCallBack(code === 0 ? null : 'ERROR: Jekyll process exited with code: '+code);
    });
+});
+
+gulp.task('clean-prod', function(){
+  return gulp.src(['_site/css/*', '_site/js/*'], {read: false})
+        .pipe(clean());
 });
 
 gulp.task('lint', function() {
