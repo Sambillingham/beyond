@@ -12,6 +12,7 @@
   background: url(../img/we-work.jpg) center no-repeat;
   background-size: cover;
   height: 400px;
+  max-height: 400px;
 
   @include media($tablet) {
     @include span-columns(6);
@@ -27,6 +28,7 @@
   @include span-columns(3);
   background-color: $beyond-salmon;
   height: 400px;
+  max-height: 400px;
   color: #ffffff;
   text-align: center;
   position: relative;
