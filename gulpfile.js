@@ -29,7 +29,7 @@ gulp.task('jekyll-dev', function (done) {
         .on('close', done);
 });
 
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', ['jekyll-dev'], function () {
     browserSync.reload();
 });
 
