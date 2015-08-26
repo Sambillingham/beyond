@@ -48,6 +48,7 @@ gulp.task('prod-sass', ['clean-prod'], function() {
 
 gulp.task('prod-js', ['clean-prod'], function() {
     gulp.src(['js/jquery-1.11.3.min.js', 'js/picturefill.min.js', 'js/svgeezy.min.js', 'js/selectivizr-min.js', 'js/main.js'])
+        .pipe(concat('all.js'))
         .pipe(rename('main.min.js'))
         .pipe(uglify({outSourceMap: true}))
         .pipe(gulp.dest('_site/js/'));
