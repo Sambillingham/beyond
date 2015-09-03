@@ -1,6 +1,6 @@
 .sponsors {
   @include outer-container();
-  padding: 50px 0;
+  padding: 50px 0 0;
 }
 
 .section-header--top-line {
@@ -8,11 +8,10 @@
 }
 
 .sponsors__headline {
-  padding: 80px 0 100px;
+  padding: 40px 0 100px;
 }
 
 .sponsors__partners {
-  padding: 80px 0 100px;
   display: table;
   width: 100%;
 
