@@ -65,7 +65,7 @@
 }
 
 .speaker__info {
-  padding: $gutter;
+  padding: 10px;
   height: 150px;
 
   @include media($mobile) {
@@ -76,21 +76,14 @@
 .speaker__title {
   color: #ffffff;
   margin: 0;
-  font-size: 1.3em;
-
-  @include media($laptop) {
-    font-size: 1.1em;
-  }
+  font-size: 1.1em;
 }
 
 .speaker__name {
   color: #ffffff;
   margin: 0;
   font-family: inherit;
-
-  @include media($laptop) {
-    font-size: 1em;
-  }
+  font-size: 1em;
 }
 
 .speaker__image {
