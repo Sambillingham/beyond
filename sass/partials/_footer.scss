@@ -1,13 +1,30 @@
 footer {
-  text-align: center;
+  @include outer-container;
   color: #2670CA;
-  padding: 30px 40px;
+  padding: 25px 0;
+  margin-top: 40px;
   line-height: 2em;
+  border-top: 5px solid $beyond-salmon;
 }
 
-footer a {
-  color: $steer-red;
-  text-decoration: none;
-  border-bottom: solid 3px $steer-red;
-  font-weight: 700;
+.footer__organised-by {
+  float: right;
+  margin: 0;
+  a {
+    color: $steer-red;
+    text-decoration: none;
+    border-bottom: solid 3px $steer-red;
+    font-weight: 700;
+  }
+}
+
+.footer__nav {
+  float: left;
+  a {
+    text-decoration: none;
+    color: $beyond-salmon;
+    border-bottom: none;
+    margin-right: 74px;
+    font-weight: 700;
+  }
 }
