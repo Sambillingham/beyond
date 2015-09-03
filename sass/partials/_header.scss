@@ -1,20 +1,18 @@
 .header {
   @include outer-container;
-  padding: 75px 0 50px 0;
+  padding: 50px 0;
   @include media($mobile) {
     padding-top: 20px;
   }
 }
 
+.header__grouped-left {
+  float: left;
+  @include clearfix;
+}
+
 .header__social {
   float: left;
-
-  @include media($tablet) {
-    float: none;
-  }
-  @include media($mobile) {
-    margin: 20px 0;
-  }
 }
 
 .header__social__icon {
@@ -29,11 +27,6 @@
   line-height: 1.4;
   font-size: 1.1em;
   margin: 0 0 0 20px;
-
-  @include media($tablet) {
-    float: none;
-    margin: 20px 0;
-  }
 }
 
 .date-contraction {
@@ -42,6 +35,10 @@
 }
 
 .header__nav {
+  @include media($mobile) {
+    text-align: center;
+    float: none;
+  }
   a {
     font-family: 'jaapokki-regular';
     text-decoration: none;
@@ -49,12 +46,17 @@
     color: $beyond-salmon;
     margin-left: 35px;
     &:hover {
-      // border-bottom: 2px solid $beyond-salmon;
       border-left: 0;
       border-right: 0;
       border-top: 0;
       border-bottom: 11px solid $beyond-salmon;
       border-image: url(../img/underline-squiggle.png) 26 0 fill;
     }
+    @include media($mobile) {
+      margin-left: 0;
+      padding: 0 20px;
+    }
   }
+
+
 }
