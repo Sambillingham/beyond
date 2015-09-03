@@ -12,11 +12,6 @@ var app = {
         self.mailChimpAjaxRegister(form);
         event.preventDefault();
       });
-
-      $('.more-speakers__btn').on('click', function(){
-          $('.speakers__aditional-speakers').slideDown(800);
-          return false;
-      });
   },
   mailChimpAjaxRegister: function (form){
     $.ajax({
