@@ -4,7 +4,6 @@
   @include row(table);
   padding: 50px 0;
   position: relative;
-
 }
 
 .after-party__feature-image {
@@ -44,6 +43,13 @@
   @include reset-display;
 }
 
+.after-paty__info__title,
+.after-party__info__sponsor-image,
+.after-party__info__limited {
+  position: relative;
+  z-index: 20;
+}
+
 .after-paty__info__title {
   color: #ffffff;
   text-transform: uppercase;
@@ -62,6 +68,7 @@
   width: 100%;
   font-size: 0.9em
 }
+
 .after-party__decoration-overlay {
   width: 350px;
   position: absolute;
