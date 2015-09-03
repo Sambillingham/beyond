@@ -17,6 +17,12 @@
 
   .sponsor {
     @include span-columns(4, table);
+    padding: 40px 0 100px;
+    @include media($mobile) {
+      width: 100%;
+      display: block;
+      padding: 50px 0;
+    }
   }
 
   .sponsor__image {
@@ -30,4 +36,7 @@
 
 .sponsor__image {
   vertical-align: middle;
+  @include media($mobile) {
+    max-width: 100%;
+  }
 }
