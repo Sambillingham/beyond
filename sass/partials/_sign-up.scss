@@ -1,18 +1,16 @@
-
 .sign-up {
-  @include outer-container();
-  padding: 50px $gutter;
+  @include outer-container;
+  padding: 50px 0;
 
+  h2 {
+  color: $beyond-yellow;
+  margin-bottom: 20px;
+  }
 }
 
 form {
   @include span-columns(12);
-  @include clearfix();
-
-  @include media($tablet) {
-    @include span-columns(9);
-    @include shift(1.5);
-  }
+  @include clearfix;
 }
 
 label {
@@ -22,18 +20,20 @@ label {
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
+
 .sign-up input {
   float: left;
   border: none;
   outline: none;
-  padding: 12px 12px 12px 0;
   border-radius: 0;
-  border-bottom: solid 8px $beyond-yellow;
 }
 
 .sign-up__name,
 .sign-up__email {
   width: 40%;
+  margin: 0 1% 0 0;
+  padding: 16px 16px 16px 20px;
+  background-color: #FFF4DB;
 
   @include placeholder {
     color: $beyond-yellow;
@@ -44,32 +44,24 @@ input:-webkit-autofill {
   }
 }
 
-.sign-up__name {
-  margin: 0 1% 0 0;
-}
-
 .sign-up__submit {
+  font-family: 'jaapokki-regular';
   color: #FDFFF4;
-  background-color: $beyond-blue;
-  width: 19%;
+  font-size: 1.1em;
+  background-color: $beyond-salmon;
+  width: 18%;
+  padding: 12px 0;
 
   @include media($tablet) {
     width: 100%;
   }
 }
-.sign-up .sign-up__submit {
-  @include media($tablet) {
-    border: none;
-  }
-}
 
 .sign-up__message {
   @include span-columns(12);
-
   text-align: center;
   padding: 15px 0;
 }
-
 
 .sign-up__message--fail {
   color: $beyond-salmon;
@@ -80,7 +72,7 @@ input:-webkit-autofill {
 }
 
 .sign-up__message a {
-  color: beyond-yellow;
+  color: $beyond-yellow;
   text-decoration: none;
   border-bottom: solid 2px $beyond-yellow;
 }
