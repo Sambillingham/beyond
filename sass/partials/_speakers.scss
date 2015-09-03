@@ -94,20 +94,12 @@
   }
 }
 
-.more-speakers {
+.more-speakers-btn {
+  display: block;
   clear: both;
-  width: 100%;
-  background-color: $beyond-blue;
   text-align: center;
   padding: 10px;
-
-  @include media($mobile) {
-    position: static;
-    width: auto;
-  }
-}
-
-.more-speakers__btn {
+  background-color: $beyond-blue;
   color: #ffffff;
   text-decoration: none;
   font-family: 'jaapokki-regular';
