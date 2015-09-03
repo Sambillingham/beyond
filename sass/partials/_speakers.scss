@@ -5,7 +5,7 @@
   position: relative;
 
   @include media($mobile) {
-    padding: 100px $gutter 0;
+    padding: 100px 0;
   }
 }
 
@@ -41,9 +41,10 @@
 }
 
 .speaker--coming-soon {
-  height: 454.688px;
-  background-image: url(../img/speaker-coming-soon.svg);
   background-size: cover;
+  @include media($mobile) {
+    display: none;
+  }
 }
 
 .speaker:nth-child(3n+1) {
@@ -84,7 +85,9 @@
   max-width: 100%;
   display: block;
   @include media($mobile) {
-    display: none;
+    float: left;
+    max-width: 140px;
+    margin-right: 10px;
   }
 }
 
