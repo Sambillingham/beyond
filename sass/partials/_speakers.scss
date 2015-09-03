@@ -29,7 +29,7 @@
   background-color: $beyond-blue;
 }
 
-.speaker--small {
+.speaker--small, .speaker--coming-soon {
   width: 25%;
 
   @include media($tablet) {
@@ -40,16 +40,10 @@
   }
 }
 
-.speaker--large {
-  width: 50%;
-
-  @include media($tablet) {
-    width: 33.33%;
-  }
-
-  @include media($mobile) {
-    @include span-columns(4);
-  }
+.speaker--coming-soon {
+  height: 454.688px;
+  background-image: url(../img/speaker-coming-soon.svg);
+  background-size: cover;
 }
 
 .speaker:nth-child(3n+1) {
@@ -79,11 +73,11 @@
   font-size: 1.2em;
 }
 
-.speaker__name {
+.speaker__name, .speaker__position, .speaker__company {
   color: #ffffff;
   margin: 0;
   font-family: inherit;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .speaker__image {
