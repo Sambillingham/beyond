@@ -9,6 +9,21 @@
   }
 }
 
+.section-header {
+  border-top: 5px solid $beyond-blue;
+  border-bottom: 20px solid $beyond-blue;
+  height: 65px;
+}
+
+.section-header__title {
+  text-transform: uppercase;
+  color: $beyond-blue;
+  margin-bottom: 0;
+  margin-left: 14px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
 .speaker {
   float: left;
   background-color: $beyond-blue;
