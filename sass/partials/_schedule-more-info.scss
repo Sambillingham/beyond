@@ -1,6 +1,9 @@
 .schedule__more-info {
   background-color: $beyond-salmon;
   height: 100%;
+  @include media($tablet) {
+    display: none;
+  }
 }
 
 .slot-info {

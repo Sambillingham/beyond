@@ -9,6 +9,15 @@
   width: 33.33333%;
   display: table-cell;
   vertical-align: top;
+  @include media($tablet) {
+    // probably dont actually need this but maybe for older browsers
+    width: 50%;
+  }
+  @include media($mobile) {
+    // probably dont actually need this but maybe for older browsers
+    display: block;
+    width: 100%;
+  }
 }
 
 // This is needed to get the correct position of the speaker slot
@@ -17,6 +26,10 @@
 }
 
 .timetable {
+  width: 100%;
+  @include media($mobile) {
+    margin-bottom: 50px;
+  }
   td {
     vertical-align: top;
     padding-top: 10px;
@@ -118,6 +131,9 @@
   .timetable__slot--break {
     .timetable__start-time {
       display: none;
+      @include media($mobile) {
+        display: block;
+      }
     }
   }
 }
