@@ -6,6 +6,12 @@ footer {
   margin-top: 40px;
   line-height: 2em;
   border-top: 5px solid $beyond-salmon;
+  @include media($tablet) {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 0 25px 0;
+  }
 }
 
 .footer__organised-by {
@@ -17,6 +23,12 @@ footer {
     border-bottom: solid 3px $steer-red;
     font-weight: 700;
   }
+  @include media($tablet) {
+    float: none;
+    border-top: 5px solid $beyond-blue;
+    margin-top: 25px;
+    padding-top: 10px;
+  }
 }
 
 .footer__nav {
@@ -27,5 +39,11 @@ footer {
     border-bottom: none;
     margin-right: 74px;
     font-weight: 700;
+    @include media($tablet) {
+      display: block;
+    }
+  }
+  @include media($tablet) {
+    float: none;
   }
 }
