@@ -12,6 +12,12 @@ var app = {
         self.mailChimpAjaxRegister(form);
         event.preventDefault();
       });
+
+      $('.timetable__slot').not('.timetable__slot--break').on('click', function(event) {
+        var slot = this;
+        self.scheduleSPeakerInfo(slot);
+        event.preventDefault();
+      });
   },
   mailChimpAjaxRegister: function (form){
     $.ajax({
@@ -34,6 +40,11 @@ var app = {
         }
       }
     }); // end AJAX
+  },
+  scheduleSPeakerInfo: function(slot) {
+    var $slot = $(slot)
+    var pxFromTop = $slot.position().top;
+    $('.js-slot-info').css('margin-top', pxFromTop)
   }
 };
 
