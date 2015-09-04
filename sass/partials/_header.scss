@@ -1,6 +1,7 @@
 .header {
   @include outer-container;
   padding: 50px 0;
+  @include outer-padding;
   @include media($mobile) {
     padding-top: 20px;
   }

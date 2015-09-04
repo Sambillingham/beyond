@@ -1,6 +1,7 @@
 .sign-up {
   @include outer-container;
   padding: 50px 0;
+  @include outer-padding;
 
   h2 {
   color: $beyond-yellow;

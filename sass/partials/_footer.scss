@@ -2,6 +2,7 @@ footer {
   @include outer-container;
   color: #2670CA;
   padding: 25px 0;
+  @include outer-padding;
   margin-top: 40px;
   line-height: 2em;
   border-top: 5px solid $beyond-salmon;
