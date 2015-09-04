@@ -27,14 +27,16 @@
   }
 }
 
-.beyond-illustration {
-  @include shift(1);
-  @include span-columns(5);
-
+.beyond-illustrations {
+  display: table-cell;
+  width: 50%;
+  padding-left: 100px;
   @include media($tablet) {
-    @include span-columns(3.5);
-    padding-top: 5%;
+    display: block;
+    width: 100%;
+    padding-left: 0;
   }
+}
 
   @include media($mobile) {
     display: none;
