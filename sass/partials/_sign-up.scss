@@ -1,6 +1,6 @@
 .sign-up {
   @include outer-container;
-  padding: 50px 0;
+  padding: 50px 0 20px;
   @include outer-padding;
 
   h2 {
@@ -23,7 +23,6 @@ input:-webkit-autofill {
 }
 
 .sign-up input {
-  float: left;
   border: none;
   outline: none;
   border-radius: 0;
@@ -31,6 +30,7 @@ input:-webkit-autofill {
 
 .sign-up__name,
 .sign-up__email {
+  float: left;
   width: 40%;
   margin: 0 1% 0 0;
   padding: 16px 16px 16px 20px;
@@ -41,11 +41,24 @@ input:-webkit-autofill {
   }
 
   @include media($tablet) {
+    width: 49%;
+    margin-bottom: 10px;
+  }
+
+  @include media($mobile) {
     width: 100%;
   }
 }
 
+.sign-up__email {
+  @include media($tablet) {
+    float: right;
+    margin-right: 0;
+  }
+}
+
 .sign-up__submit {
+  float: left;
   font-family: 'jaapokki-regular';
   color: #FDFFF4;
   font-size: 1.1em;
