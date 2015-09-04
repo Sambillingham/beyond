@@ -30,7 +30,7 @@
 
 .speaker {
   float: left;
-  background-color: $beyond-blue;
+  background-color: $beyond-salmon;
 }
 
 .speaker--small, .speaker--coming-soon {
@@ -52,15 +52,15 @@
 }
 
 .speaker:nth-child(3n+1) {
-  background-color: $beyond-salmon;
+  background-color: $beyond-yellow;
 }
 
 .speaker:nth-child(3n+2){
-  background-color: $beyond-blue;
+  background-color: $beyond-salmon;
 }
 
 .speaker:nth-child(3n+3){
-  background-color: $beyond-yellow;
+  background-color: $beyond-blue;
 }
 
 .speaker__info {
