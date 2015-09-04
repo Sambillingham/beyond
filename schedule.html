@@ -30,7 +30,10 @@ layout: default
 
     <table class="timetable js-offset-parent">
       <tbody>
-        <tr class="timetable__slot mins-30">
+        <tr class="timetable__slot mins-30" data-image="speaker-harry-robberts.jpg" data-name="Harry Roberts" data-position="Founder" data-company="CSS Wizardry" data-url="https://csswizardry.com" data-twitter="csswizardry" data-github="csswizardry" data-title="Beocming a better CSS developer" data-description="<p>Developers often talk about optimizing their code bases, but what about optimizing our personal development?</p>
+        <p>This session is about my journey with open sourcing my life.</p>
+        <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I’ve since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
+        <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>">
           <td class="timetable__start-time">9.00</td>
           <td class="timetable__slot-detail">
             <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
@@ -121,33 +124,30 @@ layout: default
     <div class="section-header section-header--empty"></div>
 
     <div class="slot-info js-slot-info">
-      <img src="img/speaker-harry-robberts.jpg" alt="">
+      <img class="js-data-image" src="" alt="">
       <div class="slot-info__meta">
         <div class="slot-info__speaker-details">
-          <h3>Harry Roberts</h3>
-          <h3>Founder</h3>
-          <h3>CSS Wizardry</h3>
+          <h3 class="js-data-name"></h3>
+          <h3 class="js-data-position"></h3>
+          <h3 class="js-data-company"></h3>
         </div>
 
         <nav class="slot-info__links">
-          <a href="#">
+          <a href="#" class="js-data-url">
             <img src="img/icon-link.svg" alt="Personal site">
           </a>
-          <a href="#">
+          <a href="#" class="js-data-twitter">
             <img src="img/icon-twitter.svg" alt="Twitter profile">
           </a>
-          <a href="#">
+          <a href="#" class="js-data-github">
             <img src="img/icon-github.svg" alt="Github profile">
           </a>
         </nav>
       </div>
 
       <div class="slot-info__description">
-        <h3>Becoming a Better CSS Developer</h3>
-        <p>Developers often talk about optimizing their code bases, but what about optimizing our personal development?</p>
-        <p>This session is about my journey with open sourcing my life.</p>
-        <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I’ve since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
-        <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
+        <h3 class="js-data-title"></h3>
+        <div class="js-data-description"></div>
       </div>
     </div>
   </div>

@@ -44,6 +44,18 @@ var app = {
   scheduleSPeakerInfo: function(slot) {
     var $slot = $(slot);
     var pxFromTop = $slot.position().top;
+    var data = $slot.data();
+
+    $('.js-data-image').attr('src', '/img/'+ data.image);
+    $('.js-data-name').text(data.name);
+    $('.js-data-position').text(data.position);
+    $('.js-data-company').text(data.company);
+    $('.js-data-url').attr('href', data.url);
+    $('.js-data-twitter').attr('href', 'https://twitter.com/'+ data.twitter);
+    $('.js-data-github').attr('href', 'https://github.com/' + data.github);
+    $('.js-data-title').text(data.title);
+    $('.js-data-description').html(data.description);
+
     $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
   }
 };
