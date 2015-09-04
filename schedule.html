@@ -2,20 +2,154 @@
 layout: default
 ---
 <header class="header">
-  <div class="hero">
-    <div class="hero__social">
-      <a href="https://twitter.com/beyondconf_"><img class="hero__social__icon" src="img/twitter.svg" alt="Beyond Conf Twitter"></a>
-      <a href="mailto:amelia@beyondconf.co"><img class="hero__social__icon" src="img/mail.svg" alt="Mail Beyond Conf"></a>
+
+    <div class="header__social">
+      <a href="/">
+        <img src="img/beyond-logo-small.svg" alt="Beyond Conf Logo" class="header__logo">
+      </a>
+      <a href="https://twitter.com/beyondconf_"><img class="header__social__icon" src="img/twitter.svg" alt="Beyond Conf Twitter"></a>
+      <a href="mailto:amelia@beyondconf.co"><img class="header__social__icon" src="img/mail.svg" alt="Mail Beyond Conf"></a>
     </div>
-    <div class="hero__info">
+
+    <div class="header__event-date">
       <time class="hero__info__data" datetime="2015-11-23 10:00">23<span class="date-contraction">rd</span> November 2015</time>
       <div class="hero__info__location">London</div>
     </div>
 
-    <h1 class="hero__lead">The conference for<br>People Who Code.</h1>
-
-    <h2 class="hero__sub-lead">Go <img class="hero__beyond-logo" src="img/beyond-logo.svg" alt="Beyond Conference Puzzle Logo">.</h2>
-  </div>
-  <img src="img/tracks-and-houses.svg" alt="Beyond Conf Puzzle Track" class="beyond-illustration">
+    <nav class="header__nav">
+      <a href="#">Tickets</a>
+      <a href="/schedule.html" class="active-link">Schedule</a>
+    </nav>
 </header>
 
+<section class="schedule">
+  <div class="schedule__talks">
+    <div class="section-header">
+      <h2 class="section-header__title">Talks</h2>
+    </div>
+
+    <table class="timetable js-offset-parent">
+      <tbody>
+        <tr class="timetable__slot mins-30">
+          <td class="timetable__start-time">9.00</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
+            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+          </td>
+        </tr>
+
+        <tr class="timetable__slot mins-30">
+          <td class="timetable__start-time">9.30</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
+            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+          </td>
+        </tr>
+
+        <tr class="timetable__slot timetable__slot--break mins-30">
+          <td class="timetable__start-time">10.00 <span class="timetable__break-name">Break</span></td>
+          <td class="timetable__slot-detail"></td>
+        </tr>
+
+        <tr class="timetable__slot mins-15">
+          <td class="timetable__start-time">10.45</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
+            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+          </td>
+        </tr>
+
+        <tr class="timetable__slot mins-30">
+          <td class="timetable__start-time">9.00</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
+            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="schedule__workshops">
+    <div class="section-header">
+      <h2 class="section-header__title">Workshops</h2>
+    </div>
+
+    <table class="timetable js-offset-parent">
+      <tbody>
+        <tr class="timetable__slot mins-30">
+          <td class="timetable__start-time">9.00</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
+            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+          </td>
+        </tr>
+
+        <tr class="timetable__slot mins-30">
+          <td class="timetable__start-time">9.30</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
+            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+          </td>
+        </tr>
+
+        <tr class="timetable__slot timetable__slot--break mins-30">
+          <td class="timetable__start-time">10.00 <span class="timetable__break-name">Break</span></td>
+          <td class="timetable__slot-detail" colspan="2"></td>
+        </tr>
+
+        <tr class="timetable__slot mins-15">
+          <td class="timetable__start-time">10.45</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
+            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+          </td>
+        </tr>
+
+        <tr class="timetable__slot mins-30">
+          <td class="timetable__start-time">9.00</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
+            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="schedule__more-info">
+    <div class="section-header section-header--empty"></div>
+
+    <div class="slot-info js-slot-info">
+      <img src="img/speaker-harry-robberts.jpg" alt="">
+      <div class="slot-info__meta">
+        <div class="slot-info__speaker-details">
+          <h3>Harry Roberts</h3>
+          <h3>Founder</h3>
+          <h3>CSS Wizardry</h3>
+        </div>
+
+        <nav class="slot-info__links">
+          <a href="#">
+            <img src="img/icon-link.svg" alt="Personal site">
+          </a>
+          <a href="#">
+            <img src="img/icon-twitter.svg" alt="Twitter profile">
+          </a>
+          <a href="#">
+            <img src="img/icon-github.svg" alt="Github profile">
+          </a>
+        </nav>
+      </div>
+
+      <div class="slot-info__description">
+        <h3>Becoming a Better CSS Developer</h3>
+        <p>Developers often talk about optimizing their code bases, but what about optimizing our personal development?</p>
+        <p>This session is about my journey with open sourcing my life.</p>
+        <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I’ve since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
+        <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
