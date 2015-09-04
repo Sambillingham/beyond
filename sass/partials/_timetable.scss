@@ -1,0 +1,121 @@
+.schedule {
+  @include outer-container;
+  margin-top: 50px;
+}
+
+.schedule__talks,
+.schedule__workshops,
+.schedule__more-info {
+  width: 33.33333%;
+  display: table-cell;
+  vertical-align: top;
+}
+
+// This is needed to get the correct position of the speaker slot
+.js-offset-parent {
+  position: relative;
+}
+
+.timetable {
+  td {
+    vertical-align: top;
+    padding-top: 10px;
+    border-bottom: 1px solid $beyond-salmon;
+  }
+}
+
+.timetable__slot {
+  cursor: pointer;
+  &:hover {
+    .timetable__start-time {
+      background-color: $beyond-salmon;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.timetable__start-time {
+  width: 60px;
+  text-align: center;
+  color: $beyond-salmon;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.timetable__slot-detail {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+.timetable__title {
+  color: $beyond-salmon;
+  margin-bottom: 0;
+}
+
+.timetable__speaker {
+  font-family: 'Varela Round', sans-serif;
+  color: $beyond-salmon;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+// Timing sizings
+.mins-15 {
+  & > td {
+    height: 100px;
+  }
+}
+
+.mins-30 {
+  & > td {
+    height: 200px;
+  }
+}
+
+.mins-45 {
+  & > td {
+    height: 300px;
+  }
+}
+
+.mins-60 {
+  & > td {
+    height: 400px;
+  }
+}
+
+// Break slot styles
+.timetable__slot--break {
+  .timetable__start-time {
+    color: $beyond-yellow;
+    background-color: #FFEEC0;
+  }
+  .timetable__slot-detail {
+    background-color: #FFE3A0;
+  }
+
+  &:hover {
+    cursor: default;
+    .timetable__start-time {
+      color: $beyond-yellow;
+      background-color: #FFEEC0;
+    }
+  }
+}
+
+.timetable__break-name {
+  display: block;
+  font-family: 'jaapokki-regular';
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 1;
+  @include transform(rotate(-90deg) translate(-90%, 0));
+  @include transform-origin(top top);
+}
+
+.schedule__workshops {
+  .timetable__slot--break {
+    .timetable__start-time {
+      display: none;
+    }
+  }
+}
