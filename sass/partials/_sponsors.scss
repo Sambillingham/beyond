@@ -1,6 +1,9 @@
 .sponsors {
   @include outer-container();
   padding: 50px 0 0;
+  @include media($mobile) {
+    padding: 20px 0;
+  }
 }
 
 .section-header--top-line {
