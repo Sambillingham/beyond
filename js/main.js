@@ -42,9 +42,9 @@ var app = {
     }); // end AJAX
   },
   scheduleSPeakerInfo: function(slot) {
-    var $slot = $(slot)
+    var $slot = $(slot);
     var pxFromTop = $slot.position().top;
-    $('.js-slot-info').css('margin-top', pxFromTop)
+    $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
   }
 };
 
