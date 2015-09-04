@@ -38,14 +38,15 @@
   }
 }
 
-  @include media($mobile) {
+.beyond-illustration {
+  @include media($tablet) {
     display: none;
   }
 }
 
 .beyond-illustration--mobile {
   display: none;
-  @include media($mobile) {
+  @include media($tablet) {
     width: 100%;
     display: block;
     margin: 0;
