@@ -1,14 +1,29 @@
 .hero {
   @include outer-container;
+  @include outer-padding;
+  display: table;
   margin-bottom: 50px;
+  @include media($tablet) {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @include media($mobile) {
+    margin-bottom: 20px;
+  }
 }
 
 .hero__text {
-  @include span-columns(6);
+  display: table-cell;
+  width: 50%;
   margin: 200px 0 100px;
-  @include media($mobile) {
-    margin: 50px 0 50px;
+  vertical-align: middle;
+
+  @include media($tablet) {
+    display: block;
     width: 100%;
+    margin: 50px 0 50px;
+    @include outer-padding;
   }
 }
 
