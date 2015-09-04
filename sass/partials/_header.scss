@@ -8,9 +8,12 @@
 
 .header__social {
   float: left;
+  a {
+    text-decoration: none;
+  }
 }
 
-.header__social__icon {
+.header__social__icon, .header__logo {
   width: 40px;
   margin: 0 10px 0 0;
 }
@@ -40,7 +43,7 @@
     font-size: 1.1em;
     color: $beyond-salmon;
     margin-left: 35px;
-    &:hover {
+    &:hover, &.active-link {
       border-left: 0;
       border-right: 0;
       border-top: 0;
@@ -52,6 +55,4 @@
       padding: 0 20px;
     }
   }
-
-
 }
