@@ -31,9 +31,6 @@
 .speaker {
   float: left;
   background-color: $beyond-salmon;
-}
-
-.speaker--small, .speaker--coming-soon {
   width: 25%;
 
   @include media($tablet) {
