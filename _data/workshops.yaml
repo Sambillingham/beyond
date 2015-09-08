@@ -1,0 +1,23 @@
+- workshop: true
+  name: Harry Roberts
+  start_time: '9:00'
+  duration: 30
+  anchor: w-sketch
+  image: speaker-harry-roberts.jpg
+  position: Founder
+  company: CSS Wizardry
+  url: https://csswizardry.com
+  github: csswizardry
+  twitter: csswizardry
+  title: Becoming a better CSS Developer
+  description: >
+    <p>Developers often talk about optimizing their code bases, but what about optimizing our personal development?</p>
+    <p>This session is about my journey with open sourcing my life.</p>
+    <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I’ve since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
+    <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
+
+
+- workshop: false
+  duration: 60
+  start_time: '10:30'
+  title: Break
