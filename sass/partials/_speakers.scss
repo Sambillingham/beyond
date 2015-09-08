@@ -88,6 +88,8 @@
 .speaker__info {
   padding: 10px;
   height: 150px;
+  position: relative;
+  z-index: 20;
 
   @include media($mobile) {
     height: auto;
