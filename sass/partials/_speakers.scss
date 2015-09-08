@@ -60,7 +60,6 @@
 }
 
 .speaker--coming-soon {
-  background-size: cover;
   @include media($mobile) {
     display: none;
   }
