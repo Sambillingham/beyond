@@ -4,7 +4,7 @@
   @include outer-padding;
 
   h2 {
-  color: $beyond-yellow;
+  color: $beyond-salmon;
   margin-bottom: 20px;
   }
 }
@@ -23,7 +23,6 @@ input:-webkit-autofill {
 }
 
 .sign-up input {
-  border: none;
   outline: none;
   border-radius: 0;
 }
@@ -32,16 +31,16 @@ input:-webkit-autofill {
 .sign-up__email {
   float: left;
   width: 40%;
-  margin: 0 1% 0 0;
-  padding: 16px 16px 16px 20px;
-  background-color: #FFF4DB;
+  border: 5px solid $beyond-salmon;
+  margin: 0 0 0 0;
+  padding: 8px 8px 8px 12px;
 
   @include placeholder {
-    color: $beyond-yellow;
+    color: $beyond-salmon;
   }
 
   @include media($tablet) {
-    width: 49%;
+    width: 50%;
     margin-bottom: 10px;
   }
 
@@ -51,9 +50,14 @@ input:-webkit-autofill {
 }
 
 .sign-up__email {
+  border-left: none;
   @include media($tablet) {
     float: right;
     margin-right: 0;
+  }
+
+  @include media($mobile) {
+    border-left: 5px solid $beyond-salmon;
   }
 }
 
@@ -64,7 +68,9 @@ input:-webkit-autofill {
   font-size: 1.1em;
   background-color: $beyond-salmon;
   width: 18%;
-  padding: 12px 0;
+  height: 46px;
+  padding: 8px 0;
+  border: none;
 
   @include media($tablet) {
     width: 100%;
