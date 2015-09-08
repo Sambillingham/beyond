@@ -39,6 +39,22 @@
   @include media($mobile) {
     @include span-columns(4);
   }
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    display: none;
+    z-index: 10;
+  }
+
+  &:hover {
+    &:before {
+      display: block;
+    }
+  }
 }
 
 .speaker--coming-soon {
@@ -48,15 +64,15 @@
   }
 }
 
-.speaker:nth-child(3n+1) {
+.speaker:nth-child(3n+1), .speaker:nth-child(3n+1):before {
   background-color: $beyond-yellow;
 }
 
-.speaker:nth-child(3n+2){
+.speaker:nth-child(3n+2), .speaker:nth-child(3n+2):before{
   background-color: $beyond-salmon;
 }
 
-.speaker:nth-child(3n+3){
+.speaker:nth-child(3n+3), .speaker:nth-child(3n+3):before {
   background-color: $beyond-blue;
 }
 
