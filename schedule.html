@@ -30,45 +30,25 @@ layout: default
 
     <table class="timetable js-offset-parent">
       <tbody>
-        <tr class="timetable__slot mins-30" data-image="speaker-harry-robberts.jpg" data-name="Harry Roberts" data-position="Founder" data-company="CSS Wizardry" data-url="https://csswizardry.com" data-twitter="csswizardry" data-github="csswizardry" data-title="Beocming a better CSS developer" data-description="<p>Developers often talk about optimizing their code bases, but what about optimizing our personal development?</p>
-        <p>This session is about my journey with open sourcing my life.</p>
-        <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I’ve since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
-        <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>">
-          <td class="timetable__start-time">9.00</td>
+        {% for speaker in site.data.speakers %}
+        <!-- This could probably do with better naming stuff but im tired  -->
+        {% if speaker.speaker %}
+        <tr id="anchor-{{speaker.anchor}}" class="timetable__slot mins-{{speaker.duration}}" data-image="{{speaker.image}}" data-name="{{speaker.name}}" data-position="{{speaker.position}}" data-company="{{speaker.company}}" data-url="{{speaker.url}}" data-twitter="{{speaker.twitter}}" data-github="{{speaker.github}}" data-title="{{speaker.title}}" data-description="{{speaker.description}}">
+          <td class="timetable__start-time">{{speaker.start_time}}</td>
           <td class="timetable__slot-detail">
-            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
-            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+            <h2 class="timetable__title">{{speaker.title}}</h2>
+            <h3 class="timetable__speaker">{{speaker.name}}</h3>
+            <img src="img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
           </td>
         </tr>
 
-        <tr class="timetable__slot mins-30">
-          <td class="timetable__start-time">9.30</td>
-          <td class="timetable__slot-detail">
-            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
-            <h3 class="timetable__speaker">Claudine Sarahe</h3>
-          </td>
-        </tr>
-
-        <tr class="timetable__slot timetable__slot--break mins-30">
-          <td class="timetable__start-time">10.00 <span class="timetable__break-name">Break</span></td>
+        {% else %}
+        <tr class="timetable__slot timetable__slot--break mins-{{ speaker.duration }}">
+          <td class="timetable__start-time">{{ speaker.start_time }} <span class="timetable__break-name">{{speaker.title}}</span></td>
           <td class="timetable__slot-detail"></td>
         </tr>
-
-        <tr class="timetable__slot mins-15">
-          <td class="timetable__start-time">10.45</td>
-          <td class="timetable__slot-detail">
-            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
-            <h3 class="timetable__speaker">Claudine Sarahe</h3>
-          </td>
-        </tr>
-
-        <tr class="timetable__slot mins-30">
-          <td class="timetable__start-time">9.00</td>
-          <td class="timetable__slot-detail">
-            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
-            <h3 class="timetable__speaker">Claudine Sarahe</h3>
-          </td>
-        </tr>
+        {% endif %}
+        {% endfor %}
       </tbody>
     </table>
   </div>
@@ -80,42 +60,23 @@ layout: default
 
     <table class="timetable js-offset-parent">
       <tbody>
-        <tr class="timetable__slot mins-30">
-          <td class="timetable__start-time">9.00</td>
+        {% for workshop in site.data.workshops %}
+        {% if workshop.workshop %}
+        <tr id="anchor-{{workshop.anchor}}" class="timetable__slot mins-{{workshop.duration}}" data-image="{{workshop.image}}" data-name="{{workshop.name}}" data-position="{{workshop.position}}" data-company="{{workshop.company}}" data-url="{{workshop.url}}" data-twitter="{{workshop.twitter}}" data-github="{{workshop.github}}" data-title="{{workshop.title}}" data-description="{{workshop.description}}">
+          <td class="timetable__start-time">{{workshop.start_time}}</td>
           <td class="timetable__slot-detail">
-            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
-            <h3 class="timetable__speaker">Claudine Sarahe</h3>
+            <h2 class="timetable__title">{{workshop.title}}</h2>
+            <h3 class="timetable__speaker">{{workshop.name}}</h3>
+            <img src="img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
           </td>
         </tr>
-
-        <tr class="timetable__slot mins-30">
-          <td class="timetable__start-time">9.30</td>
-          <td class="timetable__slot-detail">
-            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
-            <h3 class="timetable__speaker">Claudine Sarahe</h3>
-          </td>
-        </tr>
-
+        {% else %}
         <tr class="timetable__slot timetable__slot--break mins-30">
-          <td class="timetable__start-time">10.00 <span class="timetable__break-name">Break</span></td>
+          <td class="timetable__start-time">{{workshop.start_time}} <span class="timetable__break-name">{{workshop.title}}</span></td>
           <td class="timetable__slot-detail" colspan="2"></td>
         </tr>
-
-        <tr class="timetable__slot mins-15">
-          <td class="timetable__start-time">10.45</td>
-          <td class="timetable__slot-detail">
-            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
-            <h3 class="timetable__speaker">Claudine Sarahe</h3>
-          </td>
-        </tr>
-
-        <tr class="timetable__slot mins-30">
-          <td class="timetable__start-time">9.00</td>
-          <td class="timetable__slot-detail">
-            <h2 class="timetable__title">A talk about a thing that I wanted to talk about</h2>
-            <h3 class="timetable__speaker">Claudine Sarahe</h3>
-          </td>
-        </tr>
+        {% endif %}
+        {% endfor %}
       </tbody>
     </table>
   </div>
