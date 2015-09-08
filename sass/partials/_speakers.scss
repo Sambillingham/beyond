@@ -63,6 +63,14 @@
   @include media($mobile) {
     display: none;
   }
+
+  .speaker__info {
+    padding: 0;
+    background-image: url(../img/speaker-coming-soon-bottom.png);
+    background-position: center;
+    background-size: contain;
+    z-index: 0;
+  }
 }
 
 .speaker:nth-child(3n+1), .speaker:nth-child(3n+1):before {
