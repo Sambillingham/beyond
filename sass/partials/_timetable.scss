@@ -71,6 +71,15 @@
   margin-bottom: 0;
 }
 
+.timetable__open-symbol {
+  display: none;
+  width: 20px;
+  margin-top: 10px;
+  @include media($tablet) {
+    display: inline-block;
+  }
+}
+
 // Timing sizings
 .mins-15 {
   & > td {
@@ -137,3 +146,4 @@
     }
   }
 }
+
