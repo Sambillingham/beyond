@@ -130,3 +130,11 @@
   font-family: 'jaapokki-regular';
   font-size: 1.2em;
 }
+
+// Workshops they share alot of the same styles so kept in here
+.speaker--workshop {
+  width: 50%;
+  @include media($tablet) {
+    width: 100%;
+  }
+}
