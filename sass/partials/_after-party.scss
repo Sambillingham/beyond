@@ -41,6 +41,10 @@
   }
 
   @include reset-display;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .after-paty__info__title,
