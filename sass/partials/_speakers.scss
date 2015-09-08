@@ -32,6 +32,7 @@
   float: left;
   background-color: $beyond-salmon;
   width: 25%;
+  text-decoration: none;
 
   @include media($tablet) {
     width: 33.33%;
