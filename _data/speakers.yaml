@@ -61,7 +61,7 @@
     <p>Looking around at web performance advice today can be overwhelming: everything comes with caveats, disclaimers, and sometimes one piece of advice can seem to actively contradict another. Phrases like “the DOM is slow” or “always use CSS animations!” make for great headlines, but the truth is often far more nuanced. In this session we'll look at how to think holistically about performance, and how to prioritize optimization work that your users will notice and appreciate.</p>
 
 - speaker: true
-  name: Coming soon. [Sponsor Message]
+  title: Sponsor Message
   start_time: '11:00'
   duration: 15
 
@@ -81,7 +81,7 @@
   url: https://csswizardry.com
   github: csswizardry
   twitter: csswizardry
-  title: Coming Soon
+  title: Talk Title TBC
   description: >
     <p>Coming Soon.</p>
 
@@ -96,7 +96,7 @@
   url: https://ustwo.com/
   github:
   twitter: missalanawood
-  title: Coming Soon
+  title: Talk Title TBC
   description: >
     <p>Coming Soon</p>
 
@@ -116,7 +116,7 @@
     <p>Coming Soon</p>
 
 - speaker: true
-  name: Coming soon. [Sponsor Message]
+  title: Sponsor Message
   start_time: '13:20'
   duration: 15
 
@@ -197,7 +197,7 @@
   title: Break
 
 - speaker: true
-  name: Coming soon
+  name: Linda Liukas
   start_time: '17:40'
   duration: 30
   anchor: linda
@@ -207,7 +207,7 @@
   url: http://www.helloruby.com/
   github: lindaliukas
   twitter: lindaliukas
-  title: Linda Liukas
+  title: Talk Title TBC
   description: >
     <p>Coming Soon</p>
 
