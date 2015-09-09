@@ -71,7 +71,7 @@ input:-webkit-autofill {
   line-height: 2;
   background-color: $beyond-salmon;
   border: 5px solid $beyond-salmon;
-  width: 18%;
+  width: 20%;
   padding: 8px 0;
 
   @include media($tablet) {
@@ -82,6 +82,9 @@ input:-webkit-autofill {
 .sign-up__message {
   @include span-columns(12);
   text-align: center;
+}
+
+.sign-up__message--active {
   padding: 15px 0;
 }
 
