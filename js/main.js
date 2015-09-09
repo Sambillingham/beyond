@@ -19,6 +19,9 @@ var app = {
         self.scheduleSPeakerInfo(slot);
         event.preventDefault();
       });
+      $('.js-section-header-modal').on('click', function(){
+        $('.js-schedule__more-info').fadeOut();
+      });
   },
   mailChimpAjaxRegister: function (form){
     $.ajax({
@@ -57,7 +60,12 @@ var app = {
     $('.js-data-title').text(data.title);
     $('.js-data-description').html(data.description);
 
-    $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
+   if(Modernizr.mq('only screen and (max-width: 850px)')) {
+      $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>')
+      $('.js-slot-info, .js-schedule__more-info').fadeIn();
+   } else {
+      $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
+   }
   },
   daysUntilDate: function(targetDate){
     var today = new Date();
