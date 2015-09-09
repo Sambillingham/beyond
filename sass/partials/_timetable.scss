@@ -1,31 +1,44 @@
 .schedule {
   @include outer-container;
   margin-top: 50px;
+
   @include fill-parent();
   @include row(table);
+
+  @include media($mobile) {
+    @include row();
+  }
 }
 
 .schedule__talks,
 .schedule__workshops,
 .schedule__more-info {
-  @include span-columns(9);
+  width: 33.33333%;
+  display: table-cell;
   vertical-align: top;
+
   @include media($tablet) {
     // probably dont actually need this but maybe for older browsers
-    @include span-columns(6);
-
+    width: 50%;
   }
   @include media($mobile) {
     // probably dont actually need this but maybe for older browsers
     display: block;
-    @include span-columns(4);
-  }
-
-  &:last-child {
-    @include reset-display;
+    width: 100%;
   }
 }
 
+.schedule {
+  @include outer-container;
+  margin-top: 50px;
+
+  @include fill-parent();
+  @include row(table);
+
+  @include media($mobile) {
+    @include row();
+  }
+}
 // This is needed to get the correct position of the speaker slot
 .js-offset-parent {
   position: relative;

@@ -3,15 +3,31 @@
   height: 100%;
   @include media($tablet) {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }
 
 .slot-info {
   display: none;
+  @include media($tablet) {
+    width: 50%;
+    margin: 0 auto;
+  }
+  @include media($mobile) {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .slot-info__image {
   max-width: 100%;
+
+  @include media($mobile) {
+    width: 100%;
+  }
 }
 
 .slot-info__meta {
