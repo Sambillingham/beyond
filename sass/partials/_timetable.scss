@@ -1,6 +1,7 @@
 .schedule {
   @include outer-container;
   margin-top: 50px;
+  margin-bottom: 50px;
 
   @include fill-parent();
   @include row(table);
