@@ -70,8 +70,12 @@ layout: default
             <img src="img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
           </td>
         </tr>
+        {% elsif workshop.gap %}
+        <tr class="timetable__slot timetable__slot--gap mins-{{workshop.duration}}">
+          <td class="timetable__slot-detail" colspan="2"></td>
+        </tr>
         {% else %}
-        <tr class="timetable__slot timetable__slot--break mins-30">
+        <tr class="timetable__slot timetable__slot--break mins-{{ workshop.duration }}">
           <td class="timetable__start-time">{{workshop.start_time}} <span class="timetable__break-name">{{workshop.title}}</span></td>
           <td class="timetable__slot-detail" colspan="2"></td>
         </tr>

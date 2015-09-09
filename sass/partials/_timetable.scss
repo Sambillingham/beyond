@@ -126,7 +126,7 @@
 }
 
 .schedule__workshops {
-  .timetable__slot--break {
+  .timetable__slot--break, .timetable__slot--gap  {
     .timetable__start-time {
       display: none;
       @include media($mobile) {
