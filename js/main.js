@@ -3,6 +3,7 @@ var app = {
   init: function () {
     this.uiActions ();
     svgeezy.init(false, 'png');
+    this.displayCountdown();
   },
   uiActions: function () {
       var self = this;
@@ -57,6 +58,19 @@ var app = {
     $('.js-data-description').html(data.description);
 
     $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
+  },
+  daysUntilDate: function(targetDate){
+    var today = new Date();
+    var beyond = new Date(targetDate);
+    var msPerDay = 24 * 60 * 60 * 1000;
+    var timeLeft = beyond.getTime() - today.getTime();
+    var daysLeft = Math.floor(timeLeft / msPerDay);
+    return daysLeft;
+  },
+  displayCountdown: function(){
+    var days = this.daysUntilDate('November 23, 2015').toString();
+    $('.days-left__num').first().text(days[0])
+    $('.days-left__num').last().text(days[1])
   }
 };
 
