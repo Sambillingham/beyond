@@ -3,3 +3,76 @@
   @include outer-padding;
   margin-bottom: 100px;
 }
+
+.tickets__options {
+  @include fill-parent();
+  @include row(table);
+}
+.ticket {
+  @include span-columns(2.4);
+  border-top: solid 5px $beyond-salmon;
+  padding: 20px 0;
+  text-align: center;
+  color: $beyond-salmon;
+}
+
+.arrow-down {
+  margin: -20px auto 0;
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid $beyond-salmon;
+}
+
+.ticket-countdown {
+  @include span-columns(2.4);
+  color: $beyond-salmon;
+  vertical-align: top;
+  padding: 20px 50px 0;
+}
+
+.ticket__price {
+  display: block;
+  margin: 30px auto;
+  font-family: $jaapokki;
+  font-size: 1.5em;
+  letter-spacing: 0.01em;
+}
+
+.ticket__price--unreleased {
+  color: RGBA(255, 115, 97, 0.5);
+}
+
+.ticket__type {
+  display: block;
+  font-size: 0.8em;
+}
+
+.ticket-countdown__days-left {
+  display: inline-block;
+  font-size: 4em;
+}
+.days-left__num {
+  display: inline-block;
+  background-color: $beyond-salmon;
+  color: #fff;
+  padding: 12px 6px 0;
+  font-weight: 700;
+  line-height: 1;
+  font-family: $jaapokki;
+  margin: 2px;
+
+}
+
+.ticket-buy-link {
+  @include reset-display;
+  @include span-columns(9.6);
+  display: block;
+  background-color: $beyond-salmon;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 2.5;
+  font-family: $jaapokki;
+}
