@@ -34,6 +34,7 @@ input:-webkit-autofill {
   border: 5px solid $beyond-salmon;
   margin: 0 0 0 0;
   padding: 8px 8px 8px 12px;
+  line-height: 2;
 
   @include placeholder {
     color: $beyond-salmon;
@@ -51,6 +52,7 @@ input:-webkit-autofill {
 
 .sign-up__email {
   border-left: none;
+  line-height: 2;
   @include media($tablet) {
     float: right;
     margin-right: 0;
@@ -65,12 +67,12 @@ input:-webkit-autofill {
   float: left;
   font-family: 'jaapokki-regular';
   color: #FDFFF4;
-  font-size: 1.1em;
+  font-size: 1em;
+  line-height: 2;
   background-color: $beyond-salmon;
+  border: 5px solid $beyond-salmon;
   width: 18%;
-  height: 46px;
   padding: 8px 0;
-  border: none;
 
   @include media($tablet) {
     width: 100%;
