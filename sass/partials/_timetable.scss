@@ -87,29 +87,12 @@
 }
 
 // Timing sizings
-.mins-15 {
-  & > td {
-    height: 100px;
+@for $i from 1 through 20 {
+  .#{mins}-#{$i*5} {
+    height: floor(6.6667 * ($i*5) )+ px;
   }
 }
 
-.mins-30 {
-  & > td {
-    height: 200px;
-  }
-}
-
-.mins-45 {
-  & > td {
-    height: 300px;
-  }
-}
-
-.mins-60 {
-  & > td {
-    height: 400px;
-  }
-}
 
 // Break slot styles
 .timetable__slot--break {
