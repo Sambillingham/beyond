@@ -20,6 +20,10 @@
     display: block;
     @include span-columns(4);
   }
+
+  &:last-child {
+    @include reset-display;
+  }
 }
 
 // This is needed to get the correct position of the speaker slot
