@@ -5,15 +5,23 @@
 }
 
 .tickets__options {
-  @include fill-parent();
-  @include row(table);
+  @include clearfix();
 }
 .ticket {
-  @include span-columns(2.4);
+  float: left;
+  width: 20%;
   border-top: solid 5px $beyond-salmon;
   padding: 20px 0;
   text-align: center;
   color: $beyond-salmon;
+
+  @include media($tablet) {
+    width: 40%;
+  }
+  @include media($mobile) {
+    width: 100%;
+    padding: 10px 0;
+  }
 }
 
 .arrow-down {
@@ -23,13 +31,33 @@
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
 	border-top: 20px solid $beyond-salmon;
+  @include media($mobile) {
+    margin: -10px auto 0;
+
+  }
 }
 
 .ticket-countdown {
-  @include span-columns(2.4);
+  float: left;
+  width: 20%;
   color: $beyond-salmon;
   vertical-align: top;
-  padding: 20px 50px 0;
+  padding: 20px 10px 0;
+  text-align: center;
+
+  @include media($mobile) {
+    border-top: solid 5px $beyond-salmon;
+    width: 100%;
+    padding: 20px;
+  }
+}
+.ticket-countdown__contents {
+  text-align: left;
+  display: inline-block;
+  font-size: 0.9em;
+  @include media($mobile) {
+    text-align: center;
+  }
 }
 
 .ticket__price {
@@ -38,6 +66,10 @@
   font-family: $jaapokki;
   font-size: 1.5em;
   letter-spacing: 0.01em;
+
+  @include media($mobile) {
+    margin: 10px auto;
+  }
 }
 
 .ticket__price--unreleased {
@@ -51,7 +83,11 @@
 
 .ticket-countdown__days-left {
   display: inline-block;
-  font-size: 4em;
+  font-size: 3.5em;
+
+  @include media($tablet) {
+    font-size: 2.8em;
+  }
 }
 .days-left__num {
   display: inline-block;
@@ -66,8 +102,8 @@
 }
 
 .ticket-buy-link {
-  @include reset-display;
-  @include span-columns(9.6);
+  clear: both;
+  width: 80%;
   display: block;
   background-color: $beyond-salmon;
   color: #fff;
@@ -75,4 +111,8 @@
   text-align: center;
   line-height: 2.5;
   font-family: $jaapokki;
+
+  @include media($mobile) {
+    width: 100%;
+  }
 }
