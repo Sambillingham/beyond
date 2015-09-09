@@ -52,7 +52,7 @@
     z-index: 10;
   }
 
-  &:hover {
+  &:not(.speaker--coming-soon):hover {
     &:before {
       display: block;
     }
