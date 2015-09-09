@@ -4,6 +4,7 @@ var app = {
     this.uiActions ();
     svgeezy.init(false, 'png');
     this.displayCountdown();
+    this.checkHashAndTriggerModal();
   },
   uiActions: function () {
       var self = this;
@@ -79,6 +80,13 @@ var app = {
     var days = this.daysUntilDate('November 23, 2015').toString();
     $('.days-left__num').first().text(days[0])
     $('.days-left__num').last().text(days[1])
+  },
+  checkHashAndTriggerModal: function(){
+    var hash = window.location.hash;
+
+    if( $('section').hasClass('schedule') && window.location.hash){
+      $(hash).trigger('click');
+    }
   }
 };
 
