@@ -1,23 +1,226 @@
 - speaker: true
+  name: Amelia Humfress
+  start_time: '9:15'
+  duration: 15
+  anchor: amelia
+  image: speaker-amelia-humfress.jpg
+  position: Founder & CEO
+  company: Steer
+  url: https://steer.me
+  twitter: ameliahumfress
+  title: Opening Remarks
+  description: >
+      <p>A welcome from the team behind Beyond.</p>
+
+- speaker: true
+  name: Una Kravets
+  start_time: '9:30'
+  duration: 30
+  anchor: una
+  image: speaker-una-kravets.jpg
+  position: Front-End Developer
+  company: IBM Design
+  url: http://www.ibm.com/design/
+  github: una
+  twitter: una
+  title: Open Sourcing Your Life
+  description: >
+    <p>Developers often talk about optimising their code bases, but what about optimising our personal development?</p>
+    <p>This session is about my journey with open sourcing my life.</p>
+    <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I've since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
+    <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
+
+- speaker: true
+  name: Maxim Cramer
+  start_time: '10:05'
+  duration: 15
+  anchor: una
+  image: speaker-maxim-cramer.jpg
+  position: iOS Developer
+  company: Swiftkey
+  url: https://swiftkey.com/en
+  github:
+  twitter: mennenia
+  title: Users! Now what?
+  description: >
+    <p>Coming Soon.</p>
+
+- speaker: true
+  name: Paul Lewis
+  start_time: '10:25'
+  duration: 30
+  anchor: una
+  image: speaker-paul-lewis.jpg
+  position: Chrome Developer Relations
+  company: Google
+  url: http://www.google.com/
+  github: paullewis
+  twitter: aerotwist
+  title: Performance on RAILs
+  description: >
+    <p>Looking around at web performance advice today can be overwhelming: everything comes with caveats, disclaimers, and sometimes one piece of advice can seem to actively contradict another. Phrases like “the DOM is slow” or “always use CSS animations!” make for great headlines, but the truth is often far more nuanced. In this session we'll look at how to think holistically about performance, and how to prioritize optimization work that your users will notice and appreciate.</p>
+
+- speaker: true
+  name: Coming soon. [Sponsor Message]
+  start_time: '11:00'
+  duration: 15
+
+- speaker: false
+  duration: 30
+  start_time: '11:20'
+  title: Break
+
+- speaker: true
   name: Harry Roberts
-  start_time: '9:00'
+  start_time: '11:50'
   duration: 30
   anchor: harry
   image: speaker-harry-roberts.jpg
-  position: Founder
+  position: Consultant Front-End Architect
   company: CSS Wizardry
   url: https://csswizardry.com
   github: csswizardry
   twitter: csswizardry
-  title: Becoming a better CSS Developer
+  title: Coming Soon
   description: >
-    <p>Developers often talk about optimizing their code bases, but what about optimizing our personal development?</p>
-    <p>This session is about my journey with open sourcing my life.</p>
-    <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I’ve since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
-    <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
+    <p>Coming Soon.</p>
 
+- speaker: true
+  name: Alana Wood
+  start_time: '12:25'
+  duration: 15
+  anchor: alana
+  image: speaker-alana-wood.jpg
+  position: Studio Design Lead
+  company: Ustwo
+  url: https://ustwo.com/
+  github:
+  twitter: missalanawood
+  title: Coming Soon
+  description: >
+    <p>Coming Soon</p>
+
+- speaker: true
+  name: Coming soon
+  start_time: '12:45'
+  duration: 30
+  anchor:
+  image:
+  position:
+  company:
+  url:
+  github:
+  twitter:
+  title: Coming Soon
+  description: >
+    <p>Coming Soon</p>
+
+- speaker: true
+  name: Coming soon. [Sponsor Message]
+  start_time: '13:20'
+  duration: 15
 
 - speaker: false
   duration: 60
-  start_time: '10:30'
+  start_time: '13:35'
+  title: Lunch
+
+- speaker: true
+  name: Claudina Sarahe
+  start_time: '14:35'
+  duration: 30
+  anchor: claudina
+  image: speaker-claudina-sarahe.jpg
+  position: Entrepreneur & Front-End Developer
+  company: Freelance
+  url: http://itsmisscs.me/
+  github: misscs
+  twitter: itsmisscs
+  title: It’s All About Systems
+  description: >
+    <p>Coming soon</p>
+
+- speaker: true
+  name: Andy Appleton
+  start_time: '15:10'
+  duration: 30
+  anchor: andy
+  image: speaker-andy-appleton.jpg
+  position: Web Developer
+  company: Heroku
+  url: https://www.heroku.com/
+  github: appleton
+  twitter: appltn
+  title: Done Is Better Than Perfect
+  description: >
+    <p>The Heroku dashboard is a large client side JavaScript app which was rewritten with Ember last year. Since then the project has gone from a promising greenfield of perfect code to a bit of a mess and lately, back again.</p>
+    <p>This is a story about the practicalities of working on a large software project. Trying to do the right thing, making trade offs along the way and taking tough decisions to get the thing shipped. We'll talk about balancing conflicting requirements, when to compromise, when not to and how to clean up afterwards.</p>
+
+- speaker: true
+  name: Alice Bartlett
+  start_time: '15:45'
+  duration: 30
+  anchor: alice
+  image: speaker-alice-bartlett.jpg
+  position: Senior Developer
+  company: Government Digital Service
+  url: https://gds.blog.gov.uk/
+  github: alicebartlett
+  twitter: alicebartlett
+  title: Asking for More
+  description: >
+    <p>Coming Soon</p>
+
+- speaker: false
+  duration: 30
+  start_time: '16:15'
   title: Break
+
+- speaker: true
+  name: Coming soon
+  start_time: '16:45'
+  duration: 30
+  anchor:
+  image:
+  position:
+  company:
+  url:
+  github:
+  twitter:
+  title: Coming Soon
+  description: >
+    <p>Coming Soon</p>
+
+- speaker: false
+  duration: 30
+  start_time: '16:15'
+  title: Break
+
+- speaker: true
+  name: Coming soon
+  start_time: '17:40'
+  duration: 30
+  anchor: linda
+  image: speaker-linda-liukas.jpg
+  position: Author
+  company: Hello Ruby
+  url: http://www.helloruby.com/
+  github: lindaliukas
+  twitter: lindaliukas
+  title: Linda Liukas
+  description: >
+    <p>Coming Soon</p>
+
+- speaker: true
+  name: Amelia Humfress
+  start_time: '18:15'
+  duration: 15
+  anchor: amelia
+  image: speaker-amelia-humfress.jpg
+  position: Founder & CEO
+  company: Steer
+  url: https://steer.me
+  twitter: ameliahumfress
+  title: Closing Remarks
+  description: >
+      <p>A thank you from the team behind Beyond and details for the after-party.</p>
