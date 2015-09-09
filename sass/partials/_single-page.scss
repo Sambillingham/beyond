@@ -1,0 +1,31 @@
+.single-page {
+  @include outer-container();
+  @include outer-padding();
+}
+
+.single-page__content {
+  @include span-columns(8);
+  @include shift(2);
+  padding: 40px 0;
+  color: $beyond-blue;
+  line-height: 1.7;
+
+  @include media($tablet) {
+    @include span-columns(10);
+    @include shift(1);
+  }
+
+  a {
+    color: $beyond-salmon;
+  }
+}
+
+.code-of-conduct__brief {
+  font-weight: 700;
+  font-size: 1.3em;
+  line-height: 1.4;
+
+  @include media($tablet) {
+    font-size: 1.2em;
+  }
+}
