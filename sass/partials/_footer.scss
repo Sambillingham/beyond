@@ -1,17 +1,21 @@
 footer {
-  @include outer-container;
+  @include outer-container();
+  @include outer-padding();
+
   color: #2670CA;
-  padding: 25px 0;
-  @include outer-padding;
-  margin-top: 40px;
   line-height: 2em;
-  border-top: 5px solid $beyond-salmon;
   @include media($tablet) {
     margin-top: 0;
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px 0 25px 0;
   }
+}
+
+.footer__content {
+  padding: 25px 0;
+  border-top: 5px solid $beyond-salmon;
+  @include clearfix;
 }
 
 .footer__organised-by {

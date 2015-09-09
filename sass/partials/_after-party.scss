@@ -1,9 +1,14 @@
 .after-party {
   @include outer-container;
+  @include outer-padding;
   @include fill-parent();
   @include row(table);
-  padding: 50px 0;
   position: relative;
+  margin-bottom: 100px;
+
+  @include media($tablet) {
+    padding: 0;
+  }
 }
 
 .after-party__feature-image {

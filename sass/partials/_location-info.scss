@@ -1,8 +1,14 @@
 
 .location-info {
   @include outer-container();
+  @include outer-padding();
+  margin-bottom: 75px;
+  
   @include clearfix();
-  padding: 50px 0 0 0;
+
+  @include media($tablet) {
+    padding: 0;
+  }
 }
 
 .location-info__content {

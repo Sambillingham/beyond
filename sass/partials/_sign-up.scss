@@ -1,7 +1,7 @@
 .sign-up {
   @include outer-container;
-  padding: 50px 0 20px;
   @include outer-padding;
+  margin-bottom: 100px;
 
   h2 {
   color: $beyond-salmon;
