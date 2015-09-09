@@ -10,6 +10,10 @@
   display: none;
 }
 
+.slot-info__image {
+  max-width: 100%;
+}
+
 .slot-info__meta {
   padding: 15px;
   @include clearfix;
