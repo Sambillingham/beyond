@@ -1,0 +1,5 @@
+.tickets {
+  @include outer-container;
+  @include outer-padding;
+  margin-bottom: 100px;
+}
