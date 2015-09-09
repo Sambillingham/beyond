@@ -74,7 +74,18 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('browser-sync', ['sass', 'jekyll-dev'], function() {
+// Seperate task to build and move sass on jekyll rebuild
+// - sass-on-build depends on sass rebuild taking an aditional 2s even if only updating sass
+//  used for inital launch and when rebuilding _site/
+gulp.task('sass-on-build', ['jekyll-dev'], function() {
+    return sass('sass/', { style: 'expanded' })
+        .pipe(prefix("last 3 version", "> 1%", "ie 8"))
+        .pipe(rename('main.css'))
+        .pipe(gulp.dest('_site/css'))
+        .pipe(browserSync.reload({stream:true}))
+});
+
+gulp.task('browser-sync', ['jekyll-dev', 'sass-on-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -90,9 +101,9 @@ gulp.task('deploy', function() {
 gulp.task('watch', function() {
     gulp.watch('js/main.js', ['lint', 'reload-js']);
     gulp.watch('sass/**/{*.sass,*.scss}', ['sass']);
-    gulp.watch(['index.html', 'schedule.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', 'schedule.html', '_layouts/*.html', '_posts/*', '_data/*'], ['jekyll-rebuild', 'sass-on-build']);
 });
 
-gulp.task('dev', ['browser-sync', 'sass', 'watch']);
+gulp.task('dev', ['browser-sync', 'watch']);
 gulp.task('build', ['jekyll-prod', 'clean-prod','prod-sass', 'prod-js']);
 gulp.task('default', ['dev']);
