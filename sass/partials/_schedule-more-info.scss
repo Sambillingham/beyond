@@ -38,6 +38,7 @@
 .slot-info__speaker-details {
   float: left;
   margin-bottom: 30px;
+  width: 100%;
   h3 {
     margin-bottom: 0;
     color: #FFFFFF;
@@ -45,9 +46,10 @@
 }
 
 .slot-info__links {
-  float: right;
+  float: left;
+  margin-bottom: 20px;
   a {
-    margin-left: 15px;
+    margin-right: 15px;
     text-decoration: none;
   }
 }
