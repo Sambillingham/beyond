@@ -78,8 +78,8 @@ title: Schedule
         </tr>
         {% else %}
         <tr class="timetable__slot timetable__slot--break mins-{{ workshop.duration }}">
-          <td class="timetable__start-time">{{workshop.start_time}} <span class="timetable__break-name">{{workshop.title}}</span></td>
-          <td class="timetable__slot-detail" colspan="2"></td>
+          <td class="timetable__start-time">{{ workshop.start_time }} <span class="timetable__break-name timetable__slot--{{workshop.break}}">{{workshop.title}}</span></td>
+          <td class="timetable__slot-detail"></td>
         </tr>
         {% endif %}
         {% endfor %}

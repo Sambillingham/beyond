@@ -113,6 +113,12 @@
   }
 }
 
+.mins-30 .timetable__start-time {
+  height: 200px;
+}
+.mins-60 .timetable__start-time {
+  height: 400px;
+}
 
 // Break slot styles
 .timetable__slot--break {
