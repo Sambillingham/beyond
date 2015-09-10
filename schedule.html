@@ -64,7 +64,7 @@ title: Schedule
       <tbody>
         {% for workshop in site.data.workshops %}
         {% if workshop.workshop %}
-        <tr id="anchor-{{workshop.anchor}}" class="timetable__slot mins-{{workshop.duration}}" data-image="{{workshop.image}}" data-name="{{workshop.name}}" data-position="{{workshop.position}}" data-company="{{workshop.company}}" data-url="{{workshop.url}}" data-twitter="{{workshop.twitter}}" data-github="{{workshop.github}}" data-title="{{workshop.title}}" data-description="{{workshop.description}}">
+        <tr id="anchor-{{workshop.anchor}}" class="timetable__slot mins-{{workshop.duration}} {{workshop.soon}}" data-image="{{workshop.image}}" data-name="{{workshop.name}}" data-position="{{workshop.position}}" data-company="{{workshop.company}}" data-url="{{workshop.url}}" data-twitter="{{workshop.twitter}}" data-github="{{workshop.github}}" data-title="{{workshop.title}}" data-description="{{workshop.description}}">
           <td class="timetable__start-time">{{workshop.start_time}}</td>
           <td class="timetable__slot-detail">
             <h2 class="timetable__title">{{workshop.title}}</h2>
