@@ -8,6 +8,7 @@
   company: Steer
   url: https://steer.me
   twitter: ameliahumfress
+  github: false
   title: Opening Remarks
   description: >
       <p>A welcome from the team behind Beyond.</p>
@@ -39,7 +40,7 @@
   position: iOS Developer
   company: Swiftkey
   url: https://swiftkey.com/en
-  github:
+  github: false
   twitter: mennenia
   title: Users! Now what?
   description: >
@@ -95,7 +96,7 @@
   position: Studio Design Lead
   company: Ustwo
   url: https://ustwo.com/
-  github:
+  github: false
   twitter: missalanawood
   title: Talk Title TBC
   description: >

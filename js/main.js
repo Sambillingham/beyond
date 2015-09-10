@@ -58,7 +58,12 @@ var app = {
     $('.js-data-company').text(data.company);
     $('.js-data-url').attr('href', data.url);
     $('.js-data-twitter').attr('href', 'https://twitter.com/'+ data.twitter);
-    $('.js-data-github').attr('href', 'https://github.com/' + data.github);
+    if(data.github){
+      $('.js-data-github').attr('href', 'https://github.com/' + data.github);
+      $('.js-data-github').fadeIn();
+    } else {
+      $('.js-data-github').fadeOut();
+    }
     $('.js-data-title').text(data.title);
     $('.js-data-description').html(data.description);
 
