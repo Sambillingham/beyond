@@ -43,7 +43,7 @@ gulp.task('prod-sass', ['clean-prod'], function() {
         .pipe(prefix("last 3 version", "> 1%", "ie 8"))
         .pipe(rename('main.min.css'))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('_site/css/'))
+        .pipe(gulp.dest('_site/css'))
 });
 
 gulp.task('prod-js', ['clean-prod'], function() {
