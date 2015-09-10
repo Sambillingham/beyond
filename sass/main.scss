@@ -30,6 +30,10 @@ body {
   font-size: 1em;
 }
 
+body.lock-scroll {
+  overflow: hidden;
+}
+
 h2,h3 {
   font-family: 'jaapokki-regular';
 }

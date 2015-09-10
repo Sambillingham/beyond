@@ -22,7 +22,8 @@ var app = {
       });
 
       $('.js-section-header-modal').on('click', function(){
-        $('.js-schedule__more-info').fadeOut();
+        $('body').removeClass('lock-scroll');
+        $('.js-schedule__more-info, .schedule-info-overlay').fadeOut();
       });
   },
   mailChimpAjaxRegister: function (form){
@@ -68,11 +69,14 @@ var app = {
     $('.js-data-description').html(data.description);
 
    if(Modernizr.mq('only screen and (max-width: 850px)')) {
+      $('body').addClass('lock-scroll');
       $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>')
-      $('.js-slot-info, .js-schedule__more-info').fadeIn();
+      $('.js-slot-info, .js-schedule__more-info, .schedule-info-overlay').fadeIn();
+
    } else {
       $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
    }
+
   },
   daysUntilDate: function(targetDate){
     var today = new Date();
