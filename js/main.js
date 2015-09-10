@@ -78,7 +78,7 @@ var app = {
     return daysLeft;
   },
   displayCountdown: function(){
-    var days = this.daysUntilDate('November 23, 2015').toString();
+    var days = this.daysUntilDate('September 28, 2015').toString();
     $('.days-left__num').first().text(days[0])
     $('.days-left__num').last().text(days[1])
   },
