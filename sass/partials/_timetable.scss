@@ -57,12 +57,18 @@
   }
 }
 
-.timetable__slot {
+.timetable__slot:not(.coming__soon--true) {
   cursor: pointer;
   &:hover {
     .timetable__start-time {
       background-color: $beyond-salmon;
       color: #FFFFFF;
+    }
+  }
+  &.timetable__slot--break:hover, .timetable__slot--break--lunch:hover {
+    .timetable__start-time {
+      color: $beyond-yellow;
+      background-color: #FFEEC0;
     }
   }
 }

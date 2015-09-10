@@ -33,7 +33,7 @@ layout: default
         {% for speaker in site.data.speakers %}
         <!-- This could probably do with better naming stuff but im tired  -->
         {% if speaker.speaker %}
-        <tr id="anchor-{{speaker.anchor}}" class="timetable__slot mins-{{speaker.duration}}" data-image="{{speaker.image}}" data-name="{{speaker.name}}" data-position="{{speaker.position}}" data-company="{{speaker.company}}" data-url="{{speaker.url}}" data-twitter="{{speaker.twitter}}" data-github="{{speaker.github}}" data-title="{{speaker.title}}" data-description="{{speaker.description}}">
+        <tr id="anchor-{{speaker.anchor}}" class="timetable__slot mins-{{speaker.duration}} {{speaker.soon}}" data-image="{{speaker.image}}" data-name="{{speaker.name}}" data-position="{{speaker.position}}" data-company="{{speaker.company}}" data-url="{{speaker.url}}" data-twitter="{{speaker.twitter}}" data-github="{{speaker.github}}" data-title="{{speaker.title}}" data-description="{{speaker.description}}">
           <td class="timetable__start-time">{{speaker.start_time}}</td>
           <td class="timetable__slot-detail">
             <h2 class="timetable__title">{{speaker.title}}</h2>
