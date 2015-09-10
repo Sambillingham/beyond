@@ -38,10 +38,10 @@ var app = {
 
         if (data.result !== 'success') {
           console.log(data);
-          $('.sign-up__message').addClass('.sign-up__message--active sign-up__message--fail').html(message);
+          $('.sign-up__message').addClass('sign-up__message--active sign-up__message--fail').html(message);
         } else {
           console.log(data);
-          $('.sign-up__message').addClass('.sign-up__message--active sign-up__message--success').html(message);
+          $('.sign-up__message').addClass('sign-up__message--active sign-up__message--success').html(message);
         }
       }
     }); // end AJAX
