@@ -24,6 +24,7 @@
   title: Break
 
 - workshop: true
+  soon: coming__soon--true
   name: Workshop
   start_time: '11:50'
   duration: 60

@@ -78,7 +78,7 @@
   duration: 30
   anchor: harry
   image: speaker-harry-roberts.jpg
-  position: Consultant Front-End Architect
+  position: Front-End Architect
   company: CSS Wizardry
   url: https://csswizardry.com
   github: csswizardry
@@ -100,7 +100,7 @@
   twitter: missalanawood
   title: Talk Title TBC
   description: >
-    <p>Coming Soon</p>
+    <p>More information coming soon.</p>
 
 - speaker: true
   name:
@@ -116,7 +116,7 @@
   twitter:
   title: TBC
   description: >
-    <p>Coming Soon</p>
+    <p>More information coming soon.</p>
 
 - speaker: true
   soon: coming__soon--true
@@ -128,6 +128,7 @@
   duration: 60
   start_time: '13:35'
   title: Lunch
+  break: lunch
 
 - speaker: true
   name: Claudina Sarahe
@@ -142,7 +143,8 @@
   twitter: itsmisscs
   title: It’s All About Systems
   description: >
-    <p>Coming soon</p>
+    <p>More information coming soon.</p>
+
 
 - speaker: true
   name: Andy Appleton
@@ -195,12 +197,7 @@
   twitter:
   title: Coming Soon
   description: >
-    <p>Coming Soon</p>
-
-- speaker: false
-  duration: 30
-  start_time: '16:15'
-  title: Break
+    <p>More information coming soon.</p>
 
 - speaker: true
   name: Linda Liukas
@@ -215,7 +212,7 @@
   twitter: lindaliukas
   title: Talk Title TBC
   description: >
-    <p>Coming Soon</p>
+    <p>More information coming soon.</p>
 
 - speaker: true
   name: Amelia Humfress
