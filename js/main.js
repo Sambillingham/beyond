@@ -17,7 +17,7 @@ var app = {
         event.preventDefault();
       });
 
-      $('.timetable__slot').not('.timetable__slot--break, .coming__soon--true ').on('click', function(event) {
+      $('.timetable__slot').not('.timetable__slot--break, .coming__soon--true, .timetable__slot--gap ').on('click', function(event) {
         var slot = this;
         self.scheduleSPeakerInfo(slot);
         event.preventDefault();
