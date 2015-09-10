@@ -2,9 +2,11 @@
 var app = {
   init: function () {
     this.uiActions ();
-    svgeezy.init(false, 'png');
     this.displayCountdown();
     this.checkHashAndTriggerModal();
+    this.sizeFixes();
+
+    svgeezy.init(false, 'png');
   },
   uiActions: function () {
       var self = this;
@@ -97,6 +99,24 @@ var app = {
     if( $('section').hasClass('schedule') && window.location.hash){
       $(hash).trigger('click');
     }
+  },
+  sizeFixes: function(){
+
+    if(Modernizr.mq('only screen and (min-width: 850px)')) {
+      $('.js-ticket-buy-link').detach().insertAfter('.ticket-countdown');
+    }
+
+    $(window).on('resize', function(){
+
+      if(Modernizr.mq('only screen and (max-width: 850px)')) {
+        $('.js-slot-info').css('margin-top', 0);
+        $('.js-ticket-buy-link').detach().insertBefore('.ticket-countdown');
+      } else {
+        $('.js-section-header-modal').empty();
+        $('.js-ticket-buy-link').detach().insertAfter('.ticket-countdown');
+      }
+
+    });
   }
 };
 
