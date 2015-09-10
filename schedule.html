@@ -1,14 +1,15 @@
 ---
 layout: default
+permalink: 'schedule/'
 ---
 <header class="header">
 
     <div class="header__social">
       <a href="/">
-        <img src="img/beyond-logo-small.svg" alt="Beyond Conf Logo" class="header__logo">
+        <img src="/img/beyond-logo-small.svg" alt="Beyond Conf Logo" class="header__logo">
       </a>
-      <a href="https://twitter.com/beyondconf_"><img class="header__social__icon" src="img/twitter.svg" alt="Beyond Conf Twitter"></a>
-      <a href="mailto:amelia@beyondconf.co"><img class="header__social__icon" src="img/mail.svg" alt="Mail Beyond Conf"></a>
+      <a href="https://twitter.com/beyondconf_"><img class="header__social__icon" src="/img/twitter.svg" alt="Beyond Conf Twitter"></a>
+      <a href="mailto:amelia@beyondconf.co"><img class="header__social__icon" src="/img/mail.svg" alt="Mail Beyond Conf"></a>
     </div>
 
     <div class="header__event-date">
@@ -18,7 +19,7 @@ layout: default
 
     <nav class="header__nav">
       <a href="https://www.eventbrite.co.uk/e/beyond-conf-2015-tickets-18517110175">Tickets</a>
-      <a href="/schedule.html" class="active-link schedule-link">Schedule</a>
+      <a href="/schedule" class="active-link schedule-link">Schedule</a>
     </nav>
 </header>
 
@@ -38,7 +39,7 @@ layout: default
           <td class="timetable__slot-detail">
             <h2 class="timetable__title">{{speaker.title}}</h2>
             <h3 class="timetable__speaker">{{speaker.name}}</h3>
-            <img src="img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
+            <img src="/img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
           </td>
         </tr>
 
@@ -67,7 +68,7 @@ layout: default
           <td class="timetable__slot-detail">
             <h2 class="timetable__title">{{workshop.title}}</h2>
             <h3 class="timetable__speaker">{{workshop.name}}</h3>
-            <img src="img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
+            <img src="/img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
           </td>
         </tr>
         {% elsif workshop.gap %}
@@ -99,13 +100,13 @@ layout: default
 
         <nav class="slot-info__links">
           <a href="#" class="js-data-url">
-            <img src="img/icon-link.svg" alt="Personal site">
+            <img src="/img/icon-link.svg" alt="Personal site">
           </a>
           <a href="#" class="js-data-twitter">
-            <img src="img/icon-twitter.svg" alt="Twitter profile">
+            <img src="/img/icon-twitter.svg" alt="Twitter profile">
           </a>
           <a href="#" class="js-data-github">
-            <img src="img/icon-github.svg" alt="Github profile">
+            <img src="/img/icon-github.svg" alt="Github profile">
           </a>
         </nav>
       </div>
