@@ -56,8 +56,7 @@
     border-bottom: 1px solid $beyond-salmon;
   }
 }
-
-.timetable__slot:not(.coming__soon--true) {
+.timetable__slot:not(.coming__soon--true){
   cursor: pointer;
   &:hover {
     .timetable__start-time {
@@ -70,6 +69,20 @@
       color: $beyond-yellow;
       background-color: #FFEEC0;
     }
+  }
+}
+
+.timetable__slot.timetable__slot--gap {
+  cursor: default;
+
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.schedule__workshops .timetable__slot--break{
+  @include media($mobile) {
+    display: none;
   }
 }
 
@@ -158,7 +171,6 @@
 .schedule__workshops {
   .timetable__slot--break, .timetable__slot--gap  {
     .timetable__start-time {
-      display: none;
       @include media($mobile) {
         display: block;
       }
