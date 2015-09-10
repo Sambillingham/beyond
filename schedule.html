@@ -46,7 +46,7 @@ title: Schedule
 
         {% else %}
         <tr class="timetable__slot timetable__slot--break mins-{{ speaker.duration }}">
-          <td class="timetable__start-time">{{ speaker.start_time }} <span class="timetable__break-name">{{speaker.title}}</span></td>
+          <td class="timetable__start-time">{{ speaker.start_time }} <span class="timetable__break-name timetable__slot--{{speaker.break}}">{{speaker.title}}</span></td>
           <td class="timetable__slot-detail"></td>
         </tr>
         {% endif %}

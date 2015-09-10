@@ -145,6 +145,10 @@
   @include transform-origin(top top);
 }
 
+.timetable__slot--lunch {
+    margin-top: 96px;
+}
+
 .schedule__workshops {
   .timetable__slot--break, .timetable__slot--gap  {
     .timetable__start-time {
