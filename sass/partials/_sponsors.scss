@@ -1,23 +1,47 @@
 .sponsors {
   @include outer-container();
-  padding: 50px 0;
+  @include outer-padding();
+  margin-bottom: 100px;
+
+  @include media($mobile) {
+    padding: 20px 0;
+  }
+}
+
+.section-header--top-line {
+  border-bottom: none;
+}
+
+.sponsors__headline {
+  padding: 40px 0 100px;
+}
+
+.sponsors__partners {
+  display: table;
+  width: 100%;
+
+  .sponsor {
+    @include span-columns(4, table);
+    padding: 40px 0 100px;
+    @include media($mobile) {
+      width: 100%;
+      display: block;
+      padding: 50px 0;
+    }
+  }
+
+  .sponsor__image {
+    max-width: 60%;
+  }
 }
 
 .sponsor {
-  @include span-columns(3);
   text-align: center;
-
-  @include media($mobile) {
-    @include span-columns(2);
-    @include shift();
-
-    &:not(:last-of-type){
-      margin-bottom: 50px;
-    }
-  }
 }
 
 .sponsor__image {
   vertical-align: middle;
-  max-width: 80%;
+  @include media($mobile) {
+    max-width: 100%;
+  }
 }

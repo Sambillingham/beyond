@@ -2,6 +2,10 @@
 var app = {
   init: function () {
     this.uiActions ();
+    this.displayCountdown();
+    this.checkHashAndTriggerModal();
+    this.sizeFixes();
+
     svgeezy.init(false, 'png');
   },
   uiActions: function () {
@@ -13,9 +17,15 @@ var app = {
         event.preventDefault();
       });
 
-      $('.more-speakers__btn').on('click', function(){
-          $('.speakers__aditional-speakers').slideDown(800);
-          return false;
+      $('.timetable__slot').not('.timetable__slot--break, .coming__soon--true ').on('click', function(event) {
+        var slot = this;
+        self.scheduleSPeakerInfo(slot);
+        event.preventDefault();
+      });
+
+      $('.js-section-header-modal').on('click', function(){
+        $('body').removeClass('lock-scroll');
+        $('.js-schedule__more-info, .schedule-info-overlay').fadeOut();
       });
   },
   mailChimpAjaxRegister: function (form){
@@ -32,13 +42,81 @@ var app = {
 
         if (data.result !== 'success') {
           console.log(data);
-          $('.sign-up__message').addClass('sign-up__message--fail').html(message);
+          $('.sign-up__message').addClass('sign-up__message--active sign-up__message--fail').html(message);
         } else {
           console.log(data);
-          $('.sign-up__message').addClass('sign-up__message--success').html(message);
+          $('.sign-up__message').addClass('sign-up__message--active sign-up__message--success').html(message);
         }
       }
     }); // end AJAX
+  },
+  scheduleSPeakerInfo: function(slot) {
+    var $slot = $(slot);
+    var pxFromTop = $slot.position().top;
+    var data = $slot.data();
+
+    $('.js-data-image').attr('src', '/img/'+ data.image);
+    $('.js-data-name').text(data.name);
+    $('.js-data-position').text(data.position);
+    $('.js-data-company').text(data.company);
+    $('.js-data-url').attr('href', data.url);
+    $('.js-data-twitter').attr('href', 'https://twitter.com/'+ data.twitter);
+    if(data.github){
+      $('.js-data-github').attr('href', 'https://github.com/' + data.github);
+      $('.js-data-github').fadeIn();
+    } else {
+      $('.js-data-github').fadeOut();
+    }
+    $('.js-data-title').text(data.title);
+    $('.js-data-description').html(data.description);
+
+   if(Modernizr.mq('only screen and (max-width: 850px)')) {
+      $('body').addClass('lock-scroll');
+      $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>');
+      $('.js-slot-info, .js-schedule__more-info, .schedule-info-overlay').fadeIn();
+
+   } else {
+      $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
+   }
+
+  },
+  daysUntilDate: function(targetDate){
+    var today = new Date();
+    var beyond = new Date(targetDate);
+    var msPerDay = 24 * 60 * 60 * 1000;
+    var timeLeft = beyond.getTime() - today.getTime();
+    var daysLeft = Math.floor(timeLeft / msPerDay);
+    return daysLeft;
+  },
+  displayCountdown: function(){
+    var days = this.daysUntilDate('September 28, 2015').toString();
+    $('.days-left__num').first().text(days[0]);
+    $('.days-left__num').last().text(days[1]);
+  },
+  checkHashAndTriggerModal: function(){
+    var hash = window.location.hash;
+
+    if( $('section').hasClass('schedule') && window.location.hash){
+      $(hash).trigger('click');
+    }
+  },
+  sizeFixes: function(){
+
+    if(Modernizr.mq('only screen and (min-width: 850px)')) {
+      $('.js-ticket-buy-link').detach().insertAfter('.ticket-countdown');
+    }
+
+    $(window).on('resize', function(){
+
+      if(Modernizr.mq('only screen and (max-width: 850px)')) {
+        $('.js-slot-info').css('margin-top', 0);
+        $('.js-ticket-buy-link').detach().insertBefore('.ticket-countdown');
+      } else {
+        $('.js-section-header-modal').empty();
+        $('.js-ticket-buy-link').detach().insertAfter('.ticket-countdown');
+      }
+
+    });
   }
 };
 

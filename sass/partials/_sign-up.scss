@@ -1,18 +1,17 @@
-
 .sign-up {
-  @include outer-container();
-  padding: 50px $gutter;
+  @include outer-container;
+  @include outer-padding;
+  margin-bottom: 100px;
 
+  h2 {
+  color: $beyond-salmon;
+  margin-bottom: 20px;
+  }
 }
 
 form {
   @include span-columns(12);
-  @include clearfix();
-
-  @include media($tablet) {
-    @include span-columns(9);
-    @include shift(1.5);
-  }
+  @include clearfix;
 }
 
 label {
@@ -22,54 +21,70 @@ label {
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
+
 .sign-up input {
-  float: left;
-  border: none;
   outline: none;
-  padding: 12px 12px 12px 0;
   border-radius: 0;
-  border-bottom: solid 8px $beyond-yellow;
 }
 
 .sign-up__name,
 .sign-up__email {
+  float: left;
   width: 40%;
+  border: 5px solid $beyond-salmon;
+  margin: 0 0 0 0;
+  padding: 10px 8px 6px 12px;
+  line-height: 2;
 
   @include placeholder {
-    color: $beyond-yellow;
+    color: $beyond-salmon;
   }
 
   @include media($tablet) {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+
+  @include media($mobile) {
     width: 100%;
   }
 }
 
-.sign-up__name {
-  margin: 0 1% 0 0;
+.sign-up__email {
+  border-left: none;
+  line-height: 2;
+  @include media($tablet) {
+    float: right;
+    margin-right: 0;
+  }
+
+  @include media($mobile) {
+    border-left: 5px solid $beyond-salmon;
+  }
 }
 
 .sign-up__submit {
+  float: left;
+  font-family: 'jaapokki-regular';
   color: #FDFFF4;
-  background-color: $beyond-blue;
-  width: 19%;
+  font-size: 1.2em;
+  background-color: $beyond-salmon;
+  border: 5px solid $beyond-salmon;
+  width: 20%;
+  padding: 13px 0 6px;
 
   @include media($tablet) {
     width: 100%;
-  }
-}
-.sign-up .sign-up__submit {
-  @include media($tablet) {
-    border: none;
   }
 }
 
 .sign-up__message {
   @include span-columns(12);
-
-  text-align: center;
-  padding: 15px 0;
 }
 
+.sign-up__message--active {
+  padding: 15px 0;
+}
 
 .sign-up__message--fail {
   color: $beyond-salmon;
@@ -80,7 +95,7 @@ input:-webkit-autofill {
 }
 
 .sign-up__message a {
-  color: beyond-yellow;
+  color: $beyond-yellow;
   text-decoration: none;
   border-bottom: solid 2px $beyond-yellow;
 }

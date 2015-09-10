@@ -1,13 +1,53 @@
 footer {
-  text-align: center;
+  @include outer-container();
+  @include outer-padding();
+
   color: #2670CA;
-  padding: 30px 40px;
   line-height: 2em;
+  @include media($tablet) {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 0 25px 0;
+  }
 }
 
-footer a {
-  color: $steer-red;
-  text-decoration: none;
-  border-bottom: solid 3px $steer-red;
-  font-weight: 700;
+.footer__content {
+  padding: 25px 0;
+  border-top: 5px solid $beyond-salmon;
+  @include clearfix;
+}
+
+.footer__organised-by {
+  float: right;
+  margin: 0;
+  a {
+    color: $steer-red;
+    text-decoration: none;
+    border-bottom: solid 3px $steer-red;
+    font-weight: 700;
+  }
+  @include media($tablet) {
+    float: none;
+    border-top: 5px solid $beyond-blue;
+    margin-top: 25px;
+    padding-top: 10px;
+  }
+}
+
+.footer__nav {
+  float: left;
+  a {
+    text-decoration: none;
+    color: $beyond-salmon;
+    border-bottom: none;
+    margin-right: 74px;
+    font-weight: 700;
+    @include media($tablet) {
+      display: block;
+    }
+  }
+  @include media($tablet) {
+    float: none;
+  }
 }

@@ -1,0 +1,167 @@
+.schedule {
+  @include outer-container;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @include fill-parent();
+  @include row(table);
+
+  @include media($mobile) {
+    @include row();
+  }
+}
+
+.schedule__talks,
+.schedule__workshops,
+.schedule__more-info {
+  width: 33.33333%;
+  display: table-cell;
+  vertical-align: top;
+
+  @include media($tablet) {
+    // probably dont actually need this but maybe for older browsers
+    width: 50%;
+  }
+  @include media($mobile) {
+    // probably dont actually need this but maybe for older browsers
+    display: block;
+    width: 100%;
+  }
+}
+
+.schedule {
+  @include outer-container;
+  margin-top: 50px;
+
+  @include fill-parent();
+  @include row(table);
+
+  @include media($mobile) {
+    @include row();
+  }
+}
+// This is needed to get the correct position of the speaker slot
+.js-offset-parent {
+  position: relative;
+}
+
+.timetable {
+  width: 100%;
+  @include media($mobile) {
+    margin-bottom: 50px;
+  }
+  td {
+    vertical-align: top;
+    padding-top: 10px;
+    border-bottom: 1px solid $beyond-salmon;
+  }
+}
+
+.timetable__slot:not(.coming__soon--true) {
+  cursor: pointer;
+  &:hover {
+    .timetable__start-time {
+      background-color: $beyond-salmon;
+      color: #FFFFFF;
+    }
+  }
+  &.timetable__slot--break:hover, .timetable__slot--break--lunch:hover {
+    .timetable__start-time {
+      color: $beyond-yellow;
+      background-color: #FFEEC0;
+    }
+  }
+}
+
+.timetable__start-time {
+  width: 60px;
+  text-align: center;
+  color: $beyond-salmon;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.timetable__slot-detail {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+.timetable__title {
+  color: $beyond-salmon;
+  margin-bottom: 0;
+}
+
+.timetable__speaker {
+  font-family: 'Varela Round', sans-serif;
+  color: $beyond-salmon;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+.timetable__open-symbol {
+  display: none;
+  width: 20px;
+  margin-top: 7px;
+  @include media($tablet) {
+    display: inline-block;
+  }
+}
+
+// Timing sizings
+@for $i from 1 through 20 {
+  .#{mins}-#{$i*5} {
+    height: floor(6.6667 * ($i*5) )+ px;
+  }
+}
+
+.mins-30 .timetable__start-time {
+  height: 200px;
+}
+.mins-60 .timetable__start-time {
+  height: 400px;
+}
+
+// Break slot styles
+.timetable__slot--break {
+  .timetable__start-time {
+    color: $beyond-yellow;
+    background-color: #FFEEC0;
+  }
+  .timetable__slot-detail {
+    background-color: #FFE3A0;
+    background-image: url(../img/lunch-pattern.svg);
+    background-size: contain;
+  }
+
+  &:hover {
+    cursor: default;
+    .timetable__start-time {
+      color: $beyond-yellow;
+      background-color: #FFEEC0;
+    }
+  }
+}
+
+.timetable__break-name {
+  display: block;
+  font-family: 'jaapokki-regular';
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 1;
+  @include transform(rotate(-90deg) translate(-90%, 0));
+  @include transform-origin(top top);
+}
+
+.timetable__slot--lunch {
+    margin-top: 96px;
+}
+
+.schedule__workshops {
+  .timetable__slot--break, .timetable__slot--gap  {
+    .timetable__start-time {
+      display: none;
+      @include media($mobile) {
+        display: block;
+      }
+    }
+  }
+}

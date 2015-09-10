@@ -1,7 +1,8 @@
 # Site settings
-title: Beyond Conference
+title: Beyond Conference 2015
 baseurl: ""
 url: "http://beyondconf.co"
+description: Beyond 2015 is a one-day conference for people who code. Join 600 developers on 23rd November for a day of inspiring talks and interactive workshops.
 
 # Build settings
 markdown: kramdown

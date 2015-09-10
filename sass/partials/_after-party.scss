@@ -1,10 +1,14 @@
 .after-party {
   @include outer-container;
+  @include outer-padding;
   @include fill-parent();
   @include row(table);
-  padding: 50px 0;
   position: relative;
+  margin-bottom: 100px;
 
+  @include media($tablet) {
+    padding: 0;
+  }
 }
 
 .after-party__feature-image {
@@ -25,7 +29,7 @@
 
 .after-party__info {
   @include span-columns(3);
-  background-color: $beyond-salmon;
+  background-color: $beyond-yellow;
   height: 400px;
   max-height: 400px;
   color: #ffffff;
@@ -42,6 +46,17 @@
   }
 
   @include reset-display;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.after-paty__info__title,
+.after-party__info__sponsor-image,
+.after-party__info__limited {
+  position: relative;
+  z-index: 20;
 }
 
 .after-paty__info__title {
@@ -55,16 +70,14 @@
   width: 70%;
 }
 
-.after-party__info__address {
-
-}
-
 .after-party__info__limited {
   position: absolute;
+  z-index: 20;
   bottom: 5px;
   width: 100%;
   font-size: 0.9em
 }
+
 .after-party__decoration-overlay {
   width: 350px;
   position: absolute;

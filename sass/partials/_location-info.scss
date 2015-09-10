@@ -1,8 +1,14 @@
 
 .location-info {
   @include outer-container();
+  @include outer-padding();
+  margin-bottom: 75px;
+  
   @include clearfix();
-  padding: 50px 0 0 0;
+
+  @include media($tablet) {
+    padding: 0;
+  }
 }
 
 .location-info__content {
@@ -47,12 +53,11 @@
 
 .location-info__map {
   padding: 20px 0;
-  background-color: $beyond-pink;
   text-align: center;
 }
 
 .location-info__map__graphic {
-  width: 500px;
+  width: 530px;
   max-width: 90%;
   position: absolute;
   top: 50%;

@@ -1,66 +1,40 @@
 .header {
-  @include outer-container();
-  padding: 75px $gutter 50px $gutter;
+  @include outer-container;
+  padding: 50px 0;
+  @include outer-padding;
   @include media($mobile) {
     padding-top: 20px;
-  }
-}
-
-.hero {
-  @include span-columns(7);
-
-  @include media($tablet) {
-    @include span-columns(5.5);
-    @include shift(1.5);
-  }
-  @include media($mobile) {
     text-align: center;
-    @include span-columns(4);
-    @include shift(0);
+    padding-bottom: 0;
   }
 }
 
-.beyond-illustration {
-  @include span-columns(5);
-
-  @include media($tablet) {
-    @include span-columns(3.5);
-    padding-top: 5%;
-  }
-
-  @include media($mobile) {
-    display: none;
-  }
-}
-
-.hero__social {
+.header__social {
   float: left;
-
-  @include media($tablet) {
+  a {
+    text-decoration: none;
+  }
+  @include media($mobile) {
     float: none;
   }
-
-  @include media($mobile) {
-    margin: 20px 0;
-  }
 }
 
-.hero__social__icon {
-  width: 50px;
+.header__social__icon, .header__logo {
+  width: 40px;
   margin: 0 10px 0 0;
 }
 
-.hero__info {
+.header__event-date {
   float: left;
   font-family: 'jaapokki-regular';
   color: $beyond-blue;
   line-height: 1.4;
-  font-size: 1.2em;
-  margin: 0 0 0 10px;
-
-  @include media($tablet) {
+  font-size: 1.1em;
+  margin: 0 0 0 20px;
+  @include media($mobile) {
     float: none;
-    margin: 20px 0;
+    font-size: 1.3em;
+    margin-top: 30px;
   }
 }
 
@@ -69,40 +43,40 @@
   font-size: 0.7em;
 }
 
-.hero__lead {
-  margin: 200px 0 100px;
-
-  color: $beyond-blue;
-  font-family: 'jaapokki-regular';
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  font-size: 3em;
-  line-height: 1.3;
-
-  @include media($laptop) {
-    margin: 150px 0 100px;
-    font-size: 2.1em;
+.header__nav {
+  @include media($mobile) {
+    float: none;
+    margin-top: 30px;
   }
-
-  @include media($tablet) {
-    margin: 50px 0 50px;
-    font-size: 1.3em;
+  a {
+    font-family: 'jaapokki-regular';
+    text-decoration: none;
+    font-size: 1.1em;
+    color: $beyond-salmon;
+    margin-left: 35px;
+    &:hover, &.active-link {
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      border-bottom: 11px solid $beyond-salmon;
+      border-image: url(../img/underline-squiggle.png) 26 0 fill;
+      @include media($mobile) {
+        border: none;
+      }
+    }
+    @include media($mobile) {
+      font-size: 1.4em;
+      margin-left: 0;
+      padding: 10px;
+      display: block;
+      background-color: $beyond-salmon;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
   }
-}
-
-.hero__sub-lead {
-  color: $beyond-blue;
-  font-size: 3em;
-  text-transform: uppercase;
-  @include media($tablet) {
-    font-size: 2.5em;
-    margin-bottom: 0;
-  }
-}
-
-.hero__beyond-logo {
-  width: 190px;
-  @include media($tablet) {
-    width: 160px;
+  .schedule-link {
+    @include media($mobile){
+      display: none;
+    }
   }
 }

@@ -1,0 +1,123 @@
+---
+layout: default
+permalink: 'schedule/'
+title: Schedule
+---
+<header class="header">
+
+    <div class="header__social">
+      <a href="/">
+        <img src="/img/beyond-logo-small.svg" alt="Beyond Conf Logo" class="header__logo">
+      </a>
+      <a href="https://twitter.com/beyondconf_"><img class="header__social__icon" src="/img/twitter.svg" alt="Beyond Conf Twitter"></a>
+      <a href="mailto:amelia@beyondconf.co"><img class="header__social__icon" src="/img/mail.svg" alt="Mail Beyond Conf"></a>
+    </div>
+
+    <div class="header__event-date">
+      <time class="hero__info__data" datetime="2015-11-23 10:00">23<span class="date-contraction">rd</span> November 2015</time>
+      <div class="hero__info__location">London</div>
+    </div>
+
+    <nav class="header__nav">
+      <a href="https://www.eventbrite.co.uk/e/beyond-conf-2015-tickets-18517110175">Tickets</a>
+      <a href="/schedule" class="active-link schedule-link">Schedule</a>
+    </nav>
+</header>
+
+<section class="schedule">
+  <div class="schedule__talks">
+    <div class="section-header">
+      <h2 class="section-header__title">Talks</h2>
+    </div>
+
+    <table class="timetable js-offset-parent">
+      <tbody>
+        {% for speaker in site.data.speakers %}
+        <!-- This could probably do with better naming stuff but im tired  -->
+        {% if speaker.speaker %}
+        <tr id="anchor-{{speaker.anchor}}" class="timetable__slot mins-{{speaker.duration}} {{speaker.soon}}" data-image="{{speaker.image}}" data-name="{{speaker.name}}" data-position="{{speaker.position}}" data-company="{{speaker.company}}" data-url="{{speaker.url}}" data-twitter="{{speaker.twitter}}" data-github="{{speaker.github}}" data-title="{{speaker.title}}" data-description="{{speaker.description}}">
+          <td class="timetable__start-time">{{speaker.start_time}}</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">{{speaker.title}}</h2>
+            <h3 class="timetable__speaker">{{speaker.name}}</h3>
+            <img src="/img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
+          </td>
+        </tr>
+
+        {% else %}
+        <tr class="timetable__slot timetable__slot--break mins-{{ speaker.duration }}">
+          <td class="timetable__start-time">{{ speaker.start_time }} <span class="timetable__break-name timetable__slot--{{speaker.break}}">{{speaker.title}}</span></td>
+          <td class="timetable__slot-detail"></td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="schedule__workshops">
+    <div class="section-header">
+      <h2 class="section-header__title">Workshops</h2>
+    </div>
+
+    <table class="timetable js-offset-parent">
+      <tbody>
+        {% for workshop in site.data.workshops %}
+        {% if workshop.workshop %}
+        <tr id="anchor-{{workshop.anchor}}" class="timetable__slot mins-{{workshop.duration}} {{workshop.soon}}" data-image="{{workshop.image}}" data-name="{{workshop.name}}" data-position="{{workshop.position}}" data-company="{{workshop.company}}" data-url="{{workshop.url}}" data-twitter="{{workshop.twitter}}" data-github="{{workshop.github}}" data-title="{{workshop.title}}" data-description="{{workshop.description}}">
+          <td class="timetable__start-time">{{workshop.start_time}}</td>
+          <td class="timetable__slot-detail">
+            <h2 class="timetable__title">{{workshop.title}}</h2>
+            <h3 class="timetable__speaker">{{workshop.name}}</h3>
+            <img src="/img/open-arrow.svg" alt="Click to open" class="timetable__open-symbol">
+          </td>
+        </tr>
+        {% elsif workshop.gap %}
+        <tr class="timetable__slot timetable__slot--gap mins-{{workshop.duration}}">
+          <td class="timetable__slot-detail" colspan="2"></td>
+        </tr>
+        {% else %}
+        <tr class="timetable__slot timetable__slot--break mins-{{ workshop.duration }}">
+          <td class="timetable__start-time">{{ workshop.start_time }} <span class="timetable__break-name timetable__slot--{{workshop.break}}">{{workshop.title}}</span></td>
+          <td class="timetable__slot-detail"></td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="schedule__more-info js-schedule__more-info">
+    <div class="section-header section-header--empty section-header--modal js-section-header-modal"></div>
+
+    <div class="slot-info js-slot-info">
+      <img class="slot-info__image js-data-image" src="" alt="">
+      <div class="slot-info__meta">
+        <div class="slot-info__speaker-details">
+          <h3 class="js-data-name"></h3>
+          <h3 class="js-data-position"></h3>
+          <h3 class="js-data-company"></h3>
+        </div>
+
+        <nav class="slot-info__links">
+          <a href="#" class="js-data-url">
+            <img src="/img/icon-link.svg" alt="Personal site">
+          </a>
+          <a href="#" class="js-data-twitter">
+            <img src="/img/icon-twitter.svg" alt="Twitter profile">
+          </a>
+          <a href="#" class="js-data-github">
+            <img src="/img/icon-github.svg" alt="Github profile">
+          </a>
+        </nav>
+      </div>
+
+      <div class="slot-info__description">
+        <h3 class="js-data-title"></h3>
+        <div class="js-data-description"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="schedule-info-overlay"></div>

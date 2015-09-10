@@ -1,57 +1,101 @@
-.speakers {
+.speakers, .workshops {
   @include outer-container;
+  @include outer-padding;
   @include clearfix();
-  padding: 50px 0 50px 0 ;
+  margin-bottom: 100px;
   position: relative;
 
-  @include media($mobile) {
-    padding: 100px $gutter 0;
+  @include media($tablet) {
+    padding: 0;
   }
+
+  @include media($mobile) {
+    padding: 20px 0;
+  }
+}
+
+.section-header {
+  border-top: 5px solid $beyond-blue;
+  border-bottom: 20px solid $beyond-blue;
+  height: 65px;
+}
+
+.section-header--empty {
+  background-color: #FFFFFF;
+}
+
+.section-header__title {
+  text-transform: uppercase;
+  color: $beyond-blue;
+  margin-bottom: 0;
+  margin-left: 14px;
+  line-height: 47px;
+  vertical-align: middle;
 }
 
 .speaker {
   float: left;
-  background-color: $beyond-blue;
-}
-
-.speaker--small {
-  width: 25%;
-
-  @include media($tablet) {
-    width: 33.33%;
-  }
-  @include media($mobile) {
-    @include span-columns(4);
-  }
-}
-
-.speaker--large {
-  width: 50%;
-
-  @include media($tablet) {
-    width: 33.33%;
-  }
-
-  @include media($mobile) {
-    @include span-columns(4);
-  }
-}
-
-.speaker:nth-child(3n+1) {
   background-color: $beyond-salmon;
+  width: 25%;
+  position: relative;
+  text-decoration: none;
+
+  @include media($tablet) {
+    width: 33.33%;
+  }
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    display: none;
+    z-index: 10;
+  }
+
+  &:not(.speaker--coming-soon):hover {
+    &:before {
+      display: block;
+    }
+  }
 }
 
-.speaker:nth-child(3n+2){
-  background-color: $beyond-blue;
+.speaker--coming-soon {
+  @include media($mobile) {
+    display: none;
+  }
+
+  .speaker__info {
+    padding: 0;
+    background-image: url(../img/speaker-coming-soon-bottom.png);
+    background-position: center;
+    background-size: contain;
+    z-index: 0;
+  }
 }
 
-.speaker:nth-child(3n+3){
+.speaker:nth-child(3n+1), .speaker:nth-child(3n+1):before {
   background-color: $beyond-yellow;
 }
 
-.speaker__info {
-  padding: $gutter;
+.speaker:nth-child(3n+2), .speaker:nth-child(3n+2):before{
+  background-color: $beyond-salmon;
+}
+
+.speaker:nth-child(3n+3), .speaker:nth-child(3n+3):before {
+  background-color: $beyond-blue;
+}
+
+.speaker__info,
+.workshop__info {
+  padding: 10px;
   height: 150px;
+  position: relative;
+  z-index: 20;
 
   @include media($mobile) {
     height: auto;
@@ -61,52 +105,65 @@
 .speaker__title {
   color: #ffffff;
   margin: 0;
-  font-size: 1.3em;
-
-  @include media($laptop) {
-    font-size: 1.1em;
-  }
+  font-size: 1.2em;
 }
 
-.speaker__name {
+.speaker__name, .speaker__position, .speaker__company {
   color: #ffffff;
   margin: 0;
   font-family: inherit;
-
-  @include media($laptop) {
-    font-size: 1em;
-  }
+  font-size: 0.9em;
 }
 
 .speaker__image {
   max-width: 100%;
   display: block;
   @include media($mobile) {
-    display: none;
+    float: left;
+    max-width: 140px;
+    margin-right: 10px;
   }
 }
 
-.more-speakers {
+.more-speakers-btn {
+  display: block;
   clear: both;
-  width: 100%;
-  background-color: $beyond-blue;
   text-align: center;
   padding: 10px;
-
-  @include media($mobile) {
-    position: static;
-    width: auto;
-  }
-}
-
-.more-speakers__btn {
+  background-color: $beyond-blue;
   color: #ffffff;
   text-decoration: none;
   font-family: 'jaapokki-regular';
   font-size: 1.2em;
 }
 
-.speakers__aditional-speakers {
-  display: none;
-  clear: both;
+// Workshops they share alot of the same styles so kept in here
+.speaker--workshop {
+  width: 50%;
+  @include media($tablet) {
+    width: 100%;
+  }
+  .speaker__image {
+
+    @include media($tablet) {
+      width: 100%;
+    }
+  }
+}
+.speaker--workshop-comming-soon {
+  @include media($tablet) {
+    display: none;
+  }
+  .speaker__info {
+    background-image: url(../img/workshop-coming-soon-bottom.png);
+  }
+}
+
+.speaker__info--workshop {
+  // removes weird 1px line that the bg image doesn't cover at some sizes;
+  margin-top: -1px;
+}
+
+.workshop__desc {
+  color: #fff;
 }
