@@ -2,6 +2,10 @@
   @include outer-container;
   @include outer-padding;
   margin-bottom: 100px;
+
+  @include media($tablet) {
+    margin-bottom: 60px;
+  }
 }
 
 .tickets__options {
@@ -16,11 +20,16 @@
   color: $beyond-salmon;
 
   @include media($tablet) {
-    width: 40%;
+    width: 25%;
   }
   @include media($mobile) {
     width: 100%;
     padding: 10px 0;
+    border-top: solid 1px $beyond-salmon;
+
+    &:first-of-type {
+      border-top: solid 5px $beyond-salmon;
+    }
   }
 }
 
@@ -32,8 +41,7 @@
 	border-right: 20px solid transparent;
 	border-top: 20px solid $beyond-salmon;
   @include media($mobile) {
-    margin: -10px auto 0;
-
+    display: none;
   }
 }
 
@@ -45,10 +53,12 @@
   padding: 20px 10px 0;
   text-align: center;
 
-  @include media($mobile) {
-    border-top: solid 5px $beyond-salmon;
+  @include media($tablet) {
     width: 100%;
-    padding: 20px;
+    padding: 60px 0 0;
+  }
+  @include media($mobile) {
+    padding: 40px 0 0;
   }
 }
 .ticket-countdown__contents {
@@ -57,6 +67,7 @@
   font-size: 0.9em;
   @include media($mobile) {
     text-align: center;
+    font-size: 1.2em;
   }
 }
 
@@ -68,7 +79,11 @@
   letter-spacing: 0.01em;
 
   @include media($mobile) {
-    margin: 10px auto;
+    float: left;
+    width: 40%;
+    text-align: center;
+    line-height: 50px;
+    margin: auto;
   }
 }
 
@@ -79,6 +94,11 @@
 .ticket__type {
   display: block;
   font-size: 0.8em;
+  @include media($mobile) {
+    float: left;
+    width: 60%;
+    line-height: 50px;
+  }
 }
 
 .ticket-countdown__days-left {
@@ -86,7 +106,10 @@
   font-size: 3.5em;
 
   @include media($tablet) {
-    font-size: 2.8em;
+    font-size: 1.4em;
+  }
+  @include media($mobile) {
+    font-size: 1.3em;
   }
 }
 .days-left__num {
@@ -98,6 +121,11 @@
   line-height: 1;
   font-family: $jaapokki;
   margin: 2px;
+
+  @include media($tablet) {
+    padding: 6px 6px 0;
+
+  }
 
 }
 
@@ -112,7 +140,7 @@
   line-height: 2.5;
   font-family: $jaapokki;
 
-  @include media($mobile) {
+  @include media($tablet) {
     width: 100%;
   }
 }

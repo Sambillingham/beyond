@@ -37,3 +37,9 @@ body.lock-scroll {
 h2,h3 {
   font-family: 'jaapokki-regular';
 }
+
+.hidden-tablet {
+  @include media($tablet) {
+    display: none;
+  }
+}
