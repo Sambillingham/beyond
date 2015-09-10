@@ -35,7 +35,7 @@
   name: Maxim Cramer
   start_time: '10:05'
   duration: 15
-  anchor: una
+  anchor: maxim
   image: speaker-maxim-cramer.jpg
   position: iOS Developer
   company: Swiftkey
@@ -50,7 +50,7 @@
   name: Paul Lewis
   start_time: '10:25'
   duration: 30
-  anchor: una
+  anchor: paul
   image: speaker-paul-lewis.jpg
   position: Chrome Developer Relations
   company: Google
