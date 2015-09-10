@@ -72,7 +72,7 @@ var app = {
 
    if(Modernizr.mq('only screen and (max-width: 850px)')) {
       $('body').addClass('lock-scroll');
-      $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>')
+      $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>');
       $('.js-slot-info, .js-schedule__more-info, .schedule-info-overlay').fadeIn();
 
    } else {
@@ -90,8 +90,8 @@ var app = {
   },
   displayCountdown: function(){
     var days = this.daysUntilDate('September 28, 2015').toString();
-    $('.days-left__num').first().text(days[0])
-    $('.days-left__num').last().text(days[1])
+    $('.days-left__num').first().text(days[0]);
+    $('.days-left__num').last().text(days[1]);
   },
   checkHashAndTriggerModal: function(){
     var hash = window.location.hash;
