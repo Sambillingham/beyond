@@ -33,7 +33,7 @@ input:-webkit-autofill {
   width: 40%;
   border: 5px solid $beyond-salmon;
   margin: 0 0 0 0;
-  padding: 8px 8px 8px 12px;
+  padding: 10px 8px 6px 12px;
   line-height: 2;
 
   @include placeholder {
@@ -67,12 +67,11 @@ input:-webkit-autofill {
   float: left;
   font-family: 'jaapokki-regular';
   color: #FDFFF4;
-  font-size: 1em;
-  line-height: 2;
+  font-size: 1.2em;
   background-color: $beyond-salmon;
   border: 5px solid $beyond-salmon;
   width: 20%;
-  padding: 8px 0;
+  padding: 13px 0 6px;
 
   @include media($tablet) {
     width: 100%;
