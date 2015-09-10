@@ -43,7 +43,7 @@
   twitter: mennenia
   title: Users! Now what?
   description: >
-    <p>Coming Soon.</p>
+    <p>More information coming soon.</p>
 
 - speaker: true
   name: Paul Lewis
@@ -84,7 +84,7 @@
   twitter: csswizardry
   title: Talk Title TBC
   description: >
-    <p>Coming Soon.</p>
+    <p>More information coming soon.</p>
 
 - speaker: true
   name: Alana Wood
@@ -172,7 +172,8 @@
   twitter: alicebartlett
   title: Asking for More
   description: >
-    <p>Coming Soon</p>
+    <p>As a person who manages developers, I find myself giving the same advice and fixing the same problems repeatedly.</p>
+    <p>This talk will cover getting the most out of your role as a developer or person new to development including; how to negotiate a salary, how to spot and make the most of opportunities, and how to deal with conflict, and generally how to ask for more.</p>
 
 - speaker: false
   duration: 30
