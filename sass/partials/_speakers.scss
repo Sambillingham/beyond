@@ -90,7 +90,8 @@
   background-color: $beyond-blue;
 }
 
-.speaker__info {
+.speaker__info,
+.workshop__info {
   padding: 10px;
   height: 150px;
   position: relative;
@@ -142,4 +143,27 @@
   @include media($tablet) {
     width: 100%;
   }
+  .speaker__image {
+
+    @include media($tablet) {
+      width: 100%;
+    }
+  }
+}
+.speaker--workshop-comming-soon {
+  @include media($tablet) {
+    display: none;
+  }
+  .speaker__info {
+    background-image: url(../img/workshop-coming-soon-bottom.png);
+  }
+}
+
+.speaker__info--workshop {
+  // removes weird 1px line that the bg image doesn't cover at some sizes;
+  margin-top: -1px;
+}
+
+.workshop__desc {
+  color: #fff;
 }
