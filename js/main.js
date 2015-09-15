@@ -3,10 +3,14 @@ var app = {
   init: function () {
     this.uiActions ();
     this.displayCountdown();
-    this.checkHashAndTriggerModal();
     this.sizeFixes();
-
     svgeezy.init(false, 'png');
+
+    // Schedule Specific Init
+    if( $('section').hasClass('schedule')){
+      this.checkHashAndTriggerModal();
+      this.preloadHiddenSpeakerImages();
+    }
   },
   uiActions: function () {
       var self = this;
@@ -102,8 +106,7 @@ var app = {
   },
   checkHashAndTriggerModal: function(){
     var hash = window.location.hash;
-
-    if( $('section').hasClass('schedule') && window.location.hash){
+    if(hash){
       this.scheduleSPeakerInfo(hash);
     }
   },
