@@ -97,7 +97,7 @@ var app = {
     var hash = window.location.hash;
 
     if( $('section').hasClass('schedule') && window.location.hash){
-      $(hash).trigger('click');
+      this.scheduleSPeakerInfo(hash);
     }
   },
   sizeFixes: function(){
