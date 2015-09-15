@@ -50,6 +50,13 @@ var app = {
       }
     }); // end AJAX
   },
+  preloadHiddenSpeakerImages: function(){
+    $('*[data-image]').each(function(i, el){
+      if ($(el).data('image')){
+        $("<img>").attr("src", '/img/' + $(el).data('image'));
+      }
+    });
+  },
   scheduleSPeakerInfo: function(slot) {
     var $slot = $(slot);
     var pxFromTop = $slot.position().top;
