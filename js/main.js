@@ -3,10 +3,14 @@ var app = {
   init: function () {
     this.uiActions ();
     this.displayCountdown();
-    this.checkHashAndTriggerModal();
     this.sizeFixes();
-
     svgeezy.init(false, 'png');
+
+    // Schedule Specific Init
+    if( $('section').hasClass('schedule')){
+      this.checkHashAndTriggerModal();
+      this.preloadHiddenSpeakerImages();
+    }
   },
   uiActions: function () {
       var self = this;
@@ -49,6 +53,13 @@ var app = {
         }
       }
     }); // end AJAX
+  },
+  preloadHiddenSpeakerImages: function(){
+    $('*[data-image]').each(function(i, el){
+      if ($(el).data('image')){
+        $("<img>").attr("src", '/img/' + $(el).data('image'));
+      }
+    });
   },
   scheduleSPeakerInfo: function(slot) {
     var $slot = $(slot);
@@ -95,9 +106,8 @@ var app = {
   },
   checkHashAndTriggerModal: function(){
     var hash = window.location.hash;
-
-    if( $('section').hasClass('schedule') && window.location.hash){
-      $(hash).trigger('click');
+    if(hash){
+      this.scheduleSPeakerInfo(hash);
     }
   },
   sizeFixes: function(){
