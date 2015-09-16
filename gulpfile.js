@@ -11,6 +11,7 @@ var clean = require('gulp-clean');
 var browserSync = require('browser-sync');
 var spawn = require('child_process').spawn;
 var ghPages = require('gulp-gh-pages');
+var babel = require("gulp-babel");
 
 gulp.task('jekyll-prod', function (gulpCallBack){
    var enviroment = process.env
@@ -60,8 +61,16 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('reload-js', ['lint'], function(){
-  gulp.src('js/main.js')
+gulp.task('babel', function(){
+  return gulp.src('js/main.js')
+    .pipe(babel())
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest('js'));
+})
+
+gulp.task('reload-js', ['babel'], function(){
+  gulp.src('js/bundle.js')
+      .pipe(rename('main.js'))
       .pipe(gulp.dest('_site/js'))
       .pipe(browserSync.reload({stream:true}))
 })
@@ -99,7 +108,7 @@ gulp.task('deploy', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('js/main.js', ['lint', 'reload-js']);
+    gulp.watch('js/main.js', ['babel', 'reload-js']);
     gulp.watch('sass/**/{*.sass,*.scss}', ['sass']);
     gulp.watch(['*.html', '**/*.html', '_posts/*', '_data/*'], ['jekyll-rebuild', 'sass-on-build']);
 });
