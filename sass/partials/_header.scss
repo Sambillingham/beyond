@@ -44,16 +44,35 @@
 }
 
 .header__nav {
+  @include media($tablet) {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 25px 0;
+    border-top: solid 2px $beyond-salmon;
+    border-bottom: solid 2px $beyond-salmon;
+  }
   @include media($mobile) {
     float: none;
-    margin-top: 30px;
+    border: none;
+    padding: 0;
   }
+
   a {
     font-family: 'jaapokki-regular';
     text-decoration: none;
     font-size: 1.1em;
     color: $beyond-salmon;
-    margin-left: 35px;
+    margin: 0 0 0 35px;
+
+    @include media($tablet) {
+      margin: 0 30px 0 0;
+    }
+    @include media($mobile) {
+      margin: 0;
+    }
+
     &:hover, &.active-link {
       border-left: 0;
       border-right: 0;
