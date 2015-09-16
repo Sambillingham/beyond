@@ -131,3 +131,143 @@ var app = {
 };
 
 app.init();
+
+var ScheduleSlot = React.createClass({
+
+  update: function() {
+        this.props.handleChange();
+  },
+  render: function() {
+    return (
+      <tr id="anchor-name" className="timetable__slot mins-60" onClick={this.update}>
+        <td className="timetable__start-time">time</td>
+        <td className="timetable__slot-detail">
+          <h2 className="timetable__title">title</h2>
+          <h3 className="timetable__speaker">Name</h3>
+        </td>
+      </tr>
+    );
+  }
+
+});
+
+var ScheduleFullDetails = React.createClass({
+  getInitialState: function() {
+    return {
+      name: '',
+      position: '',
+      name: '',
+      company: '',
+      url: '',
+      Twitter: '',
+      github: '',
+      title: '',
+      desc: ''
+    };
+  },
+  updateDetails: function(event) {
+    console.log('updating details');
+    this.setState({
+      name: event.target.value,
+      position: event.target.value,
+      name: event.target.value,
+      company: event.target.value,
+      url: event.target.value,
+      Twitter: event.target.value,
+      github: event.target.value,
+      title: event.target.value,
+      desc: event.target.value
+    });
+  },
+  render: function() {
+    return (
+      <div className="schedule__more-info js-schedule__more-info">
+        <div className="section-header section-header--empty section-header--modal js-section-header-modal">
+
+          <div className="slot-info js-slot-info">
+            <img className="slot-info__image js-data-image" src="" alt=""/>
+            <div className="slot-info__meta">
+              <div className="slot-info__speaker-details">
+                <h3 className="js-data-name"></h3>
+                <h3 className="js-data-position"></h3>
+                <h3 className="js-data-company"></h3>
+              </div>
+
+              <nav className="slot-info__links">
+                <a href="#" className="js-data-url">
+                  <img src="/img/icon-link.svg" alt="Personal site"/>
+                </a>
+                <a href="#" className="js-data-twitter">
+                  <img src="/img/icon-twitter.svg" alt="Twitter profile"/>
+                </a>
+                <a href="#" className="js-data-github">
+                  <img src="/img/icon-github.svg" alt="Github profile"/>
+                </a>
+              </nav>
+            </div>
+
+            <div className="slot-info__description">
+              <h3 className="js-data-title"></h3>
+              <div className="js-data-description"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+});
+
+var Schedule = React.createClass({
+  getInitialState: function() {
+    return {
+    };
+  },
+  handleChange: function() {
+      console.log('click');
+  },
+  render: function() {
+    return (
+      <div className="schedule">
+        <div className="schedule__talks">
+          <div className="section-header">
+            <h2 className="section-header__title">Talks</h2>
+          </div>
+
+          <table class="timetable js-offset-parent">
+            <tbody>
+              <ScheduleSlot onUpdate={this.handleChange} />
+            </tbody>
+          </table>
+        </div>
+
+        <div className="schedule__workshops">
+          <div className="section-header">
+            <h2 className="section-header__title">Workshops</h2>
+          </div>
+
+          <table className="timetable js-offset-parent">
+            <tbody>
+              <tr id="anchor-workshop" className="timetable__slot mins-60 ">
+                <td className="timetable__start-time">Time</td>
+                <td className="timetable__slot-detail">
+                  <h2 className="timetable__title">Title</h2>
+                  <h3 className="timetable__speaker">Name</h3>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ScheduleFullDetails />
+      </div>
+
+    );
+  }
+
+});
+
+React.render(
+  <Schedule />,
+  document.querySelector('.schedule')
+);
+
