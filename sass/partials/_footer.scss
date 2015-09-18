@@ -10,28 +10,26 @@ footer {
     margin-right: 20px;
     padding: 10px 0 25px 0;
   }
+
 }
 
 .footer__content {
   padding: 25px 0;
   border-top: 5px solid $beyond-salmon;
   @include clearfix;
+  @include media($mobile) {
+    padding: 25px;
+  }
 }
 
 .footer__organised-by {
-  float: right;
+  text-align: center;
   margin: 0;
   a {
     color: $steer-red;
     text-decoration: none;
     border-bottom: solid 3px $steer-red;
     font-weight: 700;
-  }
-  @include media($tablet) {
-    float: none;
-    border-top: 5px solid $beyond-blue;
-    margin-top: 25px;
-    padding-top: 10px;
   }
 }
 
