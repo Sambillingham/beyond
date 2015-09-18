@@ -19,7 +19,7 @@
 }
 
 .slot-info {
-  display: none;
+  // display: none;
   @include media($tablet) {
     width: 100%;
     margin: 0 auto;

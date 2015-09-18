@@ -7,10 +7,10 @@ var app = {
     svgeezy.init(false, 'png');
 
     // Schedule Specific Init
-    if( $('section').hasClass('schedule')){
-      this.checkHashAndTriggerModal();
-      this.preloadHiddenSpeakerImages();
-    }
+    // if( $('section').hasClass('schedule')){
+    //   this.checkHashAndTriggerModal();
+    //   this.preloadHiddenSpeakerImages();
+    // }
   },
   uiActions: function () {
       var self = this;
@@ -21,16 +21,16 @@ var app = {
         event.preventDefault();
       });
 
-      $('.timetable__slot').not('.timetable__slot--break, .coming__soon--true, .timetable__slot--gap ').on('click', function(event) {
-        var slot = this;
-        self.scheduleSPeakerInfo(slot);
-        event.preventDefault();
-      });
-
-      $('.js-section-header-modal').on('click', function(){
-        $('body').removeClass('lock-scroll');
-        $('.js-schedule__more-info, .schedule-info-overlay').fadeOut();
-      });
+      // $('.timetable__slot').not('.timetable__slot--break, .coming__soon--true, .timetable__slot--gap ').on('click', function(event) {
+      //   var slot = this;
+      //   self.scheduleSPeakerInfo(slot);
+      //   event.preventDefault();
+      // });
+      //
+      // $('.js-section-header-modal').on('click', function(){
+      //   $('body').removeClass('lock-scroll');
+      //   $('.js-schedule__more-info, .schedule-info-overlay').fadeOut();
+      // });
   },
   mailChimpAjaxRegister: function (form){
     $.ajax({
@@ -62,33 +62,33 @@ var app = {
     });
   },
   scheduleSPeakerInfo: function(slot) {
-    var $slot = $(slot);
-    var pxFromTop = $slot.position().top;
-    var data = $slot.data();
-
-    $('.js-data-image').attr('src', '/img/'+ data.image);
-    $('.js-data-name').text(data.name);
-    $('.js-data-position').text(data.position);
-    $('.js-data-company').text(data.company);
-    $('.js-data-url').attr('href', data.url);
-    $('.js-data-twitter').attr('href', 'https://twitter.com/'+ data.twitter);
-    if(data.github){
-      $('.js-data-github').attr('href', 'https://github.com/' + data.github);
-      $('.js-data-github').fadeIn();
-    } else {
-      $('.js-data-github').fadeOut();
-    }
-    $('.js-data-title').text(data.title);
-    $('.js-data-description').html(data.description);
-
-   if(Modernizr.mq('only screen and (max-width: 850px)')) {
-      $('body').addClass('lock-scroll');
-      $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>');
-      $('.js-slot-info, .js-schedule__more-info, .schedule-info-overlay').fadeIn();
-
-   } else {
-      $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
-   }
+  //   var $slot = $(slot);
+  //   var pxFromTop = $slot.position().top;
+  //   var data = $slot.data();
+   //
+  //   $('.js-data-image').attr('src', '/img/'+ data.image);
+  //   $('.js-data-name').text(data.name);
+  //   $('.js-data-position').text(data.position);
+  //   $('.js-data-company').text(data.company);
+  //   $('.js-data-url').attr('href', data.url);
+  //   $('.js-data-twitter').attr('href', 'https://twitter.com/'+ data.twitter);
+  //   if(data.github){
+  //     $('.js-data-github').attr('href', 'https://github.com/' + data.github);
+  //     $('.js-data-github').fadeIn();
+  //   } else {
+  //     $('.js-data-github').fadeOut();
+  //   }
+  //   $('.js-data-title').text(data.title);
+  //   $('.js-data-description').html(data.description);
+   //
+  //  if(Modernizr.mq('only screen and (max-width: 850px)')) {
+  //     $('body').addClass('lock-scroll');
+  //     $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>');
+  //     $('.js-slot-info, .js-schedule__more-info, .schedule-info-overlay').fadeIn();
+   //
+  //  } else {
+  //     $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
+  //  }
 
   },
   daysUntilDate: function(targetDate){
@@ -141,7 +141,7 @@ var ScheduleSlot = React.createClass({
   },
   render: function() {
     return (
-      <tr id="anchor-name" className="timetable__slot mins-60" onClick={this.showDetails} >
+      <tr id={'anchor-' + this.props.name } className={'timetable__slot mins-' + this.props.duration }  onClick={this.showDetails} >
         <td className="timetable__start-time">{this.props.startTtime}</td>
         <td className="timetable__slot-detail">
           <h2 className="timetable__title">{this.props.title}</h2>
@@ -259,13 +259,13 @@ var Schedule = React.createClass({
 
 });
 
-var data = [
-  {startTime: '11:20', name: "Pete Hunt", title: "This is one comment"},
-  {startTime: '11:40', name: "Jordan Walke", title: "This is *another* comment"}
-];
+// var data = [
+//   {startTime: '11:20', name: "Pete Hunt", title: "This is one comment"},
+//   {startTime: '11:40', name: "Jordan Walke", title: "This is *another* comment"}
+// ];
 
 React.render(
-  <Schedule data={data} />,
+  <Schedule data={scheduleData} />,
   document.querySelector('.schedule')
 );
 
