@@ -119,6 +119,9 @@
     height: auto;
   }
 }
+.workshop__info {
+  height: 75px;
+}
 
 .speaker__title {
   color: #ffffff;
@@ -184,4 +187,12 @@
 
 .workshop__desc {
   color: #fff;
+}
+
+.workshop__comming-soon-badge {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+  width: 250px;
+  z-index: 10;
 }
