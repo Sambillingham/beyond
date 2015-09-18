@@ -101,6 +101,9 @@ var app = {
   },
   displayCountdown: function(){
     var days = this.daysUntilDate('September 28, 2015').toString();
+    if (days.length === 1){
+      days = '0' + days;
+    }
     $('.days-left__num').first().text(days[0]);
     $('.days-left__num').last().text(days[1]);
   },
