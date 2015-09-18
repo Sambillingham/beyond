@@ -9,10 +9,13 @@
   @include media($tablet) {
     padding: 0;
   }
+  @include media($mobile) {
+    margin-top: 100px;
+  }
 }
 
 .after-party__feature-image {
-  @include span-columns(9);
+  @include span-columns(6);
   background: url(../img/we-work.jpg) center no-repeat;
   background-size: cover;
   max-height: 400px;
@@ -28,63 +31,37 @@
 }
 
 .after-party__info {
-  @include span-columns(3);
-  background-color: $beyond-yellow;
+  @include span-columns(6);
+  background: $beyond-yellow url(../img/after-party-decoration.svg);
+  background-size: cover;
+  background-position: center;
   height: 400px;
   max-height: 400px;
   color: #ffffff;
-  text-align: center;
   position: relative;
-
-  @include media($tablet) {
-    @include span-columns(6);
-  }
 
   @include media($mobile) {
     @include span-columns(4);
-    overflow: hidden;
   }
 
   @include reset-display;
-  a {
-    text-decoration: none;
-    color: inherit;
+}
+.after-party__info__badge {
+  width: 230px;
+  position: absolute;
+  right: -10px;
+  top: -40px;
+  text-decoration: none;
+
+  @include media($tablet){
+    right: 0;
   }
 }
-
-.after-paty__info__title,
-.after-party__info__sponsor-image,
-.after-party__info__limited {
-  position: relative;
-  z-index: 20;
-}
-
-.after-paty__info__title {
-  color: #ffffff;
+.after-party__info__description {
+  margin: 230px 40px 0;
+  border-top: solid #fff 5px;
+  padding: 20px 0 0 0;
+  font-size: 1.05em;
+  font-family: $jaapokki;
   text-transform: uppercase;
-  font-size: 1.3em;
-  letter-spacing: 0.05em;
-  margin: 130px 0 0 0;
-}
-.after-party__info__sponsor-image {
-  width: 70%;
-}
-
-.after-party__info__limited {
-  position: absolute;
-  z-index: 20;
-  bottom: 5px;
-  width: 100%;
-  font-size: 0.9em
-}
-
-.after-party__decoration-overlay {
-  width: 350px;
-  position: absolute;
-  right: 0;
-  top: 0;
-
-  @include media($mobile) {
-    width: 100%;
-  }
 }
