@@ -17,6 +17,9 @@
 .section-header {
   border-top: 5px solid $beyond-blue;
   border-bottom: 20px solid $beyond-blue;
+}
+
+.section-header--without-description {
   height: 65px;
 }
 
@@ -28,9 +31,24 @@
   text-transform: uppercase;
   color: $beyond-blue;
   margin-bottom: 0;
-  margin-left: 14px;
+  // margin-left: 14px;
   line-height: 47px;
   vertical-align: middle;
+
+  @include media($tablet){
+    padding: 10px 20px 0;
+  }
+}
+
+.section-header__description {
+  color: $beyond-blue;
+  font-size: 1.2em;
+  font-family: $jaapokki;
+  margin: 15px 0 25px 0;
+
+  @include media($tablet){
+    padding: 0 20px;
+  }
 }
 
 .speaker {
