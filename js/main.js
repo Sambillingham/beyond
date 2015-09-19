@@ -214,6 +214,7 @@ var ScheduleFullDetails = React.createClass({
 var Schedule = React.createClass({
   getInitialState: function() {
     return {
+      showFullDetails: false,
       name: '',
       position: '',
       company: '',
@@ -225,14 +226,39 @@ var Schedule = React.createClass({
     };
   },
   handleSlotClick: function(slot) {
-    this.setState(slot);
+    this.setState( Object.assign({showFullDetails: true}, slot) );
   },
   render: function() {
-    var shed= this;
-    var slotNodes = this.props.data.map(function (slot) {
-      return (
-        <ScheduleSlot onSlotClick={shed.handleSlotClick} anchor={slot.anchor} duration={slot.duration} soon={slot.soon} image={slot.image} name={slot.name} title={slot.title} postion={slot.postion} company={slot.company} url={slot.url} twitter={slot.twitter} github={slot.github} description={slot.description} startTime={slot.startTime} />
-      );
+    var shed = this;
+    var speakerNodes = this.props.data.speakers.map(function (slot) {
+      if(slot.speaker){
+        console.log(slot);
+        return (
+          <ScheduleSessionSlot onSlotClick={shed.handleSlotClick} anchor={slot.anchor} duration={slot.duration} soon={slot.soon} image={slot.image} name={slot.name} title={slot.title} postion={slot.postion} company={slot.company} url={slot.url} twitter={slot.twitter} github={slot.github} description={slot.description} start_time={slot.start_time} />
+        );
+      } else {
+        return (
+          <ScheduleBreakSlot break={slot.break} duration={slot.duration}  name={slot.name} title={slot.title} start_time={slot.start_time} />
+        );
+      }
+    });
+
+    var workshopNodes = this.props.data.workshops.map(function (slot) {
+      if(slot.workshop){
+        return (
+          <ScheduleSessionSlot onSlotClick={shed.handleSlotClick} anchor={slot.anchor} duration={slot.duration} soon={slot.soon} image={slot.image} name={slot.name} title={slot.title} postion={slot.postion} company={slot.company} url={slot.url} twitter={slot.twitter} github={slot.github} description={slot.description} start_time={slot.start_time} />
+        );
+      } else if(slot.speaker === false){
+        return (
+          <ScheduleBreakSlot break={slot.break} duration={slot.duration}  name={slot.name} title={slot.title} start_time={slot.start_time} />
+        );
+      } else {
+        return (
+          <tr className={'timetable__slot timetable__slot--gap mins-' + slot.duration}>
+            <td className="timetable__slot-detail" colspan="2"></td>
+          </tr>
+        )
+      }
     });
 
     return (
@@ -242,9 +268,9 @@ var Schedule = React.createClass({
             <h2 className="section-header__title">Talks</h2>
           </div>
 
-          <table class="timetable js-offset-parent">
+          <table className="timetable js-offset-parent">
             <tbody>
-              {slotNodes}
+              {speakerNodes}
             </tbody>
           </table>
         </div>
@@ -256,32 +282,24 @@ var Schedule = React.createClass({
 
           <table className="timetable js-offset-parent">
             <tbody>
-              <tr id="anchor-workshop" className="timetable__slot mins-60 ">
-                <td className="timetable__start-time">Time</td>
-                <td className="timetable__slot-detail">
-                  <h2 className="timetable__title">Title</h2>
-                  <h3 className="timetable__speaker">Name</h3>
-                </td>
-              </tr>
+              {workshopNodes}
             </tbody>
           </table>
         </div>
 
-        <ScheduleFullDetails data={this.state} />
-      </div>
+        <div className="schedule__more-info ">
+          <div className="section-header"></div>
+          { this.state.showFullDetails ? <ScheduleFullDetails data={this.state} /> : null }
+        </div>
 
+      </div>
     );
   }
-
 });
 
-// var data = [
-//   {startTime: '11:20', name: "Pete Hunt", title: "This is one comment"},
-//   {startTime: '11:40', name: "Jordan Walke", title: "This is *another* comment"}
-// ];
 
 React.render(
-  <Schedule data={scheduleData} />,
+  <Schedule data={{speakers :speakerData , workshops : workshopData}} />,
   document.querySelector('.schedule')
 );
 
