@@ -134,15 +134,16 @@ app.init();
 
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
-var ScheduleSlot = React.createClass({
-
+var ScheduleSessionSlot = React.createClass({
   showDetails: function() {
-    this.props.onSlotClick(this.props);
+    if(this.props.soon !== 'coming__soon--true'){
+      this.props.onSlotClick(this.props);
+    }
   },
   render: function() {
     return (
-      <tr id={'anchor-' + this.props.name } className={'timetable__slot mins-' + this.props.duration }  onClick={this.showDetails} >
-        <td className="timetable__start-time">{this.props.startTtime}</td>
+      <tr id={'anchor-' + this.props.name } className={'timetable__slot mins-' + this.props.duration + ' ' + this.props.soon}  onClick={this.showDetails} >
+        <td className="timetable__start-time">{this.props.start_time}</td>
         <td className="timetable__slot-detail">
           <h2 className="timetable__title">{this.props.title}</h2>
           <h3 className="timetable__speaker">{this.props.name}</h3>
