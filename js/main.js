@@ -151,18 +151,33 @@ var ScheduleSessionSlot = React.createClass({
       </tr>
     );
   }
+});
 
+var ScheduleBreakSlot = React.createClass({
+  render: function() {
+    return (
+      <tr className={'timetable__slot timetable__slot--break mins-' + this.props.duration }>
+        <td className="timetable__start-time">{this.props.start_time} <span className={'timetable__break-name timetable__slot--'+this.props.break}>{this.props.title}</span></td>
+        <td className="timetable__slot-detail"></td>
+      </tr>
+    );
+  }
 });
 
 var ScheduleFullDetails = React.createClass({
   render: function() {
-    return (
-      <div className="schedule__more-info js-schedule__more-info">
-        <div className="section-header section-header--empty section-header--modal js-section-header-modal"></div>
+     if(Modernizr.mq('only screen and (max-width: 850px)')) {
 
+     } else {
+        var slotInfoStyles = {
+          marginTop: '500',
+        };
+     }
+
+    return (
           <ReactCSSTransitionGroup transitionName="example">
 
-            <div key="modal" className="slot-info js-slot-info">
+            <div key="modal" style={slotInfoStyles} className="slot-info js-slot-info">
               <img className="slot-info__image js-data-image" src={'/img/' + this.props.data.image} alt=""/>
               <div className="slot-info__meta">
                 <div className="slot-info__speaker-details">
