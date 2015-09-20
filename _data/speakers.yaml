@@ -13,23 +13,6 @@
   description: >
       <p>A welcome from the team behind Beyond.</p>
 
-- speaker: true
-  name: Una Kravets
-  start_time: '9:30'
-  duration: 30
-  anchor: una
-  image: speaker-una-kravets.jpg
-  position: Front-End Developer
-  company: IBM Design
-  url: http://www.ibm.com/design/
-  github: una
-  twitter: una
-  title: Open Sourcing Your Life
-  description: >
-    <p>Developers often talk about optimising their code bases, but what about optimising our personal development?</p>
-    <p>This session is about my journey with open sourcing my life.</p>
-    <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I've since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
-    <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
 
 - speaker: true
   name: Maxim Cramer
@@ -103,20 +86,23 @@
     <p>More information coming soon.</p>
 
 - speaker: true
-  name:
-  soon: coming__soon--true
+  name: Una Kravets
   start_time: '12:45'
   duration: 30
-  anchor:
-  image:
-  position:
-  company:
-  url:
-  github:
-  twitter:
-  title: TBC
+  anchor: una
+  image: speaker-una-kravets.jpg
+  position: Front-End Developer
+  company: IBM Design
+  url: http://www.ibm.com/design/
+  github: una
+  twitter: una
+  title: Open Sourcing Your Life
   description: >
-    <p>More information coming soon.</p>
+    <p>Developers often talk about optimising their code bases, but what about optimising our personal development?</p>
+    <p>This session is about my journey with open sourcing my life.</p>
+    <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I've since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
+    <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
+
 
 - speaker: true
   soon: coming__soon--true
