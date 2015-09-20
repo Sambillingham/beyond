@@ -142,13 +142,13 @@ var ScheduleSessionSlot = React.createClass({
   },
   render: function() {
     return (
-      <tr id={'anchor-' + this.props.name } className={'timetable__slot mins-' + this.props.duration + ' ' + this.props.soon}  onClick={this.showDetails} >
-        <td className="timetable__start-time">{this.props.start_time}</td>
-        <td className="timetable__slot-detail">
+      <div id={'anchor-' + this.props.name } className={'timetable__slot mins-' + this.props.duration + ' ' + this.props.soon}  onClick={this.showDetails} >
+        <div className="timetable__start-time">{this.props.start_time}</div>
+        <div className="timetable__slot-detail">
           <h2 className="timetable__title">{this.props.title}</h2>
           <h3 className="timetable__speaker">{this.props.name}</h3>
-        </td>
-      </tr>
+        </div>
+      </div>
     );
   }
 });
@@ -156,10 +156,10 @@ var ScheduleSessionSlot = React.createClass({
 var ScheduleBreakSlot = React.createClass({
   render: function() {
     return (
-      <tr className={'timetable__slot timetable__slot--break mins-' + this.props.duration }>
-        <td className="timetable__start-time">{this.props.start_time} <span className={'timetable__break-name timetable__slot--'+this.props.break}>{this.props.title}</span></td>
-        <td className="timetable__slot-detail"></td>
-      </tr>
+      <div className={'timetable__slot timetable__slot--break mins-' + this.props.duration }>
+        <div className="timetable__start-time">{this.props.start_time} <span className={'timetable__break-name timetable__slot--'+this.props.break}>{this.props.title}</span></div>
+        <div className="timetable__slot-detail"></div>
+      </div>
     );
   }
 });
@@ -201,12 +201,11 @@ var ScheduleFullDetails = React.createClass({
 
               <div className="slot-info__description">
                 <h3 className="js-data-title">{this.props.data.title}</h3>
-                <div className="js-data-description">{this.props.data.description}</div>
+                <div className="js-data-description" dangerouslySetInnerHTML={{__html: this.props.data.description}}></div>
               </div>
             </div>
           </ReactCSSTransitionGroup>
 
-      </div>
     );
   }
 });
@@ -254,40 +253,31 @@ var Schedule = React.createClass({
         );
       } else {
         return (
-          <tr className={'timetable__slot timetable__slot--gap mins-' + slot.duration}>
-            <td className="timetable__slot-detail" colspan="2"></td>
-          </tr>
+          <div className={'timetable__slot timetable__slot--gap mins-' + slot.duration}>
+            <div className="timetable__slot-detail"></div>
+          </div>
         )
       }
     });
 
     return (
       <div className="schedule">
+
         <div className="schedule__talks">
           <div className="section-header">
             <h2 className="section-header__title">Talks</h2>
           </div>
-
-          <table className="timetable js-offset-parent">
-            <tbody>
-              {speakerNodes}
-            </tbody>
-          </table>
+          {speakerNodes}
         </div>
 
         <div className="schedule__workshops">
           <div className="section-header">
             <h2 className="section-header__title">Workshops</h2>
           </div>
-
-          <table className="timetable js-offset-parent">
-            <tbody>
-              {workshopNodes}
-            </tbody>
-          </table>
+          {workshopNodes}
         </div>
 
-        <div className="schedule__more-info ">
+        <div className="schedule__full-details">
           <div className="section-header"></div>
           { this.state.showFullDetails ? <ScheduleFullDetails data={this.state} /> : null }
         </div>

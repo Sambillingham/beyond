@@ -3,73 +3,33 @@
   margin-top: 50px;
   margin-bottom: 50px;
 
-  @include fill-parent();
-  @include row(table);
-
-  @include media($mobile) {
-    @include row();
-  }
 }
 
 .schedule__talks,
 .schedule__workshops,
-.schedule__more-info {
+.schedule__full-details {
   width: 33.33333%;
-  display: table-cell;
-  vertical-align: top;
+  float: left;
 
   @include media($tablet) {
-    // probably dont actually need this but maybe for older browsers
     width: 50%;
   }
   @include media($mobile) {
-    // probably dont actually need this but maybe for older browsers
-    display: block;
     width: 100%;
   }
 }
 
-.schedule {
-  @include outer-container;
-  margin-top: 50px;
-
-  @include fill-parent();
-  @include row(table);
-
-  @include media($mobile) {
-    @include row();
-  }
-}
-// This is needed to get the correct position of the speaker slot
-.js-offset-parent {
-  position: relative;
-}
-
-.timetable {
-  width: 100%;
-  @include media($mobile) {
-    margin-bottom: 50px;
-  }
-  td {
-    vertical-align: top;
-    padding-top: 10px;
-    border-bottom: 1px solid $beyond-salmon;
-  }
-}
 .timetable__slot:not(.coming__soon--true){
   cursor: pointer;
-  &:hover {
-    .timetable__start-time {
-      background-color: $beyond-salmon;
-      color: #FFFFFF;
-    }
-  }
-  &.timetable__slot--break:hover, .timetable__slot--break--lunch:hover {
-    .timetable__start-time {
-      color: $beyond-yellow;
-      background-color: #FFEEC0;
-    }
-  }
+}
+.timetable__slot:not(.coming__soon--true):hover .timetable__start-time{
+  background-color: $beyond-salmon;
+  color: #FFFFFF;
+}
+
+.timetable__slot--break:hover, .timetable__slot--break--lunch:hover .timetable__start-time{
+  color: $beyond-yellow;
+  background-color: #FFEEC0;
 }
 
 .timetable__slot.timetable__slot--gap {
@@ -85,17 +45,24 @@
     display: none;
   }
 }
+.timetable__slot {
+  border-bottom: 1px solid $beyond-salmon;
+}
 
 .timetable__start-time {
-  width: 60px;
+  width: 20%;
+  float: left;
+  padding: 10px;
+
   text-align: center;
   color: $beyond-salmon;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .timetable__slot-detail {
-  padding-right: 10px;
-  padding-left: 20px;
+  float: left;
+  padding: 10px;
+  width: 80%;
 }
 
 .timetable__title {
@@ -121,7 +88,9 @@
 
 // Timing sizings
 @for $i from 1 through 20 {
-  .#{mins}-#{$i*5} {
+  .#{mins}-#{$i*5},
+  .#{mins}-#{$i*5} .timetable__start-time,
+  .#{mins}-#{$i*5} .timetable__slot-detail {
     height: floor(6.6667 * ($i*5) )+ px;
   }
 }
