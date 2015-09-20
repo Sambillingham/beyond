@@ -95,7 +95,7 @@ gulp.task('sass-on-build', ['jekyll-dev'], function() {
 });
 
 gulp.task('browser-sync', ['jekyll-dev', 'sass-on-build'], function() {
-    browserSync({
+    browserSync.init({
         server: {
             baseDir: '_site'
         }
