@@ -41,7 +41,7 @@
   twitter: mennenia
   title: Users! Now what?
   description: >
-    <p>More information coming soon.</p>
+    <p>When getting into software development, we tend to focus exclusively on writing excellent code. But what about the people that we’re coding for - the end users of our product? In this 15-minute talk I’ll be bringing things back to them; introducing you to the benefits of regularly running your builds through user testing. This exercise will give you insights that are hard to find in analytics, making you more aware of what you’re building and why. You'll save time, waste less code, and build better products.</p>
 
 - speaker: true
   name: Paul Lewis
