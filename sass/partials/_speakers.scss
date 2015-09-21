@@ -120,7 +120,11 @@
   }
 }
 .workshop__info {
+  float: left;
   height: 75px;
+  @include media($tablet) {
+    height: auto;
+  }
 }
 
 .speaker__title {
@@ -143,6 +147,11 @@
     float: left;
     max-width: 140px;
     margin-right: 10px;
+  }
+}
+.speaker--workshop .speaker__image {
+  @include media($mobile) {
+    max-width: 100%;
   }
 }
 
