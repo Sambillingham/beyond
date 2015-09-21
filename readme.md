@@ -24,5 +24,5 @@ Production ready site will be generated in '\_site/' folder. Open and check inde
 When ready push to gh-pages branch with:
 
 ```
-gulp deploy
+gulp deploy --m 'Commit message'
 ```

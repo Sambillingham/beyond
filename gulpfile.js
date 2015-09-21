@@ -95,8 +95,11 @@ gulp.task('browser-sync', ['jekyll-dev', 'sass-on-build'], function() {
 });
 
 gulp.task('deploy', function() {
+  var message = argv.m || 'Update ' + new Date().toISOString();
   return gulp.src('./_site/**/*')
-    .pipe(ghPages());
+    .pipe(ghPages({
+      message: argv.m
+    }));
 });
 
 gulp.task('watch', function() {
