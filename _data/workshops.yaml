@@ -1,10 +1,10 @@
 - workshop: false
   gap: true
-  duration: 45
+  duration: 105
 
 - workshop: true
   name: Workshop
-  start_time: '10:05'
+  start_time: '11:30'
   duration: 60
   anchor: w-sketch
   twitter: sketchapp
@@ -18,23 +18,14 @@
     <p>Used by Google, Sega and Dropbox, Sketch is fast becoming the go-to software for mocking up digital designs and creating assets for the web.</p>
     <p>You’ll learn how to navigate around the app and discover some of its most powerful features, before putting what you’ve learnt into practice. You’ll try your hand at creating different interfaces and discover how to automate parts of your workflow, creating a more seamless link between your designs and your code.</p>
 
-- speaker: false
-  duration: 30
-  start_time: '11:20'
-  title: Break
-
 - workshop: true
   soon: coming__soon--true
   name: Workshop
-  start_time: '11:50'
+  start_time: '12:35'
   duration: 60
   title: Session TBA
   description: >
     <p>Coming Soon</p>
-
-- workshop: false
-  gap: true
-  duration: 30
 
 - speaker: false
   duration: 60
@@ -42,11 +33,21 @@
   title: Lunch
   break: lunch
 
-- workshop: false
-  gap: true
-  duration: 90
+- workshop: true
+  soon: coming__soon--true
+  name: Workshop
+  start_time: '14:35'
+  duration: 55
+  title: Session TBA
+  description: >
+    <p>Coming Soon</p>
 
-- speaker: false
-  duration: 30
-  start_time: '16:15'
-  title: Break
+
+- workshop: true
+  soon: coming__soon--true
+  name: Workshop
+  start_time: '15:40'
+  duration: 60
+  title: Session TBA
+  description: >
+    <p>Coming Soon</p>
