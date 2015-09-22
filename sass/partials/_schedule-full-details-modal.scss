@@ -1,5 +1,5 @@
 
-.slot-info {
+.session-details {
   display: none;
   @include media($tablet) {
     width: 100%;
@@ -11,7 +11,7 @@
   }
 }
 
-.slot-info__image {
+.session-details__image {
   max-width: 100%;
   width: 100%;
 
@@ -20,39 +20,36 @@
   }
 }
 
-.slot-info__meta {
+.session-details__meta {
   padding: 15px;
   @include clearfix;
 }
 
-.slot-info__speaker-details {
-  float: left;
-  margin-bottom: 30px;
-  width: 100%;
-  h3 {
-    margin-bottom: 0;
-    color: #FFFFFF;
-  }
+.session-details__title {
+  margin-bottom: 0;
+  color: #fff;
 }
 
-.slot-info__links {
+.session-details__links {
   float: left;
   margin-bottom: 20px;
-  a {
-    margin-right: 15px;
-    text-decoration: none;
-  }
+  width: 100%;
 }
 
-.slot-info__description {
+.session-details__link {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.session-details__description {
   padding: 15px;
   color: #FFFFFF;
-  h3 {
+}
+.session-details__title--above-text {
     margin-bottom: 10px;
-  }
 }
 
-.schedule-info-overlay {
+.schedule-session-details-overlay {
   position: fixed;
   top: 0;
   left: 0;

@@ -29,7 +29,7 @@ var app = {
 
       $('.js-section-header-modal').on('click', function(){
         $('body').removeClass('lock-scroll');
-        $('.js-schedule__more-info, .schedule-info-overlay').fadeOut();
+        $('.js-schedule__full-details, .schedule-session-details-overlay').fadeOut();
       });
   },
   mailChimpAjaxRegister: function (form){
@@ -84,10 +84,10 @@ var app = {
    if(Modernizr.mq('only screen and (max-width: 850px)')) {
       $('body').addClass('lock-scroll');
       $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>');
-      $('.js-slot-info, .js-schedule__more-info, .schedule-info-overlay').fadeIn();
+      $('.js-session-details, .js-schedule__full-details, .schedule-session-details-overlay').fadeIn();
 
    } else {
-      $('.js-slot-info').css('margin-top', pxFromTop).fadeIn();
+      $('.js-session-details').css('margin-top', pxFromTop).fadeIn();
    }
 
   },
