@@ -83,7 +83,7 @@ var app = {
 
    if(Modernizr.mq('only screen and (max-width: 850px)')) {
       $('body').addClass('lock-scroll');
-      $('.js-section-header-modal').html('<h2 class="section-header__title">Close</h2>');
+      $('.js-section-header-modal').html('<h2 class="section-header__title section-header__title--without">Close</h2>');
       $('.js-session-details, .js-schedule__full-details, .schedule-session-details-overlay').fadeIn();
 
    } else {
