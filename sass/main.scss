@@ -1,27 +1,38 @@
-
+// Vendor
 @import "vendor/normalize";
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
 
-@import "partials/vars";
-
+// Shared
 @import "mixins";
+@import "partials/vars";
+@import "partials/shared";
+@import "partials/util";
 @import "partials/type";
 
+// modules
 @import "partials/header";
+@import "partials/footer";
+
+// pages
+// -----
+
+// Index
 @import "partials/hero";
-@import "partials/about";
 @import "partials/sign-up";
 @import "partials/sessions";
 @import "partials/tickets";
 @import "partials/after-party";
 @import "partials/sponsors";
 @import "partials/location-info";
-@import "partials/timetable";
-@import "partials/schedule-more-info";
+
+// Schedule
+@import "partials/schedule";
+@import "partials/schedule-full-details-modal";
+
+// Single
 @import "partials/single-page";
-@import "partials/footer";
 
 body {
   background-color: #FFFFFF;
@@ -32,14 +43,4 @@ body {
 
 body.lock-scroll {
   overflow: hidden;
-}
-
-h2,h3 {
-  font-family: 'jaapokki-regular';
-}
-
-.hidden-tablet {
-  @include media($tablet) {
-    display: none;
-  }
 }

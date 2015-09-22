@@ -1,0 +1,57 @@
+.beyond-btn {
+  display: block;
+  clear: both;
+  text-align: center;
+  padding: 12px 0 8px;
+  background-color: $beyond-blue;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'jaapokki-regular';
+  font-size: 1.2em;
+}
+
+.section-header {
+  border-top: 5px solid $beyond-blue;
+  border-bottom: 20px solid $beyond-blue;
+}
+
+.section-header--without-description {
+  height: 65px;
+}
+
+.section-header--empty {
+  background-color: #FFFFFF;
+}
+
+.section-header--primary {
+  text-transform: uppercase;
+}
+
+.section-header--modal {
+  cursor: pointer;
+  text-align: right;
+}
+
+.section-header__title {
+  text-transform: uppercase;
+  color: $beyond-blue;
+  margin-bottom: 0;
+  // margin-left: 14px;
+  line-height: 47px;
+  vertical-align: middle;
+
+  @include media($tablet){
+    padding: 10px 20px 0;
+  }
+}
+
+.section-header__description {
+  color: $beyond-blue;
+  font-size: 1.2em;
+  font-family: $jaapokki;
+  margin: 15px 0 25px 0;
+
+  @include media($tablet){
+    padding: 0 20px;
+  }
+}
