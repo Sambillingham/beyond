@@ -21,21 +21,15 @@
 .beyond-btn--tickets {
   width: 80%;
 }
+
 .section-header {
   border-top: 5px solid $beyond-blue;
   border-bottom: 20px solid $beyond-blue;
+  background-color: #FFFFFF;
 }
 
 .section-header--without-description {
   height: 65px;
-}
-
-.section-header--empty {
-  background-color: #FFFFFF;
-}
-
-.section-header--primary {
-  text-transform: uppercase;
 }
 
 .section-header--modal {
@@ -47,7 +41,6 @@
   text-transform: uppercase;
   color: $beyond-blue;
   margin-bottom: 0;
-  // margin-left: 14px;
   line-height: 47px;
   vertical-align: middle;
 
