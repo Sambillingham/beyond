@@ -1,0 +1,154 @@
+.speakers, .workshops {
+  @include outer-container;
+  @include outer-padding;
+  @include clearfix();
+  margin-bottom: 100px;
+  position: relative;
+
+  @include media($tablet) {
+    padding: 0;
+  }
+
+  @include media($mobile) {
+    padding: 20px 0;
+  }
+}
+
+.session {
+  float: left;
+  background-color: $beyond-salmon;
+  width: 25%;
+  position: relative;
+  text-decoration: none;
+
+  @include media($tablet) {
+    width: 33.33%;
+  }
+  @include media($mobile) {
+    @include span-columns(4);
+  }
+}
+
+.session:nth-child(3n+1), .session:nth-child(3n+1):before {
+  background-color: $beyond-yellow;
+}
+
+.session:nth-child(3n+2), .session:nth-child(3n+2):before{
+  background-color: $beyond-salmon;
+}
+
+.session:nth-child(3n+3), .session:nth-child(3n+3):before {
+  background-color: $beyond-blue;
+}
+
+.session:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    display: none;
+    z-index: 10;
+}
+
+.session:not(.session--coming-soon):hover:before {
+    display: block;
+}
+
+.session--coming-soon {
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.session__info--coming-soon {
+    padding: 0;
+    background-image: url(../img/speaker-coming-soon-bottom.png);
+    background-position: center;
+    background-size: contain;
+    z-index: 0;
+}
+
+.session__info {
+  padding: 10px;
+  height: 150px;
+  position: relative;
+  z-index: 20;
+
+  @include media($mobile) {
+    height: auto;
+  }
+}
+
+.session__name,
+.session__position,
+.session__company,
+.session__title {
+  color: #ffffff;
+  margin: 0;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+
+.session__title {
+  font-family: $jaapokki;
+  font-size: 1.2em;
+}
+
+.session__image {
+  max-width: 100%;
+  display: block;
+  @include media($mobile) {
+    float: left;
+    max-width: 140px;
+    margin-right: 10px;
+  }
+}
+
+.session__image--workshop {
+  @include media($tablet) {
+    width: 100%;
+  }
+  @include media($mobile) {
+    max-width: 100%;
+  }
+}
+
+.session--workshop {
+  width: 50%;
+  @include media($tablet) {
+    width: 100%;
+  }
+}
+
+.session__info--workshop {
+  float: left;
+  width: 100%;
+  height: 75px;
+  z-index: 10;
+
+  // removes weird 1px line that the bg image doesn't cover at some sizes;
+  margin-top: -1px;
+
+  @include media($tablet) {
+    height: auto;
+  }
+}
+
+.session--workshop-coming-soon {
+  @include media($tablet) {
+    display: none;
+  }
+}
+
+.session__info--workshop-coming-soon {
+  background-image: url(../img/workshop-coming-soon-bottom.png);
+}
+
+.session__workshop-comming-soon-badge {
+  position: absolute;
+  top: -30px;
+  right: 30px;
+  width: 250px;
+  z-index: 20;
+}
