@@ -128,20 +128,3 @@
   }
 
 }
-
-.ticket-buy-link {
-  clear: both;
-  width: 80%;
-  display: block;
-  background-color: $beyond-salmon;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.2em;
-  padding: 12px 0 8px;
-  font-family: $jaapokki;
-
-  @include media($tablet) {
-    width: 100%;
-  }
-}

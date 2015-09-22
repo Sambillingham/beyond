@@ -10,6 +10,17 @@
   font-size: 1.2em;
 }
 
+.beyond-btn--primary {
+  background-color: $beyond-blue;
+}
+
+.beyond-btn--secondary {
+  background-color: $beyond-salmon;
+}
+
+.beyond-btn--tickets {
+  width: 80%;
+}
 .section-header {
   border-top: 5px solid $beyond-blue;
   border-bottom: 20px solid $beyond-blue;
