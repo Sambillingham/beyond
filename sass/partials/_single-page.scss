@@ -11,8 +11,11 @@
   line-height: 1.7;
 
   @include media($tablet) {
-    @include span-columns(10);
-    @include shift(1);
+    @include span-columns(12);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   a {
