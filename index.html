@@ -1,5 +1,18 @@
 ---
 layout: default
+speaker_order:
+  - Harry Roberts
+  - Alice Bartlett
+  - Alex Sexton
+  - Linda Liukas
+  - Andy Appleton
+  - Coming Soon
+  - Una Kravets
+  - Coming Soon
+  - Maxim Cramer
+  - Paul Lewis
+  - Coming Soon
+  - Alana Wood
 ---
 <header class="header">
 
@@ -43,101 +56,31 @@ layout: default
     <p class="section-header__description">We’ve put together a list of speakers that’ll get you excited about code. As leaders in the industry, they’ll give you practical insights into how to build better, and share stories that’ll motivate you to go beyond the beaten track.</p>
   </div>
 
-  <a href="/schedule/#anchor-harry" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-harry-roberts.jpg">
-    <div class="session__info">
-      <h2 class="session__title">CSS for Software Engineers for CSS Developers</h2>
-      <h3 class="session__name">Harry Roberts</h3>
-      <h3 class="session__position">Front-End Architect</h3>
-      <h3 class="session__company">CSS Wizardry</h3>
-    </div>
-  </a>
+  {% for speaker in page.speaker_order %}
+    {% if speaker == "Coming Soon" %}
+      {% include speaker-coming-soon.html %}
+    {% else %}
+      {% assign current_speaker = site.data.speakers | where:"name", speaker %}
+      {% comment %}
+        The hash that is returend from the where filter above looks like it is a single hash
+         but works as if it is an array with a single hash at index 0.
 
-  <a href="/schedule/#anchor-alice" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-alice-bartlett.jpg">
-    <div class="session__info">
-      <h2 class="session__title">Asking For More</h2>
-      <h3 class="session__name">Alice Bartlett</h3>
-      <h3 class="session__position">Senior Developer</h3>
-      <h3 class="session__company">Government Digital Service</h3>
-    </div>
-  </a>
-
-  <a href="/schedule/#anchor-alex" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-alex-sexton.jpg">
-    <div class="session__info">
-      <h2 class="session__title">Getting Involved in Open Source</h2>
-      <h3 class="session__name">Alex Sexton</h3>
-      <h3 class="session__position">Product Engineer</h3>
-      <h3 class="session__company">Stripe</h3>
-    </div>
-  </a>
-
-  <a href="/schedule/#anchor-linda" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-linda-liukas.jpg">
-    <div class="session__info">
-      <h2 class="session__title">Talk Title: Coming Soon</h2>
-      <h3 class="session__name">Linda Liukas</h3>
-      <h3 class="session__position">Author</h3>
-      <h3 class="session__company">Hello Ruby</h3>
-    </div>
-  </a>
-
-  <a href="/schedule/#anchor-andy" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-andy-appleton.jpg">
-    <div class="session__info">
-      <h2 class="session__title">Done is better than perfect</h2>
-      <h3 class="session__name">Andy Appleton</h3>
-      <h3 class="session__position">Web Developer</h3>
-      <h3 class="session__company">Heroku</h3>
-    </div>
-  </a>
-
-  {% include speaker-coming-soon.html %}
-
-  <a href="/schedule/#anchor-una" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-una-kravets.jpg">
-    <div class="session__info">
-      <h2 class="session__title">Open Sourcing Your Life</h2>
-      <h3 class="session__name">Una Kravets</h3>
-      <h3 class="session__position">Front End Developer</h3>
-      <h3 class="session__company">IBM Design</h3>
-    </div>
-  </a>
-
-  {% include speaker-coming-soon.html %}
-
-  <a href="/schedule/#anchor-maxim" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-maxim-cramer.jpg">
-    <div class="session__info">
-      <h2 class="session__title">Users! Now what?</h2>
-      <h3 class="session__name">Maxim Cramer</h3>
-      <h3 class="session__position">iOS Developer</h3>
-      <h3 class="session__company">SwiftKey</h3>
-    </div>
-  </a>
-
-  <a href="/schedule/#anchor-paul" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-paul-lewis.jpg">
-    <div class="session__info">
-      <h2 class="session__title">Performance on RAILs</h2>
-      <h3 class="session__name">Paul Lewis</h3>
-      <h3 class="session__position">Chrome Developer Relations</h3>
-      <h3 class="session__company">Google</h3>
-    </div>
-  </a>
-
-  {% include speaker-coming-soon.html %}
-
-  <a href="/schedule/#anchor-alana" class="session session-speaker">
-    <img class="session__image" src="/img/speaker-alana-wood.jpg">
-    <div class="session__info">
-      <h2 class="session__title">Talk Title: Coming Soon</h2>
-      <h3 class="session__name">Alana Wood</h3>
-      <h3 class="session__position">Studio Design Lead</h3>
-      <h3 class="session__company">Ustwo</h3>
-    </div>
-  </a>
+         When returning current_speaker, current_speaker[0], current_speaker.first they all
+          look exactly the same but obvisouly there is a difference as you cannot access
+           properties of cuurent_speaker only current_speaker[0] or current_speaker.first.
+      {% endcomment %}
+      {% assign current_speaker = current_speaker.first %}
+        <a href="/schedule/#anchor-{{current_speaker.anchor}}" class="session session-speaker">
+          <img class="session__image" src="/img/{{current_speaker.image}}">
+          <div class="session__info">
+            <h2 class="session__title">{{current_speaker.title}}</h2>
+            <h3 class="session__name">{{current_speaker.name}}</h3>
+            <h3 class="session__position">{{current_speaker.position}}</h3>
+            <h3 class="session__company">{{current_speaker.company}}</h3>
+          </div>
+        </a>
+    {% endif %}
+  {% endfor %}
 
   <a class="beyond-btn beyond-btn--primary" href="/schedule">See the schedule</a>
 </section>
