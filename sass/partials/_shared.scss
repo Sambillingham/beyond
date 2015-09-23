@@ -20,6 +20,9 @@
 
 .beyond-btn--tickets {
   width: 80%;
+  @include media($tablet) {
+    width: 100%;
+  }
 }
 
 .section-header {
