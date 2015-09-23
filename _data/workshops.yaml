@@ -11,8 +11,9 @@
   github: BohemianCoding
   url: http://bohemiancoding.com/sketch/
   image: workshop-sketch-schedule.png
+  image_alt-home: workshop-sketch.png
   position: Sketch Team
-  title: Intro to Sketch
+  title: "Design for Developers: An Intro to Sketch"
   description: >
     <p>Go through the ins-and-outs of designing digital products with Sketch, led by the team behind it.</p>
     <p>Used by Google, Sega and Dropbox, Sketch is fast becoming the go-to software for mocking up digital designs and creating assets for the web.</p>
