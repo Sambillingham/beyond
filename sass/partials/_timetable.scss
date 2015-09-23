@@ -120,7 +120,7 @@
 }
 
 // Timing sizings
-@for $i from 1 through 20 {
+@for $i from 1 through 25 {
   .#{mins}-#{$i*5} {
     height: floor(6.6667 * ($i*5) )+ px;
   }
