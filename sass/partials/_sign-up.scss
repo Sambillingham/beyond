@@ -2,11 +2,12 @@
   @include outer-container;
   @include outer-padding;
   margin-bottom: 100px;
+}
 
-  h2 {
+.sign-up__lead {
+  text-transform: uppercase;
   color: $beyond-salmon;
   margin-bottom: 20px;
-  }
 }
 
 form {

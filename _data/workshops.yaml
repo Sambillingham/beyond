@@ -19,7 +19,7 @@
     <p>You’ll learn how to navigate around the app and discover some of its most powerful features, before putting what you’ve learnt into practice. You’ll try your hand at creating different interfaces and discover how to automate parts of your workflow, creating a more seamless link between your designs and your code.</p>
 
 - workshop: true
-  soon: coming__soon--true
+  soon: schedule__session--coming-soon
   name: Workshop
   start_time: '12:35'
   duration: 60
@@ -34,7 +34,7 @@
   break: lunch
 
 - workshop: true
-  soon: coming__soon--true
+  soon: schedule__session--coming-soon
   name: Workshop
   start_time: '14:35'
   duration: 55
@@ -44,7 +44,7 @@
 
 
 - workshop: true
-  soon: coming__soon--true
+  soon: schedule__session--coming-soon
   name: Workshop
   start_time: '15:40'
   duration: 60

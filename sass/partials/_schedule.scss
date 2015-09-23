@@ -1,0 +1,161 @@
+.schedule {
+  @include outer-container;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @include fill-parent();
+  @include row(table);
+
+  @include media($mobile) {
+    @include row();
+  }
+}
+
+.schedule__column {
+  width: 33.33333%;
+  display: table-cell;
+  vertical-align: top;
+
+  @include media($tablet) {
+    width: 50%;
+  }
+  @include media($mobile) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.schedule__column--more-info {
+    background-color: $beyond-salmon;
+    height: 100%;
+    z-index: 20;
+
+    @include media($tablet) {
+      display: none;
+      position: fixed;
+      top: 2%;
+      left: 15%;
+      width: 70%;
+      height: 96%;
+      overflow-y: scroll;
+    }
+    @include media($mobile) {
+      width: 96%;
+      left: 2%;
+    }
+}
+
+// This is needed to get the correct position of the speaker slot
+.js-offset-parent {
+  position: relative;
+}
+
+.schedule__sessions {
+  width: 100%;
+  @include media($mobile) {
+    margin-bottom: 50px;
+  }
+}
+
+.schedule__session:hover {
+  cursor: pointer;
+}
+
+.schedule__session--break:hover,
+.schedule__session--coming-soon:hover,
+.schedule__session--gap:hover {
+  cursor: default;
+}
+
+.schedule__session:hover .schedule__start-time {
+    background-color: $beyond-salmon;
+    color: #FFFFFF;
+}
+
+.schedule__session--break:hover .schedule__start-time{
+    color: $beyond-yellow;
+    background-color: #FFEEC0;
+}
+
+.schedule__session--coming-soon:hover .schedule__start-time,
+.schedule__session--gap:hover .schedule__start-time{
+    color: $beyond-salmon;
+    background-color: #FFFFFF;
+}
+
+// Timing sizings (controls vertical height of each schedule session)
+@for $i from 1 through 25 {
+  .#{schedule__session--mins}-#{$i*5} {
+    height: floor(6.6667 * ($i*5) )+ px;
+  }
+}
+
+.schedule__session--gap {
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.schedule__session-column {
+  vertical-align: top;
+  padding-top: 10px;
+  border-bottom: 1px solid $beyond-salmon;
+}
+
+.schedule__start-time {
+  width: 60px;
+  text-align: center;
+  color: $beyond-salmon;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.schedule__start-time--break{
+    color: $beyond-yellow;
+    background-color: #FFEEC0;
+}
+
+.schedule__details {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+.schedule__details--break {
+    background-color: #FFE3A0;
+    background-image: url(../img/lunch-pattern.svg);
+    background-size: contain;
+}
+
+.schedule__title {
+  color: $beyond-salmon;
+  margin-bottom: 0;
+}
+
+.schedule__host {
+  font-family: 'Varela Round', sans-serif;
+  color: $beyond-salmon;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+.schedule__open-symbol {
+  display: none;
+  width: 20px;
+  margin-top: 7px;
+  @include media($tablet) {
+    display: inline-block;
+  }
+}
+
+.schedule__session-name {
+  display: block;
+  font-family: 'jaapokki-regular';
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 1;
+  @include transform(rotate(-90deg) translate(-90%, 0));
+  @include transform-origin(top top);
+}
+
+.schedule__session-name--lunch {
+    margin-top: 96px;
+}

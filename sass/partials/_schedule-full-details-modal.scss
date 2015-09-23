@@ -1,0 +1,61 @@
+
+.session-details {
+  display: none;
+  @include media($tablet) {
+    width: 100%;
+    margin: 0 auto;
+  }
+  @include media($mobile) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.session-details__image {
+  max-width: 100%;
+  width: 100%;
+
+  @include media($mobile) {
+    width: 100%;
+  }
+}
+
+.session-details__meta {
+  padding: 15px;
+  @include clearfix;
+}
+
+.session-details__title {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.session-details__links {
+  float: left;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.session-details__link {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.session-details__description {
+  padding: 15px;
+  color: #FFFFFF;
+}
+.session-details__title--above-text {
+    margin-bottom: 10px;
+}
+
+.schedule-session-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.8);
+  z-index: 10;
+  display: none;
+}

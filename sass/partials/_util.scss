@@ -1,0 +1,5 @@
+.hidden-tablet {
+  @include media($tablet) {
+    display: none;
+  }
+}

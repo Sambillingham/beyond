@@ -11,6 +11,11 @@
     font-style: normal;
 }
 
+h1, h2, h3 {
+  font-weight: normal;
+  font-family: $jaapokki;
+}
+
 h2 {
   font-size: 1.3em;
   margin: 0 0 35px 0;
@@ -19,17 +24,4 @@ h2 {
 
 h3 {
   margin: 0 0 50px 0;
-}
-
-h1, h2, h3 {
-  font-weight: normal;
-}
-
-.section-header--primary {
-  text-transform: uppercase;
-}
-
-.section-header--modal {
-  cursor: pointer;
-  text-align: right;
 }

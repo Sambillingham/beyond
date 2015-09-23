@@ -59,7 +59,7 @@
     <p>Looking around at web performance advice today can be overwhelming: everything comes with caveats, disclaimers, and sometimes one piece of advice can seem to actively contradict another. Phrases like “the DOM is slow” or “always use CSS animations!” make for great headlines, but the truth is often far more nuanced. In this session we'll look at how to think holistically about performance, and how to prioritize optimization work that your users will notice and appreciate.</p>
 
 - speaker: true
-  soon: coming__soon--true
+  soon: schedule__session--coming-soon
   title: Sponsor Message
   start_time: '11:00'
   duration: 15
@@ -119,7 +119,7 @@
 
 
 - speaker: true
-  soon: coming__soon--true
+  soon: schedule__session--coming-soon
   title: Sponsor Message
   start_time: '13:20'
   duration: 15
@@ -185,7 +185,7 @@
 
 - speaker: true
   name: Coming soon
-  soon: coming__soon--true
+  soon: schedule__session--coming-soon
   start_time: '16:45'
   duration: 30
   anchor:
