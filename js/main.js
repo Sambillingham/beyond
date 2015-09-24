@@ -126,7 +126,9 @@ var app = {
     if( this.inTheFuture(superEarlyBird) ){
       nextIncrease = superEarlyBird;
     } else {
-      $('.ticket').first().addClass('ticket--sold-out');
+      $('.ticket').first().addClass('ticket--sold-out').unwrap('<a href=""></a>');
+      $('.ticket').eq(1).find('.ticket__price--unreleased').removeClass('ticket__price--unreleased');
+      $('.ticket').eq(1).wrap('<a href="https://www.eventbrite.co.uk/e/beyond-conf-2015-tickets-18517110175"></a>');
       nextIncrease = EarlyBird;
     }
 
