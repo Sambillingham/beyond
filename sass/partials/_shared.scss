@@ -34,6 +34,9 @@
 .section-header--without-description {
   height: 65px;
 }
+.section-header--primary {
+  text-transform: uppercase;
+}
 
 .section-header--modal {
   cursor: pointer;
