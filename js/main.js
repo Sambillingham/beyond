@@ -144,8 +144,8 @@ var app = {
       this.displayCountdown( days, 'days');
     }
   },
-  displayCountdown: function(countdownAmmount, format){
-    var countdownAsText = countdownAmmount.toString();
+  displayCountdown: function(countdownAmount, format){
+    var countdownAsText = countdownAmount.toString();
 
     if (countdownAsText.length === 1) {
       countdownAsText = '0' + countdownAsText;
