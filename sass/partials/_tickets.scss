@@ -18,6 +18,7 @@
   padding: 20px 0;
   text-align: center;
   color: $beyond-salmon;
+  position: relative;
 
   @include media($tablet) {
     width: 25%;
@@ -30,6 +31,26 @@
     &:first-of-type {
       border-top: solid 5px $beyond-salmon;
     }
+  }
+}
+.ticket--sold-out .ticket__all-gone {
+  display: block;
+}
+
+.ticket__all-gone {
+  display: none;
+  position: absolute;
+  width: 75%;
+  top: 30px;
+  left: 12.5%;
+
+  @include media($tablet) {
+    top: 40px;
+  }
+  @include media($mobile) {
+    width: 80px;
+    top: 15px;
+    left: 10%;
   }
 }
 
@@ -112,7 +133,7 @@
     font-size: 1.3em;
   }
 }
-.days-left__num {
+.time-left__num {
   display: inline-block;
   background-color: $beyond-salmon;
   color: #fff;
