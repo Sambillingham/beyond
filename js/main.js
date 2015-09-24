@@ -126,6 +126,7 @@ var app = {
     if( this.inTheFuture(superEarlyBird) ){
       nextIncrease = superEarlyBird;
     } else {
+      $('.ticket').first().addClass('ticket--sold-out');
       nextIncrease = EarlyBird;
     }
 
