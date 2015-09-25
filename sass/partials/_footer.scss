@@ -15,7 +15,7 @@ footer {
 
 .footer__content {
   padding: 25px 0;
-  border-top: 5px solid $beyond-salmon;
+  border-top: 5px solid $beyond-blue;
   @include clearfix;
   @include media($mobile) {
     padding: 25px;
