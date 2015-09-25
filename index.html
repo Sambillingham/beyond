@@ -62,72 +62,36 @@ speaker_order:
   <a class="beyond-btn beyond-btn--primary" href="/schedule">See the schedule</a>
 </section>
 
-<section class="sign-up">
-    <h2 class="sign-up__lead">Sign up for news and special offers</h2>
-
-    <form action="http://Steer.us3.list-manage.com/subscribe/post-json?u=b42ed4b708bcbe8ab191bbf6f&amp;id=2341ae3014&amp;c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate " target="_blank" novalidate>
-
-      	<label for="mce-NAME">Name </label>
-      	<input class="sign-up__name" type="text" value="" name="NAME" class="required" id="mce-NAME" placeholder="Name">
-
-      	<label for="mce-EMAIL">Email Address </label>
-      	<input class="sign-up__email" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
-
-        <div style="position: absolute; left: -5000px;">
-          <input type="text" name="b_b42ed4b708bcbe8ab191bbf6f_2341ae3014" tabindex="-1" value="">
-        </div>
-
-        <input class="sign-up__submit" type="submit" value="Keep me posted" name="subscribe" id="mc-embedded-subscribe" class="button">
-    </form>
-    <div class="sign-up__message"></div>
-</section>
-
-
-<section class="workshops">
-
-  <div class="section-header">
-    <h2 class="section-header__title">Workshops</h2>
-    <p class="section-header__description">​Learn a new skill at one of our workshops. There’ll be four for you to choose from, each one packed with practical tips and tricks. You'll be able to register for your chosen workshop two weeks before the event.</p>
-  </div>
-
-  {% assign sketch = site.data.workshops | where:"position", "Sketch Team" %}
-  {% assign sketch = sketch.first %}
-  <a href="/schedule#anchor-{{sketch.anchor}}" class="session session--workshop">
-    <img class="session__image session__image--workshop" src="/img/{{sketch.image_alt-home}}">
-    <div class="session__info session__info--workshop">
-      <h2 class="session__title">{{sketch.title}}</h2>
-      <h3 class="session__name">{{sketch.position}}</h3>
-    </div>
-  </a>
-
-  {% include workshop-coming-soon.html %}
-
-</section>
-
 <section class="tickets">
-  <h2 class="section-header--primary">Beyond is a one day conference for junior-level developers and people who have recently started coding. Come join us for a day of talks and workshops around code.</h2>
+  <h2 class="section-header--primary">A one day conference for junior-level developers and people who have recently started coding.</h2>
 
   <div class="tickets__options">
     <a href="https://www.eventbrite.co.uk/e/beyond-conf-2015-tickets-18517110175">
       <div class="ticket">
         <div class="arrow-down"></div>
+        <div class="arrow-up"></div>
         <span class="ticket__price">£100</span>
         <span class="ticket__type">Super Early Bird</span>
       </div>
     </a>
-    <div class="ticket">
+    <div class="ticket ticket--unreleased">
+      <div class="arrow-down"></div>
+      <div class="arrow-up"></div>
       <span class="ticket__price ticket__price--unreleased">£150</span>
       <span class="ticket__type">Early Bird</span>
     </div>
-    <div class="ticket">
+    <div class="ticket ticket--unreleased">
+      <div class="arrow-down"></div>
+      <div class="arrow-up"></div>
       <span class="ticket__price ticket__price--unreleased">£200</span>
       <span class="ticket__type">Discount</span>
     </div>
-    <div class="ticket">
+    <div class="ticket ticket--unreleased">
+      <div class="arrow-down"></div>
+      <div class="arrow-up"></div>
       <span class="ticket__price ticket__price--unreleased">£250</span>
       <span class="ticket__type">Full Price</span>
     </div>
-    <a href="https://www.eventbrite.co.uk/e/beyond-conf-2015-tickets-18517110175" class="beyond-btn beyond-btn--tickets beyond-btn--secondary js-ticket-buy-link">Get your Ticket</a>
     <div class="ticket-countdown">
       <div class="ticket-countdown__contents">
         <span class="ticket-countdown__title">Ticket prices <br class="hidden-tablet">increase in</span>
@@ -136,7 +100,7 @@ speaker_order:
           <span class="days-left__num">0</span><span class="days-left__num">0</span>
         </span>
         <br class="hidden-tablet">
-        <span class="ticket-countdown__title">days</span>
+        <span class="ticket-countdown__title ticket-countdown__title--unit">days</span>
       </div>
     </div>
   </div>

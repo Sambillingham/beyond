@@ -22,7 +22,9 @@
   color: $beyond-blue;
 }
 .beyond-btn--tickets {
-  width: 80%;
+  width: 25%;
+  margin: 100px auto 0;
+  display: block;
   @include media($tablet) {
     width: 100%;
   }
@@ -39,6 +41,11 @@
 }
 .section-header--primary {
   text-transform: uppercase;
+  font-size: 1.2em;
+  border: 5px solid $beyond-salmon;
+  border-bottom: none;
+  margin: 0;
+  padding: 22px 15px 15px 15px;
 }
 
 .section-header--modal {
