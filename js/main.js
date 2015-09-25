@@ -127,7 +127,7 @@ var app = {
       nextIncrease = superEarlyBird;
     } else {
       $('.ticket').first().addClass('ticket--sold-out').unwrap('<a href=""></a>');
-      $('.ticket').eq(1).find('.ticket__price--unreleased').removeClass('ticket__price--unreleased');
+      $('.ticket').eq(1).removeClass('ticket--unreleased');
       $('.ticket').eq(1).wrap('<a href="https://www.eventbrite.co.uk/e/beyond-conf-2015-tickets-18517110175"></a>');
       nextIncrease = EarlyBird;
     }
@@ -162,18 +162,12 @@ var app = {
   },
   sizeFixes: function(){
 
-    if(Modernizr.mq('only screen and (min-width: 850px)')) {
-      $('.js-ticket-buy-link').detach().insertAfter('.ticket-countdown');
-    }
-
     $(window).on('resize', function(){
 
       if(Modernizr.mq('only screen and (max-width: 850px)')) {
         $('.js-slot-info').css('margin-top', 0);
-        $('.js-ticket-buy-link').detach().insertBefore('.ticket-countdown');
       } else {
         $('.js-section-header-modal').empty();
-        $('.js-ticket-buy-link').detach().insertAfter('.ticket-countdown');
       }
 
     });
