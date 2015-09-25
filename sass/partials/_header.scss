@@ -9,15 +9,6 @@
   }
 }
 
-.header__social {
-  float: left;
-  a {
-    text-decoration: none;
-  }
-  @include media($mobile) {
-    float: none;
-  }
-}
 
 .header__logo {
   width: 230px;
@@ -39,7 +30,7 @@
   line-height: 1.4;
   font-size: 1.1em;
   margin: 0 0 0 20px;
-  
+
   @include media($tablet) {
     line-height: 1.3;
   }
