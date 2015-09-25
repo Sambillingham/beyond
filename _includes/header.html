@@ -1,0 +1,15 @@
+<header class="header">
+    <a href="/" class="header__logo">
+      <img src="/img/beyond-logo.svg" alt="Beyond Conf Logo" class="header__logo__img">
+    </a>
+
+    <div class="header__event-date">
+      <time class="hero__info__data" datetime="2015-11-23 10:00">23<span class="date-contraction">rd</span> November 2015</time>
+      <div class="hero__info__location">London</div>
+    </div>
+
+    <nav class="header__nav">
+      <a href="https://www.eventbrite.co.uk/e/beyond-conf-2015-tickets-18517110175">Tickets</a>
+      <a href="/schedule" class="{% if page.url == '/schedule/' %} active-link {% endif %} schedule-link">Schedule</a>
+    </nav>
+</header>
