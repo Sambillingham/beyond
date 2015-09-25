@@ -1,0 +1,14 @@
+.code-of-conduct {
+  @include outer-container;
+  @include outer-padding;
+  margin-bottom: 100px;
+}
+
+.code-of-conduct__info {
+  border: solid 5px $beyond-salmon;
+  padding: 20px 15px;
+  font-family: $jaapokki;
+  color: $beyond-salmon;
+  font-size: 1.2em;
+
+}
