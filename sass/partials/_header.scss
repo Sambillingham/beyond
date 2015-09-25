@@ -9,8 +9,13 @@
   }
 }
 
-
 .header__logo {
+  float: left;
+  @include media($mobile) {
+    float: none;
+  }
+}
+.header__logo__img {
   width: 230px;
   margin: 0 10px 0 0;
 
