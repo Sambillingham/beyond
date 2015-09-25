@@ -11,13 +11,16 @@
 }
 
 .beyond-btn--primary {
-  background-color: $beyond-blue;
 }
 
 .beyond-btn--secondary {
   background-color: $beyond-salmon;
 }
-
+.beyond-btn--primary-inverse {
+  background-color: #fff;
+  border: solid 5px $beyond-blue;
+  color: $beyond-blue;
+}
 .beyond-btn--tickets {
   width: 80%;
   @include media($tablet) {
