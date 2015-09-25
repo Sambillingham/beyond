@@ -29,16 +29,28 @@
   }
   @include media($mobile) {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 0 5px;
     border-top: solid 1px $beyond-salmon;
-
-    &:first-of-type {
-      border-top: solid 5px $beyond-salmon;
-    }
+    height: auto;
   }
 }
+
 .ticket--sold-out .ticket__all-gone {
   display: block;
+}
+
+.ticket--sold-out .arrow-up,
+.ticket--sold-out .arrow-down {
+  display: none;
+}
+
+.ticket--unreleased .arrow-up,
+.ticket--unreleased .arrow-down {
+  display: none;
+}
+
+.ticket--unreleased .ticket__price {
+  color: RGBA(255, 115, 97, 0.5);
 }
 
 .ticket__all-gone {
@@ -85,11 +97,6 @@
   }
 }
 
-.ticket--unreleased .arrow-up,
-.ticket--unreleased .arrow-down {
-  display: none;
-}
-
 .ticket-countdown {
   height: 190px;
   float: left;
@@ -108,7 +115,7 @@
     padding: 30px 0;
   }
   @include media($mobile) {
-    padding: 40px 0 0;
+    padding: 30px 0 30px;
   }
 }
 .ticket-countdown__contents {
@@ -135,10 +142,6 @@
     line-height: 50px;
     margin: auto;
   }
-}
-
-.ticket__price--unreleased {
-  color: RGBA(255, 115, 97, 0.5);
 }
 
 .ticket__type {
