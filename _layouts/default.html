@@ -7,7 +7,7 @@
     <meta name="description" content="{{site.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:url" content="http://beyondconf.co{{page.url|remove:'index.html'}}">
+    <meta property="og:url" content="http://beyondconf.co/{{ page.url| remove:'/index.html'| remove: '/' }}">
     <meta property="og:title" content="Beyond Conference 2015 - The conference for coders in development">
     <meta property="og:description" content="{{site.description}}">
     <meta property="og:type" content="website">
