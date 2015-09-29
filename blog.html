@@ -1,0 +1,20 @@
+---
+layout: default
+permalink: 'blog/'
+title: Blog
+---
+
+<section class="blog">
+  <div class="blog__nav">
+    <a href="#">Interviews</a>
+    <a href="#">News</a>
+  </div>
+  <div class="blog__content-previews">
+    {% for post in site.posts %}
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            <time class="" datetime="{{ post.date }}" >{{ post.date | date: "%b %-d, %Y" }}</time>
+            <h2 class="">{{ post.title }}</h2>
+        </a>
+    {% endfor %}
+  </div>
+</section>
