@@ -1,7 +1,3 @@
-- workshop: false
-  gap: true
-  duration: 105
-
 - workshop: true
   name: Workshop
   start_time: '11:30'
@@ -27,12 +23,6 @@
   title: Session TBA
   description: >
     <p>Coming Soon</p>
-
-- speaker: false
-  duration: 60
-  start_time: '13:35'
-  title: Lunch
-  break: lunch
 
 - workshop: true
   soon: schedule__session--coming-soon
