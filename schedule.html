@@ -5,12 +5,20 @@ title: Schedule
 ---
 
 <section class="schedule">
-  <div class="schedule__column">
+  <div class="schedule__column schedule__column--20">
     <div class="section-header section-header--without-description ">
-      <h2 class="section-header__title section-header__title--without">Talks</h2>
-    </div>
+      <h2 class="section-header__title section-header__title--without">Schedule</h2>
 
-    <table class="schedule__sessions js-offset-parent">
+    </div>
+      <div class="schedule__links">
+        <a href="#" class="schedule__link js-schedule-toggle" data-schedule-type="talks">Talks</a>
+        <a href="#" class="schedule__link js-schedule-toggle" data-schedule-type="workshops">Workshops</a>
+      </div>
+  </div>
+  <div class="schedule__column schedule__column--40">
+    <div class="section-header section-header--without-description ">
+    </div>
+    <table class="schedule__sessions js-schedule__sessions--speakers js-offset-parent">
       <tbody>
         {% for speaker in site.data.speakers %}
         {% if speaker.speaker %}
@@ -32,14 +40,8 @@ title: Schedule
         {% endfor %}
       </tbody>
     </table>
-  </div>
 
-  <div class="schedule__column">
-    <div class="section-header section-header--without-description">
-      <h2 class="section-header__title section-header__title--without">Workshops</h2>
-    </div>
-
-    <table class="schedule__sessions js-offset-parent">
+    <table class="schedule__sessions js-schedule__sessions--workshops js-offset-parent">
       <tbody>
         {% for workshop in site.data.workshops %}
         {% if workshop.workshop %}
@@ -67,7 +69,7 @@ title: Schedule
     </table>
   </div>
 
-  <div class="schedule__column schedule__column--more-info js-schedule__full-details">
+  <div class="schedule__column schedule__column--40 schedule__column--more-info js-schedule__full-details">
     <div class="section-header section-header--without-description section-header--modal js-section-header-modal"></div>
 
     <div class="session-details js-session-details">
