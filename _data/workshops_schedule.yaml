@@ -1,15 +1,15 @@
 - start_time: "10:00"
   Room A: sketch
-  Room B: ga
+  Room B: js
 
 - start_time: "11:00"
   Room A: sketch
-  Room B: ga
+  Room B: js
 
 - start_time: "14:00"
-  Room A: tbc
-  Room B: js
+  Room A: tba
+  Room B: tba
 
 - start_time: "15:00"
-  Room A: tbc
-  Room B: js
+  Room A: tba
+  Room B: tba

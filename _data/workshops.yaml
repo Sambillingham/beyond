@@ -14,16 +14,24 @@
     <p>You’ll learn how to navigate around the app and discover some of its most powerful features, before putting what you’ve learnt into practice. You’ll try your hand at creating different interfaces and discover how to automate parts of your workflow, creating a more seamless link between your designs and your code.</p>
 
 - workshop: true
-  soon: schedule__session--coming-soon
-  name: Workshop
+  name: Seb Lee-Delisle - Creative JS
   anchor: js
-  title: Session TBA
+  twitter: seb_ly
+  github: sebleedelisle
+  url: http://seb.ly/
+  image: workshop-seb-js-schedule.png
+  image_alt-home: workshop-seb-js.png
+  position: Creative JS
+  title: "JavaScript Graphics and Animation"
   description: >
-    <p>Coming Soon</p>
+    <p>In this short workshop we'll take a look at HTML5 canvas and learn how to create sophisticated graphics and animation in JavaScript. You'll learn how to draw, animate, and create engaging interactive content, with mouse interactions, image blending, and physics.</p>
+    <p>“Seb’s workshop was a delight… it is a must-attend: you’ll need these skills as a developer, but also you learn that it’s not nearly as hard as it looks.” – Paul Irish</p>
+    <p>You'll require a laptop with a browser and a text editor. I use Chrome and TextMate, but anything will do. A basic understanding of HTML and JavaScript will be helpful. </p>
 
 - workshop: true
   soon: schedule__session--coming-soon
-  name: Workshop
+  name:
+  anchor: tba
   title: Session TBA
   description: >
     <p>Coming Soon</p>
