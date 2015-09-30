@@ -64,9 +64,12 @@
     padding: 10px 20px 0;
   }
 }
-
 .section-header__title--without {
-  padding: 0 20px;
+  // padding: 0 20px;
+
+  @include media($tablet) {
+    padding: 0 20px;
+  }
 }
 
 .section-header__description {
