@@ -8,19 +8,24 @@ room_list:
 ---
 
 <section class="schedule">
-  <div class="schedule__column schedule__column--20">
+
+  <div class="schedule__column schedule__column--slim">
+
     <div class="section-header section-header--without-description ">
       <h2 class="section-header__title section-header__title--without">Schedule</h2>
+    </div>
 
+    <div class="schedule__links">
+      <a href="#" class="schedule__link js-schedule-toggle" data-schedule-type="talks">Talks</a>
+      <a href="#" class="schedule__link js-schedule-toggle" data-schedule-type="workshops">Workshops</a>
     </div>
-      <div class="schedule__links">
-        <a href="#" class="schedule__link js-schedule-toggle" data-schedule-type="talks">Talks</a>
-        <a href="#" class="schedule__link js-schedule-toggle" data-schedule-type="workshops">Workshops</a>
-      </div>
+
+    <p class="schedule__info js-schedule__info js-schedule__info--workshops">There’ll be 2 workshops running concurrently throughout the day. Each one will run twice.</p>
   </div>
-  <div class="schedule__column schedule__column--40">
-    <div class="section-header section-header--without-description ">
-    </div>
+
+  <div class="schedule__column schedule__column--normal">
+    <div class="section-header section-header--without-description hidden-tablet"></div>
+
     <table class="schedule__sessions js-schedule__sessions--speakers js-offset-parent">
       <tbody>
         {% for speaker in site.data.speakers %}
