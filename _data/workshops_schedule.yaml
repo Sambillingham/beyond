@@ -1,0 +1,15 @@
+- start_time: '10:00'
+  room_a: 'sketch'
+  room_b: 'js'
+
+- start_time: '11:00'
+  room_a: 'sketch'
+  room_b: 'js'
+
+- start_time: '14:00'
+  room_a: 'sketch'
+  room_b: 'js'
+
+- start_time: '15:00'
+  room_a: 'sketch'
+  room_b: 'js'
