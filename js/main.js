@@ -31,6 +31,11 @@ var app = {
         $('body').removeClass('lock-scroll');
         $('.js-schedule__full-details, .schedule-session-details-overlay').fadeOut();
       });
+
+      $('.js-schedule-toggle').on('click', function(){
+        var scheduleType = $(this).data('schedule-type');
+        self.toggleSchedule(scheduleType);
+      });
   },
   mailChimpAjaxRegister: function (form){
     $.ajax({
@@ -159,6 +164,17 @@ var app = {
     if(hash){
       this.scheduleSPeakerInfo(hash);
     }
+  },
+  toggleSchedule: function(scheduleType){
+    if(scheduleType === 'talks'){
+      $('.js-schedule__sessions--speakers').show();
+      $('.js-schedule__sessions--workshops').hide();
+    } else {
+      $('.js-schedule__sessions--speakers').hide();
+      $('.js-schedule__sessions--workshops').show();
+    }
+    $('.js-schedule__info').hide();
+    $('.js-schedule__info--' + scheduleType).show();
   },
   sizeFixes: function(){
 
