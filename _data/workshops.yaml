@@ -1,8 +1,6 @@
 - workshop: true
   name: Workshop
-  start_time: '11:30'
-  duration: 60
-  anchor: w-sketch
+  anchor: sketch
   twitter: sketchapp
   github: BohemianCoding
   url: http://bohemiancoding.com/sketch/
@@ -18,8 +16,7 @@
 - workshop: true
   soon: schedule__session--coming-soon
   name: Workshop
-  start_time: '12:35'
-  duration: 60
+  anchor: js
   title: Session TBA
   description: >
     <p>Coming Soon</p>
@@ -27,8 +24,6 @@
 - workshop: true
   soon: schedule__session--coming-soon
   name: Workshop
-  start_time: '14:35'
-  duration: 55
   title: Session TBA
   description: >
     <p>Coming Soon</p>
@@ -37,8 +32,6 @@
 - workshop: true
   soon: schedule__session--coming-soon
   name: Workshop
-  start_time: '15:40'
-  duration: 60
   title: Session TBA
   description: >
     <p>Coming Soon</p>
