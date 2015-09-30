@@ -21,7 +21,7 @@ var app = {
         event.preventDefault();
       });
 
-      $('.schedule__session').not('.schedule__session--break, .schedule__session--coming-soon, .schedule__session--gap ').on('click', function(event) {
+      $('.schedule__session, .js-schedule__details').not('.schedule__session--break, .schedule__session--coming-soon, .schedule__session--gap ').on('click', function(event) {
         var slot = this;
         self.scheduleSPeakerInfo(slot);
         event.preventDefault();
