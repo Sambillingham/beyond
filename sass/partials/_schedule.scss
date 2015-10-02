@@ -120,22 +120,6 @@
   cursor: default;
 }
 
-.schedule__session:hover .schedule__start-time {
-    background-color: $beyond-salmon;
-    color: #FFFFFF;
-}
-
-.schedule__session--break:hover .schedule__start-time{
-    color: $beyond-yellow;
-    background-color: #FFEEC0;
-}
-
-.schedule__session--coming-soon:hover .schedule__start-time,
-.schedule__session--gap:hover .schedule__start-time{
-    color: $beyond-salmon;
-    background-color: #FFFFFF;
-}
-
 .schedule__session--coming-soon .schedule__open-symbol {
   display: none;
 }
