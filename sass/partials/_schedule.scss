@@ -136,6 +136,9 @@
     background-color: #FFFFFF;
 }
 
+.schedule__session--coming-soon .schedule__open-symbol {
+  display: none;
+}
 // Timing sizings (controls vertical height of each schedule session)
 @for $i from 1 through 25 {
   .#{schedule__session--mins}-#{$i*5} {
@@ -200,7 +203,6 @@
 }
 
 .schedule__open-symbol {
-  display: none;
   width: 20px;
   margin-top: 7px;
   @include media($tablet) {
