@@ -25,38 +25,42 @@ speaker_order:
 </section>
 
 <section class="speakers">
-  <div class="section-header">
-    <h2 class="section-header__title">Speakers</h2>
-    <p class="section-header__description">Our speakers will inspire you to go beyond the beaten track. They’ll share their top tips for success, and get you writing better code.</p>
-  </div>
+  <section class="speakers__wrap">
 
-  {% for speaker in page.speaker_order %}
-    {% if speaker == "Coming Soon" %}
-      {% include speaker-coming-soon.html %}
-    {% else %}
-      {% assign current_speaker = site.data.speakers | where:"name", speaker %}
-      {% comment %}
-        The hash that is returend from the where filter above looks like it is a single hash
-         but works as if it is an array with a single hash at index 0.
+    <div class="section-header">
+      <h2 class="section-header__title">Speakers</h2>
+      <p class="section-header__description">Our speakers will inspire you to go beyond the beaten track. They’ll share their top tips for success, and get you writing better code.</p>
+    </div>
 
-         When returning current_speaker, current_speaker[0], current_speaker.first they all
-          look exactly the same but obvisouly there is a difference as you cannot access
-           properties of cuurent_speaker only current_speaker[0] or current_speaker.first.
-      {% endcomment %}
-      {% assign current_speaker = current_speaker.first %}
-        <a href="/schedule/#anchor-{{current_speaker.anchor}}" class="session session-speaker">
-          <img class="session__image" src="/img/{{current_speaker.image}}">
-          <div class="session__info">
-            <h2 class="session__title">{{current_speaker.title}}</h2>
-            <h3 class="session__name">{{current_speaker.name}}</h3>
-            <h3 class="session__position">{{current_speaker.position}}</h3>
-            <h3 class="session__company">{{current_speaker.company}}</h3>
-          </div>
-        </a>
-    {% endif %}
-  {% endfor %}
+    {% for speaker in page.speaker_order %}
+      {% if speaker == "Coming Soon" %}
+        <!-- {% include speaker-coming-soon.html %} -->
+      {% else %}
+        {% assign current_speaker = site.data.speakers | where:"name", speaker %}
+        {% comment %}
+          The hash that is returend from the where filter above looks like it is a single hash
+           but works as if it is an array with a single hash at index 0.
 
-  <a class="beyond-btn beyond-btn--primary" href="/schedule">See the schedule</a>
+           When returning current_speaker, current_speaker[0], current_speaker.first they all
+            look exactly the same but obvisouly there is a difference as you cannot access
+             properties of cuurent_speaker only current_speaker[0] or current_speaker.first.
+        {% endcomment %}
+        {% assign current_speaker = current_speaker.first %}
+          <a href="/schedule/#anchor-{{current_speaker.anchor}}" class="session session--speaker">
+            <img class="session__image session__image--speaker" src="/img/{{current_speaker.image}}">
+            <div class="session__info session__info--speaker">
+              <h3 class="session__name">{{current_speaker.name}}, {{current_speaker.position}} - {{current_speaker.company}}</h3>
+              <h2 class="session__title">{{current_speaker.title}}</h2>
+              <div class="session__description">
+                {{current_speaker.description | truncatewords: 48}}
+              </div>
+            </div>
+          </a>
+      {% endif %}
+    {% endfor %}
+
+    <a class="beyond-btn beyond-btn--primary" href="/schedule">See the schedule</a>
+  </section>
 </section>
 
 <section class="tickets">
