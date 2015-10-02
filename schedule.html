@@ -67,37 +67,7 @@ title: Schedule
     </table>
   </div>
 
-  <div class="schedule__column schedule__column--more-info js-schedule__full-details">
-    <div class="section-header section-header--without-description section-header--modal js-section-header-modal"></div>
-
-    <div class="session-details js-session-details">
-      <img class="session-details__image js-data-image" src="" alt="">
-      <div class="session-details__meta">
-        <div class="session-details__links">
-          <h3 class="session-details__title js-data-name"></h3>
-          <h3 class="session-details__title js-data-position"></h3>
-          <h3 class="session-details__title js-data-company"></h3>
-        </div>
-
-        <nav class="session-details__links">
-          <a href="#" class="session-details__link js-data-url">
-            <img src="/img/icon-link.svg" alt="Personal site">
-          </a>
-          <a href="#" class="session-details__link js-data-twitter">
-            <img src="/img/icon-twitter.svg" alt="Twitter profile">
-          </a>
-          <a href="#" class="session-details__link js-data-github">
-            <img src="/img/icon-github.svg" alt="Github profile">
-          </a>
-        </nav>
-      </div>
-
-      <div class="session-details__description">
-        <h3 class="session-details__title--above-text js-data-title"></h3>
-        <div class="js-data-description"></div>
-      </div>
-    </div>
-  </div>
+  {% include speaker-modal.html %}
 </section>
 
 <div class="schedule-session-details-overlay"></div>
