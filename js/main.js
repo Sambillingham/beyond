@@ -175,6 +175,7 @@ var app = {
     }
     $('.js-schedule__info').hide();
     $('.js-schedule__info--' + scheduleType).show();
+    $('.js-session-details').fadeOut(200);
   },
   sizeFixes: function(){
 
