@@ -1,4 +1,4 @@
-import speakerModal from './speaker-modal';
+import schedule from './schedule';
 import mailchimpForm from './mailchimp-form';
 
 class UiActions {
@@ -10,9 +10,9 @@ class UiActions {
       event.preventDefault();
     });
 
-    $('.schedule__session').not('.schedule__session--break, .schedule__session--coming-soon, .schedule__session--gap ').on('click', function(event) {
+    $('.schedule__session, .js-schedule__details').not('.schedule__session--break, .schedule__session--coming-soon, .schedule__session--gap ').on('click', function(event) {
       var slot = this;
-      speakerModal.scheduleSPeakerInfo(slot);
+      schedule.scheduleSPeakerInfo(slot);
       event.preventDefault();
     });
 
@@ -21,12 +21,20 @@ class UiActions {
       $('.js-schedule__full-details, .schedule-session-details-overlay').fadeOut();
     });
 
+    $('.js-schedule-toggle').on('click', function(){
+      var scheduleType = $(this).data('schedule-type');
+      $('.js-session-details').fadeOut(200);
+      schedule.toggleSchedule(scheduleType);
+    });
+
     $('.session--speaker').on('click', function(){
+      console.log('yo')
       var mobile = Modernizr.mq('only screen and (max-width: 850px)');
 
+      console.log(mobile);
       if(mobile){
         var slot = this;
-        self.scheduleSPeakerInfo(slot);
+        schedule.scheduleSPeakerInfo(slot);
         event.preventDefault();
         return false;
       } else {

@@ -119,7 +119,7 @@ gulp.task('deploy', ['build'], function() {
 gulp.task('watch', function() {
     gulp.watch('js/**/*.js', ['reload-js']);
     gulp.watch('sass/**/{*.sass,*.scss}', ['sass']);
-    gulp.watch(['*.html', '**/*.html', '_posts/*', '_data/*'], ['jekyll-rebuild', 'sass', 'babel']);
+    gulp.watch(['*.html', '**/*.html', '_posts/*', '_data/*'], ['jekyll-rebuild', 'sass', 'reload-js']);
 });
 
 gulp.task('dev', ['browser-sync', 'watch']);

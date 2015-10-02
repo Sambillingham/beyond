@@ -1,8 +1,9 @@
-class SpeakerModal {
+class Schedule {
   init() {
     if( $('section').hasClass('schedule')){
       this.checkHashAndTriggerModal();
       this.preloadHiddenSpeakerImages();
+      this.checkHashAndTriggerCorrectSchedule();
     }
   }
   preloadHiddenSpeakerImages(){
@@ -15,10 +16,34 @@ class SpeakerModal {
 
   checkHashAndTriggerModal(){
     var hash = window.location.hash;
-    if(hash){
+    if(hash !== '#workshops' && hash !== '#talks'){
       this.scheduleSPeakerInfo(hash);
     }
+    console.log(hash);
+    if(hash === '#anchor-js' || hash === '#anchor-sketch'){
+      this.toggleSchedule('workshops');
+    }
   }
+
+  checkHashAndTriggerCorrectSchedule(){
+    var hash = window.location.hash;
+    if(hash === '#workshops'){
+      this.toggleSchedule('workshops');
+    }
+  }
+
+  toggleSchedule(scheduleType){
+    if(scheduleType === 'talks'){
+      $('.js-schedule__sessions--speakers').show();
+      $('.js-schedule__sessions--workshops').hide();
+    } else {
+      $('.js-schedule__sessions--speakers').hide();
+      $('.js-schedule__sessions--workshops').show();
+    }
+    $('.js-schedule__info').hide();
+    $('.js-schedule__info--' + scheduleType).show();
+  }
+
   scheduleSPeakerInfo(slot) {
     var $slot = $(slot);
     var pxFromTop = $slot.position().top;
@@ -49,4 +74,4 @@ class SpeakerModal {
     }
   }
 }
-export default new SpeakerModal();
+export default new Schedule();

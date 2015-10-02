@@ -27,7 +27,7 @@
   color: #fff;
   text-decoration: none;
   cursor: pointer;
-  
+
   @include media($laptop) {
     width: 100%;
   }
@@ -159,6 +159,7 @@
 .session__name--workshop {
   font-size: 0.9em;
   font-family: $varela;
+  color: #fff;
 }
 .session__title {
   font-family: $jaapokki;
@@ -174,6 +175,7 @@
 }
 
 .session__title--workshop {
+  color: #fff;
   margin-bottom: 0;
 }
 .session__image {
@@ -206,6 +208,12 @@
     float: left;
   }
 }
+
+.session--workshop:nth-last-of-type(2n),
+.session--workshop:nth-last-of-type(2n):before {
+  background-color: $beyond-yellow;
+}
+
 .session:nth-of-type(4n) .session__image--speaker {
   float: right;
   @include media($tablet) {
@@ -254,7 +262,10 @@
 .session__workshop-comming-soon-badge {
   position: absolute;
   top: -30px;
-  right: 30px;
-  width: 250px;
+  left: -30px;
+  width: 200px;
   z-index: 20;
+  @include media($tablet) {
+    display: none;
+  }
 }
