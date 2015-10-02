@@ -31,8 +31,8 @@
 - workshop: true
   soon: schedule__session--coming-soon
   name:
-  anchor: tba
-  title: Session TBA
+  anchor: tbc
+  title: Session TBC
   description: >
     <p>Coming Soon</p>
 
@@ -40,6 +40,6 @@
 - workshop: true
   soon: schedule__session--coming-soon
   name: Workshop
-  title: Session TBA
+  title: Session TBC
   description: >
     <p>Coming Soon</p>
