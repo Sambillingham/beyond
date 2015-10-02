@@ -31,6 +31,19 @@ var app = {
         $('body').removeClass('lock-scroll');
         $('.js-schedule__full-details, .schedule-session-details-overlay').fadeOut();
       });
+
+      $('.session--speaker').on('click', function(){
+        var mobile = Modernizr.mq('only screen and (max-width: 850px)');
+
+        if(mobile){
+          var slot = this;
+          self.scheduleSPeakerInfo(slot);
+          event.preventDefault();
+          return false;
+        } else {
+          return true;
+        }
+      });
   },
   mailChimpAjaxRegister: function (form){
     $.ajax({

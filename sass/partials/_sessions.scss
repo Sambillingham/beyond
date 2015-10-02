@@ -26,7 +26,8 @@
   background-color: $beyond-salmon;
   color: #fff;
   text-decoration: none;
-
+  cursor: pointer;
+  
   @include media($laptop) {
     width: 100%;
   }

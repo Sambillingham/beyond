@@ -46,7 +46,7 @@ speaker_order:
              properties of cuurent_speaker only current_speaker[0] or current_speaker.first.
         {% endcomment %}
         {% assign current_speaker = current_speaker.first %}
-          <a href="/schedule/#anchor-{{current_speaker.anchor}}" class="session session--speaker">
+          <a href="/schedule/#anchor-{{current_speaker.anchor}}" class="session session--speaker"  data-image="{{current_speaker.image}}" data-name="{{current_speaker.name}}" data-position="{{current_speaker.position}}" data-company="{{current_speaker.company}}" data-url="{{current_speaker.url}}" data-twitter="{{current_speaker.twitter}}" data-github="{{current_speaker.github}}" data-title="{{current_speaker.title}}" data-description="{{current_speaker.description}}">
             <img class="session__image session__image--speaker" src="/img/{{current_speaker.image}}">
             <div class="session__info session__info--speaker">
               <h3 class="session__name">{{current_speaker.name}} - {{current_speaker.company}}</h3>
@@ -223,3 +223,5 @@ speaker_order:
     </form>
     <div class="sign-up__message"></div>
 </section>
+
+{% include speaker-modal.html %}
