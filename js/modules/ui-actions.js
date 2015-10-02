@@ -27,6 +27,21 @@ class UiActions {
       schedule.toggleSchedule(scheduleType);
     });
 
+    $('.session--speaker').on('click', function(){
+      console.log('yo')
+      var mobile = Modernizr.mq('only screen and (max-width: 850px)');
+
+      console.log(mobile);
+      if(mobile){
+        var slot = this;
+        schedule.scheduleSPeakerInfo(slot);
+        event.preventDefault();
+        return false;
+      } else {
+        return true;
+      }
+    });
+
     $(window).on('resize', function(){
 
       if(Modernizr.mq('only screen and (max-width: 850px)')) {
