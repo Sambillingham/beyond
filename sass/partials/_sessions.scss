@@ -121,6 +121,11 @@
   }
 }
 
+.session--workshop:nth-last-of-type(2n),
+.session--workshop:nth-last-of-type(2n):before {
+  background-color: $beyond-yellow;
+}
+
 .session__info--workshop {
   float: left;
   width: 100%;
@@ -148,7 +153,10 @@
 .session__workshop-comming-soon-badge {
   position: absolute;
   top: -30px;
-  right: 30px;
+  left: -30px;
   width: 250px;
   z-index: 20;
+  @include media($tablet) {
+    display: none;
+  }
 }

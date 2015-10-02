@@ -1,12 +1,12 @@
 - workshop: true
-  name: Sketch
+  name: Sketch Team
   anchor: sketch
   twitter: sketchapp
-  github: BohemianCoding
+  github: Bohemian Coding
   url: http://bohemiancoding.com/sketch/
   image: workshop-sketch-schedule.png
   image_alt-home: workshop-sketch.png
-  position: Sketch Team
+  position: BohemianCoding
   title: "Design for Developers: An Intro to Sketch"
   description: >
     <p>Go through the ins-and-outs of designing digital products with Sketch, led by the team behind it.</p>
@@ -14,13 +14,13 @@
     <p>You’ll learn how to navigate around the app and discover some of its most powerful features, before putting what you’ve learnt into practice. You’ll try your hand at creating different interfaces and discover how to automate parts of your workflow, creating a more seamless link between your designs and your code.</p>
 
 - workshop: true
-  name: Seb Lee-Delisle - Creative JS
+  name: Seb Lee-Delisle
   anchor: js
   twitter: seb_ly
   github: sebleedelisle
   url: http://seb.ly/
-  image: workshop-seb-js-schedule.png
-  image_alt-home: workshop-seb-js.png
+  image: workshop-seb-js.jpg
+  image_alt-home: workshop-seb-js.jpg
   position: Creative JS
   title: "JavaScript Graphics and Animation"
   description: >
