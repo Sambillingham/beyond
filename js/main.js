@@ -9,6 +9,7 @@ var app = {
     // Schedule Specific Init
     if( $('section').hasClass('schedule')){
       this.checkHashAndTriggerModal();
+      this.checkHashAndTriggerCorrectSchedule();
       this.preloadHiddenSpeakerImages();
     }
   },
@@ -161,8 +162,14 @@ var app = {
   },
   checkHashAndTriggerModal: function(){
     var hash = window.location.hash;
-    if(hash){
+    if(hash !== '#workshops' && hash !== '#talks'){
       this.scheduleSPeakerInfo(hash);
+    }
+  },
+  checkHashAndTriggerCorrectSchedule: function(){
+    var hash = window.location.hash;
+    if(hash === '#workshops'){
+      this.toggleSchedule('workshops');
     }
   },
   toggleSchedule: function(scheduleType){
