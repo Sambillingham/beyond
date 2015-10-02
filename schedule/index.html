@@ -37,12 +37,25 @@
 </header>
 
     <section class="schedule">
-  <div class="schedule__column">
+
+  <div class="schedule__column schedule__column--slim">
+
     <div class="section-header section-header--without-description ">
-      <h2 class="section-header__title section-header__title--without">Talks</h2>
+      <h2 class="section-header__title section-header__title--without">Schedule</h2>
     </div>
 
-    <table class="schedule__sessions js-offset-parent">
+    <div class="schedule__links">
+      <a href="#talks" class="schedule__link js-schedule-toggle" data-schedule-type="talks">Talks</a>
+      <a href="#workshops" class="schedule__link js-schedule-toggle" data-schedule-type="workshops">Workshops</a>
+    </div>
+
+    <p class="schedule__info js-schedule__info js-schedule__info--workshops">There’ll be 2 workshops running concurrently throughout the day. Each one will run twice.</p>
+  </div>
+
+  <div class="schedule__column schedule__column--normal">
+    <div class="section-header section-header--without-description hidden-tablet"></div>
+
+    <table class="schedule__sessions js-schedule__sessions--speakers js-offset-parent">
       <tbody>
         
         
@@ -117,7 +130,7 @@
         
         
         
-        <tr id="anchor-harry" class="schedule__session schedule__session--mins-30 " data-image="speaker-harry-roberts.jpg" data-name="Harry Roberts" data-position="Front-End Architect" data-company="CSS Wizardry" data-url="https://csswizardry.com" data-twitter="csswizardry" data-github="csswizardry" data-title="CSS for Software Engineers for CSS Developers" data-description="<p>More information coming soon.</p>
+        <tr id="anchor-harry" class="schedule__session schedule__session--mins-30 " data-image="speaker-harry-roberts.jpg" data-name="Harry Roberts" data-position="Front-End Architect" data-company="CSS Wizardry" data-url="https://csswizardry.com" data-twitter="csswizardry" data-github="csswizardry" data-title="CSS for Software Engineers for CSS Developers" data-description="<p>Depending on where you draw your measurements from, the first programming languages for use on ‘modern’ electric computers were designed in the ’40s and ’50s. CSS, on the other hand, is a mere adolescent—born in 1996, it’s just 18 years old. This means that software engineers have had over four decades’ head start on us: we should be listening to a lot more of what they have to say.</p> <p>In this talk, we’ll take a look at some very traditional computer science and software engineering paradigms and how we can steal, bend, borrow, and reimplement them when writing our CSS. Writing CSS like software engineers so that we can become better CSS developers.</p>
 ">
           <td class="schedule__session-column schedule__start-time">11:50</td>
           <td class="schedule__session-column schedule__details">
@@ -261,113 +274,158 @@
         
       </tbody>
     </table>
-  </div>
 
-  <div class="schedule__column">
-    <div class="section-header section-header--without-description">
-      <h2 class="section-header__title section-header__title--without">Workshops</h2>
-    </div>
-
-    <table class="schedule__sessions js-offset-parent">
+    <table class="schedule__sessions schedule__sessions--workshops js-schedule__sessions--workshops js-offset-parent">
       <tbody>
         
-        
-        <tr class="schedule__session schedule__session--gap schedule__session--mins-105">
-          <td class="schedule__session-column schedule__start-time"></td>
-          <td class="schedule__session-column schedule__details"></td>
-        </tr>
-        
-        
-        
-        <tr id="anchor-w-sketch" class="schedule__session schedule__session--mins-60 " data-image="workshop-sketch-schedule.png" data-name="Workshop" data-position="Sketch Team" data-company="" data-url="http://bohemiancoding.com/sketch/" data-twitter="sketchapp" data-github="BohemianCoding" data-title="Design for Developers: An Intro to Sketch" data-description="<p>Go through the ins-and-outs of designing digital products with Sketch, led by the team behind it.</p> <p>Used by Google, Sega and Dropbox, Sketch is fast becoming the go-to software for mocking up digital designs and creating assets for the web.</p> <p>You’ll learn how to navigate around the app and discover some of its most powerful features, before putting what you’ve learnt into practice. You’ll try your hand at creating different interfaces and discover how to automate parts of your workflow, creating a more seamless link between your designs and your code.</p>
+
+          <tr class="schedule__workshop-slot">
+            <td class="schedule__session-column schedule__session--workshop schedule__start-time">10:00</td>
+            <td>
+              
+                
+                
+                <div id="anchor-sketch" class="schedule__session-column schedule__session--workshop schedule__details js-schedule__details schedule__session--mins- " data-image="workshop-sketch.jpg" data-name="Sketch Team" data-position="BohemianCoding" data-company="" data-url="http://bohemiancoding.com/sketch/" data-twitter="sketchapp" data-github="Bohemian Coding" data-title="Design for Developers: An Intro to Sketch" data-description="<p>Go through the ins-and-outs of designing digital products with Sketch, led by the team behind it.</p> <p>Used by Google, Sega and Dropbox, Sketch is fast becoming the go-to software for mocking up digital designs and creating assets for the web.</p> <p>You’ll learn how to navigate around the app and discover some of its most powerful features, before putting what you’ve learnt into practice. You’ll try your hand at creating different interfaces and discover how to automate parts of your workflow, creating a more seamless link between your designs and your code.</p>
 ">
-          <td class="schedule__session-column schedule__start-time">11:30</td>
-          <td class="schedule__session-column schedule__details">
-            <h2 class="schedule__title">Design for Developers: An Intro to Sketch</h2>
-            <h3 class="schedule__host">Workshop</h3>
-            <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
-          </td>
-        </tr>
-        
-        
-        
-        <tr id="anchor-" class="schedule__session schedule__session--mins-60 schedule__session--coming-soon" data-image="" data-name="Workshop" data-position="" data-company="" data-url="" data-twitter="" data-github="" data-title="Session TBA" data-description="<p>Coming Soon</p>
+                  <h2 class="schedule__title">Room A</h2>
+                  <h2 class="schedule__title">Design for Developers: An Intro to Sketch</h2>
+                  <h3 class="schedule__host">Sketch Team</h3>
+                  <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
+                </div>
+              
+                
+                
+                <div id="anchor-js" class="schedule__session-column schedule__session--workshop schedule__details js-schedule__details schedule__session--mins- " data-image="workshop-seb-js.jpg" data-name="Seb Lee-Delisle" data-position="Creative JS" data-company="" data-url="http://seb.ly/" data-twitter="seb_ly" data-github="sebleedelisle" data-title="JavaScript Graphics and Animation" data-description="<p>In this short workshop we'll take a look at HTML5 canvas and learn how to create sophisticated graphics and animation in JavaScript. You'll learn how to draw, animate, and create engaging interactive content, with mouse interactions, image blending, and physics.</p> <p>“Seb’s workshop was a delight… it is a must-attend: you’ll need these skills as a developer, but also you learn that it’s not nearly as hard as it looks.” – Paul Irish</p> <p>You'll require a laptop with a browser and a text editor. I use Chrome and TextMate, but anything will do. A basic understanding of HTML and JavaScript will be helpful. </p>
 ">
-          <td class="schedule__session-column schedule__start-time">12:35</td>
-          <td class="schedule__session-column schedule__details">
-            <h2 class="schedule__title">Session TBA</h2>
-            <h3 class="schedule__host">Workshop</h3>
-            <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
-          </td>
-        </tr>
+                  <h2 class="schedule__title">Room B</h2>
+                  <h2 class="schedule__title">JavaScript Graphics and Animation</h2>
+                  <h3 class="schedule__host">Seb Lee-Delisle</h3>
+                  <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
+                </div>
+              
+            </td>
+          </tr>
         
-        
-        
-        <tr class="schedule__session schedule__session--break schedule__session--mins-60">
-          <td class="schedule__session-column schedule__start-time schedule__start-time--break">13:35 <span class="schedule__session-name schedule__session-name--lunch">Lunch</span></td>
-          <td class="schedule__session-column schedule__details schedule__details--break"></td>
-        </tr>
-        
-        
-        
-        <tr id="anchor-" class="schedule__session schedule__session--mins-55 schedule__session--coming-soon" data-image="" data-name="Workshop" data-position="" data-company="" data-url="" data-twitter="" data-github="" data-title="Session TBA" data-description="<p>Coming Soon</p>
+
+          <tr class="schedule__workshop-slot">
+            <td class="schedule__session-column schedule__session--workshop schedule__start-time">11:00</td>
+            <td>
+              
+                
+                
+                <div id="anchor-sketch" class="schedule__session-column schedule__session--workshop schedule__details js-schedule__details schedule__session--mins- " data-image="workshop-sketch.jpg" data-name="Sketch Team" data-position="BohemianCoding" data-company="" data-url="http://bohemiancoding.com/sketch/" data-twitter="sketchapp" data-github="Bohemian Coding" data-title="Design for Developers: An Intro to Sketch" data-description="<p>Go through the ins-and-outs of designing digital products with Sketch, led by the team behind it.</p> <p>Used by Google, Sega and Dropbox, Sketch is fast becoming the go-to software for mocking up digital designs and creating assets for the web.</p> <p>You’ll learn how to navigate around the app and discover some of its most powerful features, before putting what you’ve learnt into practice. You’ll try your hand at creating different interfaces and discover how to automate parts of your workflow, creating a more seamless link between your designs and your code.</p>
 ">
-          <td class="schedule__session-column schedule__start-time">14:35</td>
-          <td class="schedule__session-column schedule__details">
-            <h2 class="schedule__title">Session TBA</h2>
-            <h3 class="schedule__host">Workshop</h3>
-            <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
-          </td>
-        </tr>
-        
-        
-        
-        <tr id="anchor-" class="schedule__session schedule__session--mins-60 schedule__session--coming-soon" data-image="" data-name="Workshop" data-position="" data-company="" data-url="" data-twitter="" data-github="" data-title="Session TBA" data-description="<p>Coming Soon</p>
+                  <h2 class="schedule__title">Room A</h2>
+                  <h2 class="schedule__title">Design for Developers: An Intro to Sketch</h2>
+                  <h3 class="schedule__host">Sketch Team</h3>
+                  <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
+                </div>
+              
+                
+                
+                <div id="anchor-js" class="schedule__session-column schedule__session--workshop schedule__details js-schedule__details schedule__session--mins- " data-image="workshop-seb-js.jpg" data-name="Seb Lee-Delisle" data-position="Creative JS" data-company="" data-url="http://seb.ly/" data-twitter="seb_ly" data-github="sebleedelisle" data-title="JavaScript Graphics and Animation" data-description="<p>In this short workshop we'll take a look at HTML5 canvas and learn how to create sophisticated graphics and animation in JavaScript. You'll learn how to draw, animate, and create engaging interactive content, with mouse interactions, image blending, and physics.</p> <p>“Seb’s workshop was a delight… it is a must-attend: you’ll need these skills as a developer, but also you learn that it’s not nearly as hard as it looks.” – Paul Irish</p> <p>You'll require a laptop with a browser and a text editor. I use Chrome and TextMate, but anything will do. A basic understanding of HTML and JavaScript will be helpful. </p>
 ">
-          <td class="schedule__session-column schedule__start-time">15:40</td>
-          <td class="schedule__session-column schedule__details">
-            <h2 class="schedule__title">Session TBA</h2>
-            <h3 class="schedule__host">Workshop</h3>
-            <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
-          </td>
-        </tr>
+                  <h2 class="schedule__title">Room B</h2>
+                  <h2 class="schedule__title">JavaScript Graphics and Animation</h2>
+                  <h3 class="schedule__host">Seb Lee-Delisle</h3>
+                  <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
+                </div>
+              
+            </td>
+          </tr>
         
+
+          <tr class="schedule__workshop-slot">
+            <td class="schedule__session-column schedule__session--workshop schedule__start-time">14:00</td>
+            <td>
+              
+                
+                
+                <div id="anchor-tbc" class="schedule__session-column schedule__session--workshop schedule__details js-schedule__details schedule__session--mins- schedule__session--coming-soon" data-image="" data-name="" data-position="" data-company="" data-url="" data-twitter="" data-github="" data-title="Session TBC" data-description="<p>Coming Soon</p>
+">
+                  <h2 class="schedule__title">Room A</h2>
+                  <h2 class="schedule__title">Session TBC</h2>
+                  <h3 class="schedule__host"></h3>
+                  <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
+                </div>
+              
+                
+                
+                <div id="anchor-tbc" class="schedule__session-column schedule__session--workshop schedule__details js-schedule__details schedule__session--mins- schedule__session--coming-soon" data-image="" data-name="" data-position="" data-company="" data-url="" data-twitter="" data-github="" data-title="Session TBC" data-description="<p>Coming Soon</p>
+">
+                  <h2 class="schedule__title">Room B</h2>
+                  <h2 class="schedule__title">Session TBC</h2>
+                  <h3 class="schedule__host"></h3>
+                  <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
+                </div>
+              
+            </td>
+          </tr>
+        
+
+          <tr class="schedule__workshop-slot">
+            <td class="schedule__session-column schedule__session--workshop schedule__start-time">15:00</td>
+            <td>
+              
+                
+                
+                <div id="anchor-tbc" class="schedule__session-column schedule__session--workshop schedule__details js-schedule__details schedule__session--mins- schedule__session--coming-soon" data-image="" data-name="" data-position="" data-company="" data-url="" data-twitter="" data-github="" data-title="Session TBC" data-description="<p>Coming Soon</p>
+">
+                  <h2 class="schedule__title">Room A</h2>
+                  <h2 class="schedule__title">Session TBC</h2>
+                  <h3 class="schedule__host"></h3>
+                  <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
+                </div>
+              
+                
+                
+                <div id="anchor-tbc" class="schedule__session-column schedule__session--workshop schedule__details js-schedule__details schedule__session--mins- schedule__session--coming-soon" data-image="" data-name="" data-position="" data-company="" data-url="" data-twitter="" data-github="" data-title="Session TBC" data-description="<p>Coming Soon</p>
+">
+                  <h2 class="schedule__title">Room B</h2>
+                  <h2 class="schedule__title">Session TBC</h2>
+                  <h3 class="schedule__host"></h3>
+                  <img src="/img/open-arrow.svg" alt="Click to open" class="schedule__open-symbol">
+                </div>
+              
+            </td>
+          </tr>
         
       </tbody>
     </table>
   </div>
 
-  <div class="schedule__column schedule__column--more-info js-schedule__full-details">
-    <div class="section-header section-header--without-description section-header--modal js-section-header-modal"></div>
+  <div class="schedule__column schedule__column--normal schedule__column--more-info js-schedule__full-details ">
+  <div class="section-header section-header--without-description section-header--modal js-section-header-modal"></div>
 
-    <div class="session-details js-session-details">
-      <img class="session-details__image js-data-image" src="" alt="">
-      <div class="session-details__meta">
-        <div class="session-details__links">
-          <h3 class="session-details__title js-data-name"></h3>
-          <h3 class="session-details__title js-data-position"></h3>
-          <h3 class="session-details__title js-data-company"></h3>
-        </div>
-
-        <nav class="session-details__links">
-          <a href="#" class="session-details__link js-data-url">
-            <img src="/img/icon-link.svg" alt="Personal site">
-          </a>
-          <a href="#" class="session-details__link js-data-twitter">
-            <img src="/img/icon-twitter.svg" alt="Twitter profile">
-          </a>
-          <a href="#" class="session-details__link js-data-github">
-            <img src="/img/icon-github.svg" alt="Github profile">
-          </a>
-        </nav>
+  <div class="session-details js-session-details">
+    <img class="session-details__image js-data-image" src="" alt="">
+    <div class="session-details__meta">
+      <div class="session-details__links">
+        <h3 class="session-details__title js-data-name"></h3>
+        <h3 class="session-details__title js-data-position"></h3>
+        <h3 class="session-details__title js-data-company"></h3>
       </div>
 
-      <div class="session-details__description">
-        <h3 class="session-details__title--above-text js-data-title"></h3>
-        <div class="js-data-description"></div>
-      </div>
+      <nav class="session-details__links">
+        <a href="#" class="session-details__link js-data-url">
+          <img src="/img/icon-link.svg" alt="Personal site">
+        </a>
+        <a href="#" class="session-details__link js-data-twitter">
+          <img src="/img/icon-twitter.svg" alt="Twitter profile">
+        </a>
+        <a href="#" class="session-details__link js-data-github">
+          <img src="/img/icon-github.svg" alt="Github profile">
+        </a>
+      </nav>
+    </div>
+
+    <div class="session-details__description">
+      <h3 class="session-details__title--above-text js-data-title"></h3>
+      <div class="js-data-description"></div>
     </div>
   </div>
+</div>
+
 </section>
 
 <div class="schedule-session-details-overlay"></div>
