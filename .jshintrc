@@ -7,5 +7,6 @@
   "strict": true,
   "trailing": false,
   "undef": true,
+  "esnext": true,
   "predef" : ["svgeezy", "Modernizr"]
 }
