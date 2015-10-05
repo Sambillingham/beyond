@@ -82,7 +82,8 @@
   twitter: csswizardry
   title: CSS for Software Engineers for CSS Developers
   description: >
-    <p>More information coming soon.</p>
+    <p>Depending on where you draw your measurements from, the first programming languages for use on ‘modern’ electric computers were designed in the ’40s and ’50s. CSS, on the other hand, is a mere adolescent—born in 1996, it’s just 18 years old. This means that software engineers have had over four decades’ head start on us: we should be listening to a lot more of what they have to say.</p>
+    <p>In this talk, we’ll take a look at some very traditional computer science and software engineering paradigms and how we can steal, bend, borrow, and reimplement them when writing our CSS. Writing CSS like software engineers so that we can become better CSS developers.</p>
 
 - speaker: true
   name: Alana Wood
@@ -210,9 +211,10 @@
   url: http://www.helloruby.com/
   github: lindaliukas
   twitter: lindaliukas
-  title: Talk Title TBC
+  title: ​Six impossible things before breakfast
   description: >
-    <p>More information coming soon.</p>
+    <p>“You used to be much more...muchier. You’ve lost your muchness.”</p>
+    <p>We all begin our careers in programming full of play. There's curiosity, joy and wonder of discovery. So how do we stay like Alice, choose always the red bill and fall deeper down into the machine?</p>
 
 - speaker: true
   name: Amelia Humfress

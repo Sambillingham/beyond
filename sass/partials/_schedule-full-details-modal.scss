@@ -1,4 +1,7 @@
-
+.speaker-modal--index {
+  // if rendered on the homepage this class is added so it can be easily hidden
+  display: none;
+}
 .session-details {
   display: none;
   @include media($tablet) {

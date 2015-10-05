@@ -14,34 +14,61 @@
   }
 }
 
+.speakers__wrap {
+  background: $beyond-blue url(../img/speaker-wrap-pattern-background.svg) repeat;
+  background-size: 400px;
+}
+
 .session {
   float: left;
-  background-color: $beyond-salmon;
-  width: 25%;
+  width: 75%;
   position: relative;
-  text-decoration: none;
-
-  @include media($tablet) {
-    width: 33.33%;
-  }
-  @include media($mobile) {
-    @include span-columns(4);
-  }
-}
-
-.session:nth-child(3n+1), .session:nth-child(3n+1):before {
-  background-color: $beyond-yellow;
-}
-
-.session:nth-child(3n+2), .session:nth-child(3n+2):before{
   background-color: $beyond-salmon;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include media($laptop) {
+    width: 100%;
+  }
+}
+// 3s(3,6,9) + 7s(7,14) speaker yellow
+.session:nth-of-type(3n),
+.session:nth-of-type(3n):before,
+.session:nth-of-type(7n),
+.session:nth-of-type(7n):before {
+  background-color: $beyond-yellow;
+  color: #fff;
+}
+// Every other speaker white  (overides 6 form above)
+.session:nth-of-type(2n+2),
+.session:nth-of-type(2n+2):before {
+  background-color: #fff;
+  color: $beyond-blue;
 }
 
-.session:nth-child(3n+3), .session:nth-child(3n+3):before {
-  background-color: $beyond-blue;
+// overide Speaker 9 from yeelow above
+.session:nth-of-type(9n),
+.session:nth-of-type(9n):before{
+  background-color: $beyond-salmon;
+  color: #fff;
+}
+// 2,7,12
+.session:nth-of-type(5n-3) {
+  float: right;
+}
+// 3
+.session:nth-of-type(3n) {
+  float: right;
+}
+// 9
+.session:nth-of-type(9n) {
+  float: left;
 }
 
+// default hover
 .session:before {
+    background-color: $beyond-salmon;
     content: '';
     position: absolute;
     height: 100%;
@@ -61,6 +88,16 @@
   }
 }
 
+.session__info {
+  padding: 30px 30px 0;
+  position: relative;
+  z-index: 20;
+
+  @include media($mobile) {
+    padding: 10px;
+  }
+}
+
 .session__info--coming-soon {
     padding: 0;
     background-image: url(../img/speaker-coming-soon-bottom.png);
@@ -69,32 +106,78 @@
     z-index: 0;
 }
 
-.session__info {
-  padding: 10px;
-  height: 150px;
-  position: relative;
-  z-index: 20;
+.session__info--speaker {
+  float: left;
+  width: 66.6667%;
 
+  @include media($tablet) {
+    width: 80%;
+  }
   @include media($mobile) {
-    height: auto;
+    width: 60%;
+
   }
 }
 
+.session__info--workshop {
+  float: left;
+  width: 100%;
+  height: 75px;
+  z-index: 10;
+  padding: 10px;
+  // removes weird 1px line that the bg image doesn't cover at some sizes;
+  margin-top: -1px;
+
+  @include media($tablet) {
+    height: auto;
+  }
+}
 .session__name,
 .session__position,
 .session__company,
-.session__title {
-  color: #ffffff;
+.session__title,
+.session__description {
+  color: inherit;
   margin: 0;
   font-family: inherit;
   font-size: 0.9em;
 }
 
+.session__description {
+  @include media($tablet) {
+    display: none;
+  }
+}
+.session__name {
+  font-family: $jaapokki;
+  font-size: 1.3em;
+
+  @include media($mobile) {
+    font-size: 1em;
+  }
+}
+.session__name--workshop {
+  font-size: 0.9em;
+  font-family: $varela;
+  color: #fff;
+}
 .session__title {
   font-family: $jaapokki;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  @include media($laptop){
+    margin-bottom: 0;
+  }
+  @include media($mobile){
+    font-size: 0.9em;
+    font-family: $varela;
+  }
 }
 
+.session__title--workshop {
+  color: #fff;
+  margin-bottom: 0;
+}
 .session__image {
   max-width: 100%;
   display: block;
@@ -103,6 +186,51 @@
     max-width: 140px;
     margin-right: 10px;
   }
+}
+
+.session__image--speaker {
+  float: left;
+  width: 33.3334%;
+
+  @include media($tablet) {
+    float: left;
+    width: 20%;
+  }
+  @include media($mobile) {
+    width: 40%;
+    margin-right: 0;
+  }
+}
+
+.session:nth-of-type(3n) .session__image--speaker {
+  float: right;
+  @include media($tablet) {
+    float: left;
+  }
+}
+
+.session--workshop:nth-last-of-type(2n),
+.session--workshop:nth-last-of-type(2n):before {
+  background-color: $beyond-yellow;
+}
+
+.session:nth-of-type(4n) .session__image--speaker {
+  float: right;
+  @include media($tablet) {
+    float: left;
+  }
+}
+.session:nth-of-type(6n) .session__image--speaker {
+  float: left;
+}
+.session:nth-of-type(7n) .session__image--speaker {
+  float: right;
+  @include media($tablet) {
+    float: left;
+  }
+}
+.session:nth-of-type(9n) .session__image--speaker {
+  float: left;
 }
 
 .session__image--workshop {
@@ -121,20 +249,6 @@
   }
 }
 
-.session__info--workshop {
-  float: left;
-  width: 100%;
-  height: 75px;
-  z-index: 10;
-
-  // removes weird 1px line that the bg image doesn't cover at some sizes;
-  margin-top: -1px;
-
-  @include media($tablet) {
-    height: auto;
-  }
-}
-
 .session--workshop-coming-soon {
   @include media($tablet) {
     display: none;
@@ -148,7 +262,10 @@
 .session__workshop-comming-soon-badge {
   position: absolute;
   top: -30px;
-  right: 30px;
-  width: 250px;
+  left: -30px;
+  width: 200px;
   z-index: 20;
+  @include media($tablet) {
+    display: none;
+  }
 }
