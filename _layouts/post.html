@@ -1,3 +1,21 @@
 ---
 layout: default
 ---
+
+<section class="blog-single">
+
+  <div class="blog-content-wrap">
+    <img class="blog-hero-image" src="/img/blog-content/{{page.single_feature_image}}">
+    <div class="blog-content">
+      <h1>{{page.title}}</h1>
+
+      {{content}}
+
+      <div class="blog-content__share">
+        <span class="blog-content__share-copy"> Share:</span>
+        <img class="blog-content__share-link" src="/img/blog-twitter.svg" width="20">
+        <img class="blog-content__share-link" src="/img/blog-fb.svg" width="20">
+      </div>
+    </div>
+  </div>
+</section>
