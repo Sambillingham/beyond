@@ -5,16 +5,24 @@ title: Blog
 ---
 
 <section class="blog">
-  <div class="blog__nav">
-    <a href="#">Interviews</a>
-    <a href="#">News</a>
+  <div class="section-header section-header--without-description">
+    <h2 class="section-header__title">Blog</h2>
   </div>
-  <div class="blog__content-previews">
+
+  <div class="blog__nav">
+    <a href="#" class="blog__nav__links">Speaker Interviews</a>
+    <a href="#" class="blog__nav__links">News</a>
+  </div>
+  <div class="blog__post-previews">
     {% for post in site.posts %}
-        <a href="{{ post.url | prepend: site.baseurl }}">
-            <time class="" datetime="{{ post.date }}" >{{ post.date | date: "%b %-d, %Y" }}</time>
-            <h2 class="">{{ post.title }}</h2>
-        </a>
+      <div class="post-preview">
+        <div class="post-preview__info">
+          <h2 class="post-preview__title">{{ post.title }}</h2>
+          <p class="post-preview__excerpt">{{ post.excerpt | remove: '<p><strong>' | remove: '</p></strong>' | truncatewords: 25}}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__readmore">read more</a>
+        </div>
+        <img src="/img/blog-content/{{post.blog_feature_image}}" class="post-preview__image">
+      </div>
     {% endfor %}
   </div>
 </section>
