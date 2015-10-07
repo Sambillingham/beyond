@@ -52,6 +52,14 @@ class UiActions {
         return false;
     });
 
+    $('.js-filter-blog').on('click', function(){
+      var filter = $(this).data('filter');
+      $('.js-post-preview').fadeOut(300).promise().done( function(){
+        $('*[data-category="'+filter+'"]').fadeIn(400);
+      })
+      return false
+    });
+
     $(window).on('resize', function(){
 
       if(Modernizr.mq('only screen and (max-width: 850px)')) {
