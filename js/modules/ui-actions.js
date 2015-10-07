@@ -1,5 +1,7 @@
 import schedule from './schedule';
 import mailchimpForm from './mailchimp-form';
+import share from './share';
+
 
 class UiActions {
   init() {
@@ -40,6 +42,14 @@ class UiActions {
       } else {
         return true;
       }
+    });
+
+    $('.js-share-btn').on('click', function(){
+        var platform = $(this).data('platform');
+        var message = $(this).data('message');
+        var url = $(this).data('url');
+        share.popItUp(platform, message, url);
+        return false;
     });
 
     $(window).on('resize', function(){
