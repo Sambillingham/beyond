@@ -1,5 +1,5 @@
 class MailchimpForm {
-  reister(form){
+  register(form){
     $.ajax({
       type: form.attr('method'),
       url: form.attr('action'),
