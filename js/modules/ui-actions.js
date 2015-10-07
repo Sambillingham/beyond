@@ -6,7 +6,7 @@ class UiActions {
     var form = $('#mc-embedded-subscribe-form');
 
     $('.sign-up__submit').on('click', function ( event ) {
-      mailchimpForm.mailChimpAjaxRegister(form);
+      mailchimpForm.register(form);
       event.preventDefault();
     });
 
