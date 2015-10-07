@@ -1,4 +1,106 @@
 .blog {
   @include outer-container;
   @include outer-padding;
+  @include clearfix;
+  @include media($tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.blog__nav {
+  padding: 20px 0;
+  width: 25%;
+  float: left;
+  color: $beyond-blue;
+
+  @include media($tablet) {
+    width: 100%;
+    margin: 20px 20px;
+  }
+}
+
+.blog__nav__links {
+  color: $beyond-blue;
+  text-decoration: none;
+  display: block;
+  font-size: 1.3em;
+  font-family: $jaapokki;
+  margin: 0 0 10px 0;
+}
+
+.blog__post-previews {
+  width: 75%;
+  float: left;
+  @include media($tablet) {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+
+.post-preview {
+  @include clearfix;
+  border-bottom: solid 1px $beyond-salmon;
+}
+
+.post-preview:first-of-type {
+  @include media($tablet) {
+    border-top: solid 1px $beyond-salmon;
+  }
+}
+.post-preview:last-of-type {
+  border-bottom: none;
+}
+
+.post-preview__info {
+  float: left;
+  width: 60%;
+  padding: 20px 20px 20px 0;
+  color: $beyond-blue;
+  @include media($laptop) {
+    width: 55%;
+  }
+  @include media($mobile) {
+    padding: 30px 0 30px 0;
+    width: 100%;
+  }
+}
+.post-preview__image {
+  float: left;
+  width: 40%;
+
+  @include media($laptop) {
+    width: 45%;
+  }
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.post-preview__title {
+  color: $beyond-blue;
+  margin: 0 0 45px 0;
+  @include media($laptop) {
+    margin: 0 0 25px 0;
+  }
+  @include media($tablet) {
+    margin: 0 0 20px 0;
+    font-size: 1.2em;
+  }
+}
+
+.post-preview__excerpt {
+  font-family: $jaapokki;
+  font-size: 1.2em;
+  @include media($laptop) {
+    font-size: 1.1em;
+  }
+  @include media($tablet) {
+    font-size: 1em;
+  }
+}
+
+.post-preview__readmore {
+  display: block;
+  color: $beyond-salmon;
 }
