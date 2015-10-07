@@ -21,7 +21,7 @@
   width: 100%;
 
   .sponsor {
-    @include span-columns(4, table);
+    @include span-columns(3, table);
     padding: 40px 0 100px;
     @include media($mobile) {
       width: 100%;
