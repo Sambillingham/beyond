@@ -1,27 +1,45 @@
 .schedule {
   @include outer-container;
+  @include outer-padding;
   margin-top: 50px;
   margin-bottom: 50px;
 
   @include fill-parent();
   @include row(table);
 
+  @include media($tablet) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   @include media($mobile) {
     @include row();
   }
 }
 
 .schedule__column {
-  width: 33.33333%;
   display: table-cell;
   vertical-align: top;
 
-  @include media($tablet) {
-    width: 50%;
-  }
   @include media($mobile) {
     display: block;
     width: 100%;
+  }
+}
+
+.schedule__column--slim {
+  width: 25%;
+  @include media($tablet) {
+    display: block;
+    width: 100%;
+  }
+}
+.schedule__column--normal {
+  width: 37.5%;
+
+  @include media($tablet) {
+    display: block;
+    width: 100%;
+    border-top: solid $beyond-salmon 1px;
   }
 }
 
@@ -45,6 +63,33 @@
     }
 }
 
+.schedule__links {
+  margin-top: 20px;
+  @include media($tablet) {
+    padding: 0 20px 20px;
+  }
+}
+.schedule__link {
+  display: block;
+  padding: 5px 0;
+  font-family: $jaapokki;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: $beyond-blue;
+}
+
+.schedule__info {
+  color: $beyond-blue;
+  display: none;
+  font-weight: 300;
+  padding-right: 50px;
+
+  @include media($tablet) {
+    padding: 0 20px;
+    margin-top: 0;
+  }
+}
+
 // This is needed to get the correct position of the speaker slot
 .js-offset-parent {
   position: relative;
@@ -55,6 +100,14 @@
   @include media($mobile) {
     margin-bottom: 50px;
   }
+}
+.schedule__sessions--workshops {
+  display: none;
+}
+.schedule__workshop-slot {
+  @include clearfix();
+  border-bottom: solid 1px $beyond-salmon;
+  padding: 20px 0;
 }
 
 .schedule__session:hover {
@@ -67,22 +120,9 @@
   cursor: default;
 }
 
-.schedule__session:hover .schedule__start-time {
-    background-color: $beyond-salmon;
-    color: #FFFFFF;
+.schedule__session--coming-soon .schedule__open-symbol {
+  display: none;
 }
-
-.schedule__session--break:hover .schedule__start-time{
-    color: $beyond-yellow;
-    background-color: #FFEEC0;
-}
-
-.schedule__session--coming-soon:hover .schedule__start-time,
-.schedule__session--gap:hover .schedule__start-time{
-    color: $beyond-salmon;
-    background-color: #FFFFFF;
-}
-
 // Timing sizings (controls vertical height of each schedule session)
 @for $i from 1 through 25 {
   .#{schedule__session--mins}-#{$i*5} {
@@ -100,6 +140,15 @@
   vertical-align: top;
   padding-top: 10px;
   border-bottom: 1px solid $beyond-salmon;
+}
+
+.schedule__session--workshop {
+  border-bottom: none;
+  padding: 50px 0 ;
+  cursor: pointer;
+}
+.schedule__session--workshop:last-child{
+  padding-top: 0;
 }
 
 .schedule__start-time {
@@ -138,7 +187,6 @@
 }
 
 .schedule__open-symbol {
-  display: none;
   width: 20px;
   margin-top: 7px;
   @include media($tablet) {
@@ -148,7 +196,7 @@
 
 .schedule__session-name {
   display: block;
-  font-family: 'jaapokki-regular';
+  font-family: $jaapokki;
   text-transform: uppercase;
   font-size: 1.4em;
   line-height: 1;

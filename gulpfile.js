@@ -12,6 +12,9 @@ var browserSync = require('browser-sync');
 var spawn = require('child_process').spawn;
 var ghPages = require('gulp-gh-pages');
 var argv = require('yargs').argv;
+var browserify = require('browserify');
+var babelify = require('babelify');
+var source = require('vinyl-source-stream');
 
 gulp.task('jekyll-prod', function (gulpCallBack){
    var enviroment = process.env
@@ -47,8 +50,8 @@ gulp.task('prod-sass', ['clean-prod'], function() {
         .pipe(gulp.dest('_site/css'))
 });
 
-gulp.task('prod-js', ['clean-prod'], function() {
-    gulp.src(['js/jquery-1.11.3.min.js', 'js/picturefill.min.js', 'js/svgeezy.min.js', 'js/selectivizr-min.js', 'js/modernizr-custom-mq.js','js/main.js'])
+gulp.task('prod-js', ['babel','clean-prod'], function() {
+    gulp.src(['js/jquery-1.11.3.min.js', 'js/svgeezy.min.js', 'js/selectivizr-min.js', 'js/modernizr-custom-mq.js','js/bundle.js'])
         .pipe(concat('all.js'))
         .pipe(rename('main.min.js'))
         .pipe(uglify({outSourceMap: true}))
@@ -61,8 +64,19 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('reload-js', ['lint'], function(){
-  gulp.src('js/main.js')
+gulp.task('babel',['lint'], function () {
+  return browserify('js/main.js', { debug: true })
+    .transform(babelify)
+    .bundle()
+    .on('error', function (err) { console.log('Error : ' + err.message); })
+    .pipe(source('bundle.js'))
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest('js'))
+});
+
+
+gulp.task('reload-js', ['babel'], function(){
+    return gulp.src('js/bundle.js')
       .pipe(gulp.dest('_site/js'))
       .pipe(browserSync.reload({stream:true}))
 })
@@ -103,9 +117,10 @@ gulp.task('deploy', ['build'], function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('js/main.js', ['lint', 'reload-js']);
+    gulp.watch('js/**/*.js', ['reload-js']);
     gulp.watch('sass/**/{*.sass,*.scss}', ['sass']);
     gulp.watch(['*.html', '**/*.html', '*/_posts/*', '_data/*'], ['jekyll-rebuild', 'sass-on-build']);
+
 });
 
 gulp.task('dev', ['browser-sync', 'watch']);
