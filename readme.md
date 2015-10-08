@@ -14,6 +14,11 @@ Launch the site for development. Compile Sass, Lint JS and live reload with Brow
 gulp dev
 ```
 
+To launch jekyll with draft posts enabled run gulp dev with the --drafts flag
+```
+gulp dev --drafts
+```
+
 ## Production
 
 Prepare the site for production -

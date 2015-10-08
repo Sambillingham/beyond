@@ -27,9 +27,10 @@ gulp.task('jekyll-prod', function (gulpCallBack){
 });
 
 gulp.task('jekyll-dev', function (done) {
+    var drafts = argv.drafts ? '--drafts' : '';
     browserSync.notify('Running: $ jekyll build - This takes awhile...');
 
-    spawn('jekyll', ['build'], {stdio: 'inherit'})
+    spawn('jekyll', ['build', drafts], {stdio: 'inherit'})
         .on('close', done);
 });
 
