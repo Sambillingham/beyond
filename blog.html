@@ -18,7 +18,7 @@ title: Blog
       <div class="post-preview js-post-preview" data-category={{post.categories}}>
         <div class="post-preview__info">
           <h2 class="post-preview__title">{{ post.title }}</h2>
-          <p class="post-preview__excerpt">{{ post.excerpt | remove: '<p><strong>' | remove: '</p></strong>' | truncatewords: 25}}</p>
+          <p class="post-preview__excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' | remove: '<strong>' | remove: '</strong>' | truncatewords: 24 }}</p>
           <a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__readmore">read more</a>
         </div>
         <img src="/img/blog-content/{{post.blog_feature_image}}" class="post-preview__image">
