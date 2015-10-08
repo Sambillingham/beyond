@@ -30,7 +30,7 @@ The final area that we wanted to track was occupation. It’s here that the resu
 
   <div class="image-with-caption">
   ![Attendees Occupation Visualisation](/img/blog-content/visualisations-attendees-occupations.png)
-  45% of attendees are developers. The other 55% are made up of designers, entrepeneurs, project managers and other traditionally non-technical roles, proving  that it's not just developers who require coding skills in today’s job market
+  45% of attendees are developers. The other 55% are made up of designers, entrepeneurs, project managers and other traditionally non-technical roles, proving  that it's not just developers who require coding skills in today’s job market.
   </div>
 
 We’ll keep you posted on how the numbers change as we sell more tickets. As ever, if you have any questions, drop an email to amelia@beyondconf.co or tweet us @BeyondConf_.
