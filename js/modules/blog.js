@@ -3,14 +3,15 @@ var blog = {
     if($(el).hasClass('blog__nav__link--selected') ){
       $('.js-filter-blog').removeClass('blog__nav__link--selected');
       $('.js-post-preview').fadeOut(300).promise().done( function(){
+        $('.post-preview').removeClass('post-preview--last');
         $('.js-post-preview').fadeIn(400);
       })
     } else {
       $('.js-filter-blog').removeClass('blog__nav__link--selected');
+      $(el).addClass('blog__nav__link--selected');
       $('.js-post-preview').fadeOut(300).promise().done( function(){
-        $('.post-preview').removeClass('post-preview--last');
-        $(el).addClass('blog__nav__link--selected');
         $('*[data-category="'+filter+'"]').fadeIn(400);
+        $('.post-preview:visible:last').addClass('post-preview--last');
       });
     }
   },
