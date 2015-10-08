@@ -27,9 +27,10 @@ gulp.task('jekyll-prod', function (gulpCallBack){
 });
 
 gulp.task('jekyll-dev', function (done) {
+    var drafts = argv.drafts ? '--drafts' : '';
     browserSync.notify('Running: $ jekyll build - This takes awhile...');
 
-    spawn('jekyll', ['build'], {stdio: 'inherit'})
+    spawn('jekyll', ['build', drafts], {stdio: 'inherit'})
         .on('close', done);
 });
 
@@ -119,7 +120,8 @@ gulp.task('deploy', ['build'], function() {
 gulp.task('watch', function() {
     gulp.watch('js/**/*.js', ['reload-js']);
     gulp.watch('sass/**/{*.sass,*.scss}', ['sass']);
-    gulp.watch(['*.html', '**/*.html', '_posts/*', '_data/*'], ['jekyll-rebuild', 'sass', 'reload-js']);
+    gulp.watch(['*.html', '**/*.html', '*/_posts/*', '_data/*'], ['jekyll-rebuild', 'sass-on-build']);
+
 });
 
 gulp.task('dev', ['browser-sync', 'watch']);

@@ -6,11 +6,17 @@ Install development dependencies -
 ```
 npm install
 gem install jekyll
+bower install
 ```
 ## Dev
 Launch the site for development. Compile Sass, Lint JS and live reload with Browsersync.
 ```
 gulp dev
+```
+
+To launch jekyll with draft posts enabled run gulp dev with the --drafts flag
+```
+gulp dev --drafts
 ```
 
 ## Production

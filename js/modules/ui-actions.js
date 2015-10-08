@@ -1,5 +1,6 @@
 import schedule from './schedule';
 import mailchimpForm from './mailchimp-form';
+import blog from './blog';
 
 class UiActions {
   init() {
@@ -40,6 +41,21 @@ class UiActions {
       } else {
         return true;
       }
+    });
+
+    $('.js-share-btn').on('click', function(){
+        var platform = $(this).data('platform');
+        var message = $(this).data('message');
+        var url = $(this).data('url');
+        blog.openSharePopup(platform, message, url);
+        return false;
+    });
+
+    $('.js-filter-blog').on('click', function(){
+      var selected = $(this).data('filter');
+      var el = this;
+      blog.filterBy(selected, el);
+      return false
     });
 
     $(window).on('resize', function(){

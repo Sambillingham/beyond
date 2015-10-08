@@ -1,0 +1,114 @@
+.blog-single {
+  @include outer-padding;
+  @include outer-container;
+}
+
+.blog-content-video {
+  max-width: 70%;
+  @include media($tablet) {
+    max-width: 100%;
+  }
+}
+
+.blog-content-wrap {
+  background: $beyond-yellow url(../img/blog-pattern.svg);
+  background-size: 350px;
+  background-position: right;
+  border-top: solid 15px $beyond-blue;
+  @include clearfix;
+}
+
+.blog-hero-image {
+  float: left;
+  width: 70%;
+
+  @include media($tablet) {
+    width: 100%;
+  }
+}
+
+.blog-content {
+  float: left;
+  width: 70%;
+  background-color: #fff;
+  padding: 0 150px 50px 0;
+  color: $beyond-blue;
+
+  @include media($laptop) {
+    padding: 0 50px 50px 0;
+  }
+  @include media($tablet) {
+    padding: 0 0 50px 0;
+    width: 100%;
+  }
+}
+
+.blog-content h1 {
+
+}
+
+.blog-content h2 {
+  color: $beyond-blue;
+  margin: 20px 0;
+}
+
+.blog-content p {
+
+}
+
+.blog-content blockquote {
+  color: $beyond-salmon;
+  font-family: $jaapokki;
+  font-size: 1.3em;
+  line-height: 1.3;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%) rotate(90deg);
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAAKCAYAAAAUyhYIAAAB0ElEQVR4AdWUA9AbURSFT23btm3bVrL31RjUtge1Na5t69fufbVt23Z756V2k1TfzEmyPJfBNykZEBb1NsTAfw858UW9QXxE9AJKv4bim6LZcNsF4U9cIamNl9IzxGspLD0Sll0OQCh/JtQExLdA+pQxc9uVjAlxBzHeaxIknox6HAm+UC8gIRQvEJ9XokOiOeI3U773vC3iAVBIAfhmMj8MSE8TPYXldDfHX8NiJYb3QLwdNQNiwhssrmgKp/QOKLvoV7qXB6QDQPxcvjvCa0iP8Bg5hfAj3MGZofgaiLf98r65HQtKP4Pi4WZfv8mA0LB40NuudYVXWMGJQE5W/CwuJ6cpwq8kRk47KP1SvjvjZyEeaBKzuAt+Fim6mQavUJxLDG/I9264gtJ9Z7TDQzojeiJy/bqPM9STmO7144Tsgm9jmg2vcXM2kD4K4vvG1BUS65MRIl3NLD/xWVh2MXiLpfu/HcWVaBiUDJ9TaXUEKO5rRpt4lPH2iWorIpsXkX7g6YbeC2LHVEySNdfqBUSFr3j+YC6JnovPPCink3i2ATnj5Pu6p3Byjz8xu2Vpt9kD4n5i1hDV7WjwJ6aATksQbxCdgeITpnvia7r1EW8Af9j1zoI6XaoAAAAASUVORK5CYII);
+    width: 53px;
+    height: 10px;
+  }
+}
+
+.blog-content p {
+  line-height: 1.6;
+}
+.blog-content strong {
+  color: $beyond-blue;
+  font-family: $jaapokki;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.blog-content img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.image-with-caption {
+  margin: 40px 0;
+  font-size: 0.8em;
+}
+
+.blog-image-caption {
+}
+
+.blog-content__share {
+  margin: 100px 0 50px 0;
+}
+
+.blog-content__share-copy {
+  margin-right: 10px;
+}
+
+img.blog-content__share-link {
+  cursor: pointer;
+  margin-bottom: 0;
+  margin-left: 10px;
+}

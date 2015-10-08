@@ -8,3 +8,4 @@ _site
 css/main.css
 css/main.min.css
 js/bundle.js
+bower_components/
