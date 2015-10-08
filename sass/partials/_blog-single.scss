@@ -3,6 +3,10 @@
   @include outer-container;
 }
 
+.blog-content-video iframe {
+  float: left;
+}
+
 .blog-content-wrap {
   background: $beyond-yellow url(../img/blog-pattern.svg);
   background-size: 350px;
