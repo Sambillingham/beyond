@@ -86,14 +86,21 @@
 .blog-content em {
 
 }
+.blog-content img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
 
 .blog-content__share {
   margin: 100px 0 50px 0;
 }
+
 .blog-content__share-copy {
   margin-right: 10px;
 }
-.blog-content__share-link {
+
+img.blog-content__share-link {
   cursor: pointer;
+  margin-bottom: 0;
   margin-left: 10px;
 }
