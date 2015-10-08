@@ -1,6 +1,7 @@
 import schedule from './schedule';
 import mailchimpForm from './mailchimp-form';
 import share from './share';
+import blog from './blog';
 
 
 class UiActions {
@@ -53,10 +54,9 @@ class UiActions {
     });
 
     $('.js-filter-blog').on('click', function(){
-      var filter = $(this).data('filter');
-      $('.js-post-preview').fadeOut(300).promise().done( function(){
-        $('*[data-category="'+filter+'"]').fadeIn(400);
-      })
+      var selected = $(this).data('filter');
+      var el = this;
+      blog.filterBy(selected, el);
       return false
     });
 
