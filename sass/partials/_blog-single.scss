@@ -3,8 +3,11 @@
   @include outer-container;
 }
 
-.blog-content-video iframe {
-  float: left;
+.blog-content-video {
+  max-width: 70%;
+  @include media($tablet){
+    max-width: 100%;
+  }
 }
 
 .blog-content-wrap {
