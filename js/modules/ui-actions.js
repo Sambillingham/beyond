@@ -1,8 +1,6 @@
 import schedule from './schedule';
 import mailchimpForm from './mailchimp-form';
-import share from './share';
 import blog from './blog';
-
 
 class UiActions {
   init() {
@@ -49,7 +47,7 @@ class UiActions {
         var platform = $(this).data('platform');
         var message = $(this).data('message');
         var url = $(this).data('url');
-        share.popItUp(platform, message, url);
+        blog.openSharePopup(platform, message, url);
         return false;
     });
 
