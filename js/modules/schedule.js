@@ -33,6 +33,8 @@ class Schedule {
   }
 
   toggleSchedule(scheduleType){
+    $('.schedule__link').removeClass('schedule__link--selected');
+    $('*[data-schedule-type="'+scheduleType+'"]').addClass('schedule__link--selected');
     if(scheduleType === 'talks'){
       $('.js-schedule__sessions--speakers').show();
       $('.js-schedule__sessions--workshops').hide();
