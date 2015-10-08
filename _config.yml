@@ -6,5 +6,5 @@ description: Beyond 2015 is a one-day conference for people who code. Join 600 d
 permalink: :title
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 exclude: [readme.md, .gitignore, .jshintrc, gulpfile.js, package.json, sass, node_modules, vendor ]
