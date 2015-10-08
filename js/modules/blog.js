@@ -1,6 +1,5 @@
 var blog = {
   filterBy: function(filter,el){
-    console.log(el);
     if($(el).hasClass('blog__nav__link--selected') ){
       $('.js-filter-blog').removeClass('blog__nav__link--selected');
       $('.js-post-preview').fadeOut(300).promise().done( function(){
@@ -8,8 +7,9 @@ var blog = {
       })
     } else {
       $('.js-filter-blog').removeClass('blog__nav__link--selected');
-      $(el).addClass('blog__nav__link--selected');
       $('.js-post-preview').fadeOut(300).promise().done( function(){
+        $('.post-preview').removeClass('post-preview--last');
+        $(el).addClass('blog__nav__link--selected');
         $('*[data-category="'+filter+'"]').fadeIn(400);
       });
     }

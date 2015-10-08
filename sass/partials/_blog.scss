@@ -57,7 +57,8 @@
     border-top: solid 1px $beyond-salmon;
   }
 }
-.post-preview:last-of-type {
+.post-preview:last-of-type,
+.post-preview--last {
   border-bottom: none;
 }
 
