@@ -14,6 +14,10 @@
   float: left;
   color: $beyond-blue;
 
+  @include media($laptop) {
+    width: 22%;
+  }
+
   @include media($tablet) {
     width: 100%;
     padding: 40px 20px;
@@ -27,6 +31,12 @@
   font-size: 1.3em;
   font-family: $jaapokki;
   margin: 0 0 10px 0;
+  @include media($laptop) {
+    font-size: 1.1em;
+  }
+  @include media($tablet) {
+    font-size: 1.3em;
+  }
 }
 .blog__nav__link--selected:after {
   content:'';
@@ -36,11 +46,24 @@
   background-color: $beyond-blue;
   border-radius: 50%;
   margin: 0 0 0 8px;
+
+  @include media($laptop) {
+    height: 8px;
+    width: 8px;
+  }
+  @include media($tablet) {
+    height: 10px;
+    width: 10px;
+  }
 }
 
 .blog__post-previews {
   width: 75%;
   float: left;
+
+  @include media($laptop) {
+    width: 78%;
+  }
   @include media($tablet) {
     width: 100%;
     padding: 0 20px;
@@ -69,6 +92,9 @@
   color: $beyond-blue;
   @include media($laptop) {
     width: 55%;
+  }
+  @include media($tablet) {
+    padding: 20px 18px 20px 0;  
   }
   @include media($mobile) {
     padding: 30px 0 30px 0;

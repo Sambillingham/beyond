@@ -91,9 +91,16 @@
   margin-bottom: 20px;
 }
 
-.blog-image-caption {
+.image-with-caption {
+  margin: 40px 0;
   font-size: 0.8em;
-  margin-top: 0;
+}
+
+.image-with-caption img {
+  margin-bottom: 0;
+}
+
+.blog-image-caption {
 }
 
 .blog-content__share {
