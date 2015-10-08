@@ -6,6 +6,7 @@ Install development dependencies -
 ```
 npm install
 gem install jekyll
+bower install
 ```
 ## Dev
 Launch the site for development. Compile Sass, Lint JS and live reload with Browsersync.
