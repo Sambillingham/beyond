@@ -5,7 +5,7 @@
 
 .blog-content-video {
   max-width: 70%;
-  @include media($tablet){
+  @include media($tablet) {
     max-width: 100%;
   }
 }
@@ -76,16 +76,16 @@
   }
 }
 
+.blog-content p {
+  line-height: 1.6;
+}
 .blog-content strong {
   color: $beyond-blue;
   font-family: $jaapokki;
   font-size: 1.2em;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
-.blog-content em {
-
-}
 .blog-content img {
   max-width: 100%;
   margin-bottom: 20px;
