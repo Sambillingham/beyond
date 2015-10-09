@@ -1,6 +1,5 @@
 //vendor
 import Modernizr from 'modernizr-mq';
-import $ from 'jquery';
 
 //Modules
 import schedule from './schedule';
