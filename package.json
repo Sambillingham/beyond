@@ -37,7 +37,8 @@
     "yargs": "^3.25.0"
   },
   "browserify-shim": {
-    "jquery": "$"
+    "jquery": "$",
+    "svgeezy": "svgeezy"
   },
   "browserify": {
     "transform": [
@@ -46,6 +47,7 @@
   },
   "browser": {
     "fitvids": "./bower_components/fitvids/jquery.fitvids.js",
-    "jquery": "./bower_components/jquery/dist/jquery.js"
+    "jquery": "./bower_components/jquery/dist/jquery.js",
+    "svgeezy": "./bower_components/svgeezy/svgeezy.js"
   }
 }

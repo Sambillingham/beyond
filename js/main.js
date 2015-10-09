@@ -2,6 +2,7 @@
 //vendor
 import $ from 'jquery';
 import fitvids from 'fitvids';
+import svgeezy from 'svgeezy';
 
 //modules
 import countdown from './modules/countdown';
