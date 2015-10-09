@@ -1,9 +1,11 @@
 ---
 layout: post
+post: true
 title: Championing diversity in tech?
 date: 2015-10-08 15:30:00
 blog_feature_image: visualisations-attendees-preview.png
 single_feature_image: visualisations-attendees-header.png
+og_image: visualisations-attendees-og.png
 ---
 
 When we first had the idea for Beyond, we discussed the importance of creating an event where everyone felt welcome. We all know that the technology sector often gets a bad rep for being an industry that’s focussed on the young white male, and we wanted to push against that.
