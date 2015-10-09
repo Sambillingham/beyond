@@ -1,7 +1,5 @@
 .DS_Store
 .sass-cache/
-sass/bourbon/
-sass/neat/
 node_modules/
 _site
 .publish/
