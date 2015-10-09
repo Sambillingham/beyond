@@ -38,10 +38,14 @@
   },
   "browserify-shim": {
     "jquery": "$"
-   },
-   "browserify": {
-     "transform": [
-       "browserify-shim"
-     ]
-   }
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "fitvids": "./bower_components/fitvids/jquery.fitvids.js",
+    "jquery": "./bower_components/jquery/dist/jquery.js"
+  }
 }

@@ -1,7 +1,7 @@
 "use strict";
 //vendor
-import $ from '../bower_components/jquery/dist/jquery.min';
-import fitvids from '../bower_components/fitvids/jquery.fitvids';
+import $ from 'jquery';
+import fitvids from 'fitvids';
 
 //modules
 import countdown from './modules/countdown';
