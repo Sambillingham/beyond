@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="og:url" content="http://beyondconf.co/{{ page.url| remove:'/index.html'| remove: '/' }}">
-    <meta property="og:title" content="{%if page.post %}{{ page.title }}{% else %}Beyond Conference 2015 - The conference for coders in development{% endif %}t">
+    <meta property="og:title" content="{%if page.post %}{{ page.title }}{% else %}Beyond Conference 2015 - The conference for coders in development{% endif %}">
     <meta property="og:description" content="{%if page.post %}{{ page.content | strip_html | truncate: 250 }}{% else %}{{site.description}}{% endif %}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{%if page.post %}{{ site.url | append: '/blog-content/'| append: page.og_image }}{% else %}{{site.url}}/img/beyond-facebook.png{% endif %}">
