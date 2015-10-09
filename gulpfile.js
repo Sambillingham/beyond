@@ -51,7 +51,12 @@ gulp.task('prod-sass', ['clean-prod'], function() {
         .pipe(gulp.dest('_site/css'))
 });
 
-gulp.task('prod-js', ['babel','clean-prod'], function() {
+gulp.task('move-vendor', ['clean-prod'], function() {
+    return gulp.src('js/vendor/*')
+      .pipe(gulp.dest('_site/js/vendor/'))
+});
+
+gulp.task('prod-js', ['move-vendor','babel','clean-prod'], function() {
     gulp.src('js/bundle.js')
         .pipe(concat('all.js'))
         .pipe(rename('main.min.js'))
