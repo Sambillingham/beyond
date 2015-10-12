@@ -18,6 +18,7 @@
     "jquery": "~1.x",
     "svgeezy": "~1.0.0",
     "neat": "~1.7.2",
-    "bourbon": "~4.2.5"
+    "bourbon": "~4.2.5",
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }
