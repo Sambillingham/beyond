@@ -11,8 +11,8 @@ footer {
     margin-right: 20px;
     padding: 0 0 25px 0;
   }
-
 }
+
 .social {
   position: absolute;
   right: 20px;
@@ -27,13 +27,18 @@ footer {
     text-align: center;
   }
 }
-.social__icon, {
+
+.social__link {
+  display: inline-block;
   width: 38px;
   margin: 0 0 0 10px;
   @include media($tablet) {
     margin: 0 5px 0 5px;
-
   }
+}
+
+.social__icon {
+  width: 100%;
 }
 
 .footer__content {

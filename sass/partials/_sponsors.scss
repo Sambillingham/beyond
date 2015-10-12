@@ -30,8 +30,14 @@
     }
   }
 
-  .sponsor__image {
+  .sponsor__link {
+    display: block;
+    margin: 0 auto 0 auto;
     max-width: 60%;
+  }
+
+  .sponsor__image {
+    width: 100%;
   }
 }
 

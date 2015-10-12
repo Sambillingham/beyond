@@ -44,6 +44,7 @@
 }
 
 .beyond-illustration {
+  width: 100%;
   @include media($tablet) {
     display: none;
   }
