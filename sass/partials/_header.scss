@@ -11,21 +11,19 @@
 
 .header__logo {
   float: left;
-  @include media($mobile) {
-    float: none;
-  }
-}
-.header__logo__img {
   width: 230px;
   margin: 0 10px 0 0;
 
   @include media($tablet) {
+    float: none;
+    display: block;
     width: 200px;
+    margin: 0 auto;
   }
+}
 
-  @include media($mobile) {
-    margin: 0;
-  }
+.header__logo__img {
+  width: 100%;
 }
 
 .header__event-date {
