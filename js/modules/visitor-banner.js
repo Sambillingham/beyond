@@ -11,6 +11,7 @@ var visitors = {
 
 var visitor = {
   init: function(){
+    this.displayBanner();
   },
   getQueryParams: function(variable) {
     var query = window.location.search.substring(1);
