@@ -14,6 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "fitvids": "~1.1.0"
+    "fitvids": "~1.1.0",
+    "lodash-compat": "~3.10.1"
   }
 }
