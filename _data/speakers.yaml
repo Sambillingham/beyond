@@ -62,7 +62,7 @@
   twitter: aerotwist
   title: Performance on RAILs
   description: >
-    <p>Looking around at web performance advice today can be overwhelming: everything comes with caveats, disclaimers, and sometimes one piece of advice can seem to actively contradict another. </p>
+    <p>Looking at web performance advice can be overwhelming: everything comes with caveats, disclaimers, and sometimes one piece of advice can seem to actively contradict another. </p>
     <p>Phrases like “the DOM is slow” or “always use CSS animations!” make for great headlines, but the truth is often far more nuanced. </p>
     <p>In this session we'll look at how to think holistically about performance, and how to prioritize optimization work that your users will notice and appreciate.</p>
 
