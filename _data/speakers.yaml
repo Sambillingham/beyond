@@ -26,7 +26,10 @@
   twitter: slexaxton
   title: Getting Involved in Open Source
   description: >
-      <p>As a person who is new to the Open Source world, contributing back can sound like the least likely outcome to you. But it’s not as scary as it sounds. With a few rare exceptions, everyone’s just winging it like you are. The open source community is pining for new ideas and opinions and ways of thinking, and the more folks we have contributing, the better the software turns out! It’s important to learn how to make your entry into contributing a smooth one (and it’s important for projects to help make it smooth!). So let’s learn the ins and outs of how to fulfill your own feature request and to fix your own bug reports, how to give those fixes back, and how to think about and “do” open source, even at (or ​<em>especially</em>​ at) your job.</p>
+    <p>As a person who is new to the Open Source world, contributing back can sound like the least likely outcome to you.</p>
+    <p>But it’s not as scary as it sounds. With a few rare exceptions, everyone’s just winging it like you are. </p>
+    <p>The open source community is pining for new ideas and opinions and ways of thinking, and the more folks we have contributing, the better the software turns out! It’s important to learn how to make your entry into contributing a smooth one (and it’s important for projects to help make it smooth!).</p>
+    <p>So let’s learn the ins and outs of how to fulfill your own feature request and to fix your own bug reports, how to give those fixes back, and how to think about and “do” open source, even at (or ​<em>especially</em>​ at) your job.</p>
 
 - speaker: true
   name: Maxim Cramer
@@ -41,7 +44,10 @@
   twitter: mennenia
   title: Users! Now what?
   description: >
-    <p>When getting into software development, we tend to focus exclusively on writing excellent code. But what about the people that we’re coding for - the end users of our product? In this 15-minute talk I’ll be bringing things back to them; introducing you to the benefits of regularly running your builds through user testing. This exercise will give you insights that are hard to find in analytics, making you more aware of what you’re building and why. You'll save time, waste less code, and build better products.</p>
+    <p>When getting into software development, we tend to focus exclusively on writing excellent code. But what about the people that we’re coding for - the end users of our product? </p>
+    <p>In this 15-minute talk I’ll be bringing things back to them; introducing you to the benefits of regularly running your builds through user testing. This exercise will give you insights that are hard to find in analytics, making you more aware of what you’re building and why. </p>
+    <p>You'll save time, waste less code, and build better products.</p>
+
 
 - speaker: true
   name: Paul Lewis
@@ -56,7 +62,9 @@
   twitter: aerotwist
   title: Performance on RAILs
   description: >
-    <p>Looking around at web performance advice today can be overwhelming: everything comes with caveats, disclaimers, and sometimes one piece of advice can seem to actively contradict another. Phrases like “the DOM is slow” or “always use CSS animations!” make for great headlines, but the truth is often far more nuanced. In this session we'll look at how to think holistically about performance, and how to prioritize optimization work that your users will notice and appreciate.</p>
+    <p>Looking at web performance advice can be overwhelming: everything comes with caveats, disclaimers, and sometimes one piece of advice can seem to actively contradict another. </p>
+    <p>Phrases like “the DOM is slow” or “always use CSS animations!” make for great headlines, but the truth is often far more nuanced. </p>
+    <p>In this session we'll look at how to think holistically about performance, and how to prioritize optimization work that your users will notice and appreciate.</p>
 
 - speaker: true
   soon: schedule__session--coming-soon
@@ -82,7 +90,8 @@
   twitter: csswizardry
   title: CSS for Software Engineers for CSS Developers
   description: >
-    <p>Depending on where you draw your measurements from, the first programming languages for use on ‘modern’ electric computers were designed in the ’40s and ’50s. CSS, on the other hand, is a mere adolescent—born in 1996, it’s just 18 years old. This means that software engineers have had over four decades’ head start on us: we should be listening to a lot more of what they have to say.</p>
+    <p>Depending on where you draw your measurements from, the first programming languages for use on ‘modern’ electric computers were designed in the ’40s and ’50s. </p>
+    <p>CSS, on the other hand, is a mere adolescent—born in 1996, it’s just 18 years old. This means that software engineers have had over four decades’ head start on us: we should be listening to a lot more of what they have to say.</p>
     <p>In this talk, we’ll take a look at some very traditional computer science and software engineering paradigms and how we can steal, bend, borrow, and reimplement them when writing our CSS. Writing CSS like software engineers so that we can become better CSS developers.</p>
 
 - speaker: true
@@ -98,7 +107,9 @@
   twitter: missalanawood
   title: How To Make Apps People Love
   description: >
-    <p>Moodnotes is an app to improve your thinking habits, and was launched this year as Ustwo’s first move into the health space. Partnering with psychologists based in Los Angeles and getting the MVP out in just 2.5 months forced us to focus on what would deliver the most value to users. Designing the alliance and process ensured that a framework was in place to deliver a compelling proposition and product to market. In this talk, I’ll be taking you through some of the highs and lows of our story. You’ll leave with the knowledge to apply the lessons that we learnt to your own projects.</p>
+    <p>Moodnotes is an app to improve your thinking habits, and was launched this year as Ustwo’s first move into the health space.</p>
+    <p>Partnering with psychologists based in Los Angeles and getting the MVP out in just 2.5 months forced us to focus on what would deliver the most value to users. Designing the alliance and process ensured that a framework was in place to deliver a compelling proposition and product to market.</p>
+    <p>In this talk, I’ll be taking you through some of the highs and lows of our story. You’ll leave with the knowledge to apply the lessons that we learnt to your own projects.</p>
 
 - speaker: true
   name: Una Kravets
@@ -113,11 +124,10 @@
   twitter: una
   title: Open Sourcing Your Life
   description: >
-    <p>Developers often talk about optimising their code bases, but what about optimising our personal development?</p>
+    <p>Developers often talk about optimising their code bases, but what about optimising our personal development?</p>
     <p>This session is about my journey with open sourcing my life.</p>
-    <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I've since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
-    <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
-
+    <p>In October 2014, I put my personal goals on GitHub (things I want to learn and do), set up a weekly review system, and even created some terminal aliases to make it even easier. I've since had several external contributions to this repo and it is one of my most popular. The system has grown over time.</p>
+    <p>Living out loud has made me MUCH more productive and has allowed me to honestly reach these goals. This session will cover my experience and teach you how to set up your own personal goals system.</p>
 
 - speaker: true
   soon: schedule__session--coming-soon
@@ -160,7 +170,7 @@
   twitter: appltn
   title: Done Is Better Than Perfect
   description: >
-    <p>The Heroku dashboard is a large client side JavaScript app which was rewritten with Ember last year. Since then the project has gone from a promising greenfield of perfect code to a bit of a mess and lately, back again.</p>
+    <p>The Heroku dashboard is a large client side JavaScript app which was rewritten with Ember last year.  Since then the project has gone from a promising greenfield of perfect code to a bit of a mess and lately, back again.</p>
     <p>This is a story about the practicalities of working on a large software project. Trying to do the right thing, making trade offs along the way and taking tough decisions to get the thing shipped. We'll talk about balancing conflicting requirements, when to compromise, when not to and how to clean up afterwards.</p>
 
 - speaker: true
@@ -213,7 +223,7 @@
   twitter: lindaliukas
   title: ​Six impossible things before breakfast
   description: >
-    <p>“You used to be much more...muchier. You’ve lost your muchness.”</p>
+    <p>“You used to be much more...muchier. You’ve lost your muchness.”<p>
     <p>We all begin our careers in programming full of play. There's curiosity, joy and wonder of discovery. So how do we stay like Alice, choose always the red bill and fall deeper down into the machine?</p>
 
 - speaker: true
