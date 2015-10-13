@@ -31,6 +31,12 @@ var visitor = {
     if(this.isSpecialGuest(visitor)){
       return visitors[visitor];
     }
+  },
+  displayBanner: function(){
+    var visitorDetails = this.findValues();
+    if(visitorDetails) {
+      $('body').prepend(`<div class="welcome-banner">${visitorDetails.message} </div>`);
+    }
   }
 }
 export default visitor;
