@@ -21,6 +21,16 @@ var visitor = {
             return [item[0], item[1]];
         })
     );
+  },
+  isSpecialGuest: function(visitor){
+    return visitors[visitor] || false;
+  },
+  findValues: function(){
+    var params = this.getQueryParams();
+    var visitor = params['visitor'];
+    if(this.isSpecialGuest(visitor)){
+      return visitors[visitor];
+    }
   }
 }
 export default visitor;
