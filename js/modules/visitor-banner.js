@@ -1,6 +1,6 @@
 import _ from '../../bower_components/lodash-compat/lodash.min';
 
-var visitors = {
+const visitors = {
   'product-hunt' : {
     message : 'Welcome Product Hunters get 20% off with code hunt20'
   },
@@ -9,16 +9,16 @@ var visitors = {
   }
 };
 
-var visitor = {
+const visitor = {
   init: function(){
     this.displayBanner();
   },
   getQueryParams: function(variable) {
-    var query = window.location.search.substring(1);
-    var allParams = query.split("&");
+    let query = window.location.search.substring(1);
+    let allParams = query.split("&");
     return _.object(
-        _.map(allParams, function(value){
-            var item = value.split('=');
+        _.map(allParams, (value) => {
+            let item = value.split('=');
             return [item[0], item[1]];
         })
     );
@@ -27,14 +27,14 @@ var visitor = {
     return visitors[visitor] || false;
   },
   findValues: function(){
-    var params = this.getQueryParams();
-    var visitor = params['visitor'];
+    let params = this.getQueryParams();
+    let visitor = params['visitor'];
     if(this.isSpecialGuest(visitor)){
       return visitors[visitor];
     }
   },
   displayBanner: function(){
-    var visitorDetails = this.findValues();
+    let visitorDetails = this.findValues();
     if(visitorDetails) {
       $('body').prepend(`<div class="welcome-banner">${visitorDetails.message} </div>`);
     }
