@@ -52,7 +52,7 @@ gulp.task('prod-sass', ['clean-prod'], function() {
 });
 
 gulp.task('move-vendor', ['clean-prod'], function() {
-    return gulp.src('js/vendor/*')
+    return gulp.src('./bower_components/selectivizr-new/selectivizr.js')
       .pipe(gulp.dest('_site/js/vendor/'))
 });
 
