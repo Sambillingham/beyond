@@ -16,13 +16,13 @@ class Schedule {
 
   checkHashAndTriggerModal(){
     var hash = window.location.hash;
-    if(hash !== '#workshops' && hash !== '#talks'){
-      this.scheduleSPeakerInfo(hash);
-    }
-    console.log(hash);
-    if(hash === '#anchor-js' || hash === '#anchor-sketch'){
+    if(hash === '#anchor-js' || hash === '#anchor-sketch' || hash === '#anchor-github'){
       this.toggleSchedule('workshops');
     }
+    if(hash !== '#workshops' && hash !== '#talks'){
+        this.scheduleSPeakerInfo(hash);
+    }
+    console.log(hash);
   }
 
   checkHashAndTriggerCorrectSchedule(){

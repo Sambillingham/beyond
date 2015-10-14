@@ -209,11 +209,6 @@
   }
 }
 
-.session--workshop:nth-last-of-type(2n),
-.session--workshop:nth-last-of-type(2n):before {
-  background-color: $beyond-yellow;
-}
-
 .session:nth-of-type(4n) .session__image--speaker {
   float: right;
   @include media($tablet) {
@@ -248,8 +243,11 @@
     width: 100%;
   }
 }
-
-.session--workshop-coming-soon {
+.session:nth-of-type(2n+2).session--js {
+  background-color: $beyond-blue;
+}
+.session.session--coming-soon {
+  background-color: $beyond-blue;
   @include media($tablet) {
     display: none;
   }
@@ -261,8 +259,8 @@
 
 .session__workshop-comming-soon-badge {
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: 30px;
+  right: 30px;
   width: 200px;
   z-index: 20;
   @include media($tablet) {
