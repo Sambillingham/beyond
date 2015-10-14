@@ -114,6 +114,15 @@ gulp.task('browser-sync', ['jekyll-dev', 'sass-on-build'], function() {
     });
 });
 
+gulp.task('serve', function(){
+    browserSync.init({
+        server: {
+            port: 8080,
+            baseDir: "./_site/"
+        }
+    });
+})
+
 gulp.task('deploy', ['build'], function() {
   var message = argv.m || 'Update ' + new Date().toISOString();
   return gulp.src('./_site/**/*')
