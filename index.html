@@ -142,6 +142,19 @@ speaker_order:
     </div>
   </a>
 
+  {% include workshop-coming-soon.html %}
+
+  {% assign github = site.data.workshops | where:"name", "GitHub" %}
+  {% assign github = github.first %}
+  <a href="/schedule#anchor-{{github.anchor}}" class="session session--github session--workshop">
+
+    <img class="session__image session__image--workshop" src="/img/{{github.image_alt-home}}">
+    <div class="session__info session__info--workshop">
+      <h2 class="session__title session__title--workshop">{{github.title}}</h2>
+      <h3 class="session__name session__name--workshop">{{github.name}}</h3>
+    </div>
+  </a>
+
   <a class="beyond-btn beyond-btn--primary" href="/schedule">See the schedule</a>
 
 </section>
