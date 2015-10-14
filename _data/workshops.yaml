@@ -29,13 +29,18 @@
     <p>You'll require a laptop with a browser and a text editor. I use Chrome and TextMate, but anything will do. A basic understanding of HTML and JavaScript will be helpful. </p>
 
 - workshop: true
-  soon: schedule__session--coming-soon
-  name:
-  anchor: tbc
-  title: Session TBC
+  name: GitHub
+  anchor: github
+  twitter: github
+  github:
+  url: http://patchwork.github.io/
+  image: workshop-github.png
+  image_alt-home: workshop-github.png
+  position:
+  title: Patchwork by GitHub
   description: >
-    <p>Coming Soon</p>
-
+    <p>This is a self-directed and hands-on workshop for people who want to learn Git and GitHub. You’ll leave with a merged Pull Request, a square on your contributions graph, and confidence to get more involved in the open source community. This session will be led by Mike McQuaid, a Senior Software Engineer at GitHub who works on the GitHub API and webhooks.</p>
+    <p>If you’re an experienced GitHub user, we’d love for you to join the session as a mentor. To join the session as a mentor, please email sam.b@beyondconf.co</p>
 
 - workshop: true
   soon: schedule__session--coming-soon
