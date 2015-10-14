@@ -261,8 +261,8 @@
 
 .session__workshop-comming-soon-badge {
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: 30px;
+  right: 30px;
   width: 200px;
   z-index: 20;
   @include media($tablet) {
