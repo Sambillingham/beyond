@@ -80,6 +80,16 @@ gulp.task('babel',['lint'], function () {
     .pipe(gulp.dest('js'))
 });
 
+gulp.task('init-js', ['jekyll-dev'], function(){
+  return browserify('js/main.js', { debug: true })
+    .transform(babelify)
+    .bundle()
+    .on('error', function (err) { console.log('Error : ' + err.message); })
+    .pipe(source('bundle.js'))
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest('_site/js'))
+})
+
 
 gulp.task('reload-js', ['babel'], function(){
     return gulp.src('js/bundle.js')
@@ -106,7 +116,7 @@ gulp.task('sass-on-build', ['jekyll-dev'], function() {
         .pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('browser-sync', ['jekyll-dev', 'sass-on-build'], function() {
+gulp.task('browser-sync', ['jekyll-dev', 'sass-on-build', 'init-js'], function() {
     browserSync({
         server: {
             baseDir: '_site'
