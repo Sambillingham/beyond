@@ -49,6 +49,7 @@
     "fitvids": "./bower_components/fitvids/jquery.fitvids.js",
     "jquery": "./bower_components/jquery/dist/jquery.js",
     "svgeezy": "./bower_components/svgeezy/svgeezy.js",
-    "modernizr-mq": "./js/vendor/modernizr-custom-mq-only.js"
+    "modernizr-mq": "./js/vendor/modernizr-custom-mq-only.js",
+    "jplayer": "./bower_components/jplayer/dist/jplayer/jquery.jplayer.js"
   }
 }
