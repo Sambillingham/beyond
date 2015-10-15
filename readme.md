@@ -58,7 +58,7 @@ Bower is a dependency manager. When using Bower there is no need to check in dep
 Install new dependencies with `bower install name` most vendors list bower as a method of installation, a list of the current dependencies for the project are stored in `bower.json`. The dependencies downloaded are stored in the `bower_components` folder that is ignored by github but used through the project just like any another.
 
 #### Browserify Shim
-To allow some third party modules/plugins to work such as fitvids that expects `$` to be defined globally we can use the shim as normally browserify will not allow anything to pollute the global scope. File that need to be shimmed are listed in the `package.json`, they still need to be included in the JS file via an import.
+To allow some third party modules/plugins to work such as fitvids that expects `$` to be defined globally. We can use the shim that ids included, as normally browserify will not allow anything to pollute the global scope. Files that need to be shimmed are listed in the `package.json`, they still need to be included in the JS file via an import.
 
 ## Production
 
