@@ -8,6 +8,7 @@ import svgeezy from 'svgeezy';
 import countdown from './modules/countdown';
 import uiActions from './modules/ui-actions';
 import schedule from './modules/schedule';
+import audioPlayer from './modules/audio-player';
 
 const APP = {
   init: function() {
@@ -19,6 +20,7 @@ const APP = {
     uiActions.init();
     countdown.init();
     schedule.init();
+    audioPlayer.init();
   }
 };
 
