@@ -38,8 +38,7 @@
   },
   "browserify-shim": {
     "jquery": "$",
-    "svgeezy": "svgeezy",
-    "jplayer": "jplayer"
+    "svgeezy": "svgeezy"
   },
   "browserify": {
     "transform": [
