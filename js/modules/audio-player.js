@@ -1,3 +1,6 @@
+import jPlayer from 'jplayer';
+import $ from 'jquery';
+
 class AudioPlayer {
   init() {
     console.log("test")
@@ -8,7 +11,7 @@ class AudioPlayer {
     $('.js-audio-player-wrapper').jPlayer({
       ready: function() {
         $(this).jPlayer('setMedia', {
-          mp3: $('.js-audio-player-wrapper').data('audio')
+          mp3: $('.js-audio-player-wrapper').data('audio-url')
         });
       },
       preload: 'auto',
