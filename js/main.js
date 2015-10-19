@@ -1,7 +1,6 @@
 "use strict";
 //vendor
 import $ from 'jquery';
-import jquery from 'jquery';
 import fitvids from 'fitvids';
 import svgeezy from 'svgeezy';
 
