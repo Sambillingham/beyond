@@ -1,9 +1,9 @@
 "use strict";
 //vendor
 import $ from 'jquery';
+import jquery from 'jquery';
 import fitvids from 'fitvids';
 import svgeezy from 'svgeezy';
-import jPlayer from 'jplayer';
 
 //modules
 import countdown from './modules/countdown';
