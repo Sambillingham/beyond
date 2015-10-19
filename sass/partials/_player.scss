@@ -1,9 +1,9 @@
 .player__container {
   @include display(flex);
   @include clearfix;
-  background: #FFE4E4;
+  background: $beyond-blue;
   padding: 30px 45px 20px;
-  color: #2F6B93;
+  color: #FFFFFF;
   font-weight: 700;
 }
 
@@ -24,13 +24,13 @@
 }
 
 .player__seek-bar {
-  background: #C4D5E0;
+  background: #FFFFFF;
   cursor: pointer;
 }
 
 .player__play-bar {
   height: 8px;
-  background: #ff341a;
+  background: $beyond-salmon;
 }
 
 .player__duration {
@@ -38,36 +38,27 @@
 }
 
 .player__download-link {
-  background-image: url(../images/download.png);
+  background-image: url(../img/player-download.png);
   background-repeat: no-repeat;
   background-size: 30px;
   height: 30px;
   width: 30px;
-  &:hover {
-    background-image: url(../images/download-hover.png);
-  }
 }
 
 .play-btn {
-  background-image: url(../images/play.png);
+  background-image: url(../img/player-play.png);
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: 20px;
   height: 30px;
   width: 30px;
-  &:hover {
-    background-image: url(../images/play-hover.png);
-  }
 }
 
 .pause-btn {
-  background-image: url(../images/pause.png);
+  background-image: url(../img/player-pause.png);
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: 19px;
   height: 30px;
   width: 30px;
-  &:hover {
-    background-image: url(../images/pause-hover.png);
-  }
 }
