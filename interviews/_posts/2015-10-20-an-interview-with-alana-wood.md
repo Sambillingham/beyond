@@ -10,6 +10,11 @@ audio_file_url: https://steer-podcast.s3.amazonaws.com/42.mp3
 Founder and CEO of Steer, Amelia Humfress, was joined by Alana Wood, studio design lead at UsTwo and one of the speakers at Beyond. They discuss what it’s like to work at a successful studio like UsTwo, and how to get ahead in your career. Read below for the full transcript.
 
 ## Mentioned in the Interview
+- [The Lean Startup, Eric Ries](http://theleanstartup.com/book)
+- [Ideo](https://www.ideo.com/by-ideo/)
+- [Agile Product Management, Roman Pichler](http://www.romanpichler.com/)
+- [Basecamp](https://basecamp.com/)
+- [Slack](https://slack.com/)
 - [Marvel App](https://marvelapp.com/)
 - [Moodnotes App](https://itunes.apple.com/us/app/moodnotes-thought-journal/id1019230398?mt=8)
 - [Pause App](https://itunes.apple.com/us/app/pause-relaxation-at-your-fingertip/id991764216?mt=8)
@@ -72,7 +77,7 @@ We quite often don’t want to see finished work - we’re normally interested i
 
 **Alana:** We quite often come into this situation. It might be that someone, somewhere, in a big organisation has said that they prefer this colour, or that they want this to change. It’s important that the core team that’s working on the project has a rationale for the decisions they make with the design or the experience. Quite often you can tie that back to a business goal or to the user. Often we’ll start off a project with user research and who we’re designing for, and we’ll create personas and use those in conversations day to day. Any time we’re talking about a product, we talk about how this persona might use it. When the conversation changes to ‘oh I want to change this’, we question whether the persona would want that. Sometimes it’s a case of not discounting and idea, because it might be that someone’s intuition is right, and the reason they think they solution is something else is because something’s not quite right. It’s important to keep questioning why to get to the root cause of why a change needs to be made, and then you can justify whether it’s inline with the bigger project objectives.
 
-**Amelia:** That’s really interesting and something that we’ve been looking at for our courses internally. We finally got round 3 years in to developing core personas for the people who come on our courses. We always had an idea of who those people were but we’d never really written it down and discussed it. We were quite excited to go through that process ourselves, and if you’re working in a project I’d strongly recommend that you give that a try. I treally does bring the whole team together on making decisions and why you’re making those decisions.
+**Amelia:** That’s really interesting and something that we’ve been looking at for our courses internally. We finally got round 3 years in to developing core personas for the people who come on our courses. We always had an idea of who those people were but we’d never really written it down and discussed it. We were quite excited to go through that process ourselves, and if you’re working in a project I’d strongly recommend that you give that a try. It really does bring the whole team together on making decisions and why you’re making those decisions.
 
 Moving on to mood notes which is an exciting application for which Alana was product lead. It’s an incredible application which helps people track and improve their mental health. What were the biggest challenges that you came across when you were working on the project? And before you answer that, could you tell us a little bit about what Moodnotes is why it’s useful for people?
 
