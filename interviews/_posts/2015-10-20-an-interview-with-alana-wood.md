@@ -7,7 +7,7 @@ single_feature_image: interview-alana-wood.jpg
 og_image: interview-alana-wood-og.jpg
 audio_file_url: https://steer-podcast.s3.amazonaws.com/42.mp3
 ---
-Founder and CEO of Steer, Amelia Humfress, was joined by Alana Wood, studio design lead at Ustwo and one of the speakers at Beyond. They discuss what it’s like to work at a successful studio like Ustwo, and how to get ahead in your career. Read below for the full transcript.
+Founder and CEO of Steer, Amelia Humfress, was joined by Alana Wood, Studio Design Lead at Ustwo and one of the speakers at Beyond. They discuss what it’s like to work at a successful studio like Ustwo, and how to get ahead in your career. Read below for the full transcript.
 
 ## Mentioned in the Interview
 - [The Lean Startup, Eric Ries](http://theleanstartup.com/book)
@@ -21,13 +21,13 @@ Founder and CEO of Steer, Amelia Humfress, was joined by Alana Wood, studio desi
 
 ## Full Transcript
 
-**Amelia:** Hello and welcome to episode 42 of the Steercast! I’m Amelia Humfress, the founder and CEO of Steer, and I’m going to be your host today. This week we’re being joined by Alana Wood, who’s the studio design lead at Ustwo, an award winning studio that’s built popular iOS apps like the incredible Monument Valley. If you’re a regular Steercast listener you’ll know that we’re organising a conference for junior developers and people who have recently started coding called Beyond Conf. Alana is going to be one of the speakers at Beyond, so we thought we’d get her on the Steercast to tell us what it’s like to work at a company like Ustwo and how you can get ahead in your career. At Beyond, Alana is giving a talk on how to make apps that people use, and she’ll be sharing stories from her most recent project, Moodnotes, which is an iOS app that helps people improve their thinking habits. Prices for Beyond increase on Thursday so head over to beyondconf.co before then to get your ticket for 25% off the regular price. In today’s episode we’re going to talk about Alana’s career, the difference between UX and UI designers, how to make yourself stand out as a junior designer and how Ustwo work on products. Let’s get started!
+**Amelia:** Hello and welcome to episode 42 of the Steercast! I’m Amelia Humfress, the founder and CEO of Steer, and I’m going to be your host today. This week we’re being joined by Alana Wood, who’s the Studio Design Lead at Ustwo, an award winning studio that’s built popular iOS apps like the incredible Monument Valley. If you’re a regular Steercast listener you’ll know that we’re organising a conference for junior developers and people who have recently started coding called Beyond Conf. Alana is going to be one of the speakers at Beyond, so we thought we’d get her on the Steercast to tell us what it’s like to work at a company like Ustwo and how you can get ahead in your career. At Beyond, Alana is giving a talk on how to make apps that people use, and she’ll be sharing stories from her most recent project, Moodnotes, which is an iOS app that helps people improve their thinking habits. Prices for Beyond increase on Thursday so head over to beyondconf.co before then to get your ticket for 25% off the regular price. In today’s episode we’re going to talk about Alana’s career, the difference between UX and UI designers, how to make yourself stand out as a junior designer and how Ustwo work on products. Let’s get started!
 
 **Amelia:** Hey Alana thanks so much for joining us today!
 
 **Alana:** Hello, thanks for having me.
 
-**Amelia:** So before we dive into the questions, could you tell us a little bit about what it’s like being a studio design lead at Ustwo, and what your responsibilities are like day to day?
+**Amelia:** So before we dive into the questions, could you tell us a little bit about what it’s like being a Studio Design Lead at Ustwo, and what your responsibilities are like day to day?
 
 **Alana:** Cool so yeh, it’s always tricky with job titles, especially in Ustwo where everyone gets involved in multiple things. But my background is in Interaction Design, I’ve worked in many different projects throughout many different industries and these days I’ve started to get more involved in the strategy side of things and more involved in thinking about the business model around a particular product, and leading a team to create that product. Whether it’s getting the initial vision out for a client or whether it’s actually getting a build of a product into the market, my responsibilities lay around team coaching but also planning, road mapping, and then boiling down to the niggly things of checking in with some of the details within screens. Essentially we have teams made up of designers, whether that’s UI and UX, or sometimes it’s both, developers, and than a product lead which would normally be myself. Sometimes it’s a leaner team without a coach, it really depends on the project at the time.
 
