@@ -14,6 +14,12 @@
     "tests"
   ],
   "dependencies": {
-    "fitvids": "~1.1.0"
+    "fitvids": "~1.1.0",
+    "jquery": "~1.x",
+    "svgeezy": "~1.0.0",
+    "neat": "~1.7.2",
+    "bourbon": "~4.2.5",
+    "normalize-css": "normalize.css#~3.0.3",
+    "selectivizr-new": "~1.0.3"
   }
 }
