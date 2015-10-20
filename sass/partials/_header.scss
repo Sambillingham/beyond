@@ -14,7 +14,7 @@
   width: 230px;
   margin: 0 10px 0 0;
 
-  @include media($tablet) {
+  @include media($mobile) {
     float: none;
     display: block;
     width: 200px;
