@@ -21,6 +21,11 @@
     {% else %}
     <link rel="stylesheet" href="/css/main.css">
     {% endif %}
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script type="text/javascript" src="/js/vendor/selectivizr.js"></script>
+    <![endif]-->
   </head>
   <body>
 
@@ -64,11 +69,7 @@
     </noscript>
 
     {% else %}
-    <script src="/js/jquery-1.11.3.min.js"></script>
-    <script src="/js/svgeezy.min.js"></script>
-    <script src="/js/selectivizr-min.js"></script>
-    <script src="/js/modernizr-custom-mq.js"></script>
-    <script src="/js/bundle.js"></script>
+      <script src="/js/bundle.js"></script>
     {% endif %}
   </body>
 </html>

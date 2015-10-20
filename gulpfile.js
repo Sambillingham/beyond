@@ -51,8 +51,13 @@ gulp.task('prod-sass', ['clean-prod'], function() {
         .pipe(gulp.dest('_site/css'))
 });
 
-gulp.task('prod-js', ['babel','clean-prod'], function() {
-    gulp.src(['js/jquery-1.11.3.min.js', 'js/svgeezy.min.js', 'js/selectivizr-min.js', 'js/modernizr-custom-mq.js','js/bundle.js'])
+gulp.task('move-vendor', ['clean-prod'], function() {
+    return gulp.src('./bower_components/selectivizr-new/selectivizr.js')
+      .pipe(gulp.dest('_site/js/vendor/'))
+});
+
+gulp.task('prod-js', ['move-vendor','babel','clean-prod'], function() {
+    gulp.src('js/bundle.js')
         .pipe(concat('all.js'))
         .pipe(rename('main.min.js'))
         .pipe(uglify({outSourceMap: true}))
@@ -74,6 +79,16 @@ gulp.task('babel',['lint'], function () {
     .pipe(rename('bundle.js'))
     .pipe(gulp.dest('js'))
 });
+
+gulp.task('init-js', ['jekyll-dev'], function(){
+  return browserify('js/main.js', { debug: true })
+    .transform(babelify)
+    .bundle()
+    .on('error', function (err) { console.log('Error : ' + err.message); })
+    .pipe(source('bundle.js'))
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest('_site/js'))
+})
 
 
 gulp.task('reload-js', ['babel'], function(){
@@ -101,13 +116,22 @@ gulp.task('sass-on-build', ['jekyll-dev'], function() {
         .pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('browser-sync', ['jekyll-dev', 'sass-on-build'], function() {
+gulp.task('browser-sync', ['jekyll-dev', 'sass-on-build', 'init-js'], function() {
     browserSync({
         server: {
             baseDir: '_site'
         }
     });
 });
+
+gulp.task('serve', function(){
+    browserSync.init({
+        server: {
+            port: 8080,
+            baseDir: "./_site/"
+        }
+    });
+})
 
 gulp.task('deploy', ['build'], function() {
   var message = argv.m || 'Update ' + new Date().toISOString();
@@ -118,7 +142,7 @@ gulp.task('deploy', ['build'], function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('js/**/*.js', ['reload-js']);
+    gulp.watch( ['!js/bundle.js','js/main.js', 'js/modules/*'], ['reload-js']);
     gulp.watch('sass/**/{*.sass,*.scss}', ['sass']);
     gulp.watch(['*.html', '**/*.html', '*/_posts/*', '_data/*'], ['jekyll-rebuild', 'sass-on-build']);
 
