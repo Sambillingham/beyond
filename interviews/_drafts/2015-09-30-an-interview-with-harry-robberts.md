@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: audio-post
 title: An Interview With Harry Robberts
 date: 2015-09-30 10:00:00
 blog_feature_image: example-blog-feature.jpg

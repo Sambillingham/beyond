@@ -1,0 +1,64 @@
+.player__container {
+  @include display(flex);
+  @include clearfix;
+  background: $beyond-blue;
+  padding: 30px 45px 20px;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.player__controls {
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin-right: 30px;
+  }
+}
+
+.player__timeline {
+  @include flex(1);
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.player__seek-bar {
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.player__play-bar {
+  height: 8px;
+  background: $beyond-salmon;
+}
+
+.player__duration {
+  float: right;
+}
+
+.player__download-link {
+  background-image: url(../img/player-download.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.play-btn {
+  background-image: url(../img/player-play.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  height: 30px;
+  width: 30px;
+}
+
+.pause-btn {
+  background-image: url(../img/player-pause.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 19px;
+  height: 30px;
+  width: 30px;
+}

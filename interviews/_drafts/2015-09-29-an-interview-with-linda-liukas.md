@@ -1,5 +1,5 @@
 ---
-layout: video-post
+layout: audio-post
 title: An Interview With Linda Liukas
 date: 2015-09-29 10:00:00
 blog_feature_image: example-blog-feature.jpg

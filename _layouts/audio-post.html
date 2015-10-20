@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<section class="blog-single">
+
+  <div class="blog-content-wrap">
+    <img class="blog-hero-image" src="/img/blog-content/{{page.single_feature_image}}">
+    <div class="blog-content">
+      <h1>{{page.title}}</h1>
+
+      <div class="js-audio-player-wrapper" data-audio-url="{{page.audio_file_url}}"></div>
+      <div class="player__container">
+        <div class="player__controls">
+          <button class="play-btn" role="button"></button>
+          <button class="pause-btn" role="button"></button>
+        </div>
+
+        <div class="player__timeline">
+          <div class="player__seek-bar">
+            <div class="player__play-bar"></div>
+          </div>
+          <time class="player__current-time"></time>
+          <time class="player__duration"></time>
+        </div>
+          <a href="{{page.audio_file_url}}" class="player__download-link"></a>
+      </div>
+
+      {{content}}
+
+      {% include blog-share.html %}
+    </div>
+  </div>
+</section>
