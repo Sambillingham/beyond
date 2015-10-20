@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import fitvids from 'fitvids';
 import svgeezy from 'svgeezy';
+import Modernizr from 'modernizr-mq';
 
 //modules
 import countdown from './modules/countdown';

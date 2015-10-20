@@ -1,5 +1,3 @@
-//vendor
-import Modernizr from 'modernizr-mq';
 
 //Modules
 import schedule from './schedule';
