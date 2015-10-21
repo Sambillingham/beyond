@@ -5,6 +5,5 @@ _site
 .publish/
 css/main.css
 css/main.min.css
-js/bundle.js
 bower_components/*
 !bower_components/jplayer/
