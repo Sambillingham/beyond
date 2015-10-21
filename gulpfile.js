@@ -133,7 +133,7 @@ gulp.task('serve', function(){
     });
 })
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['build'], function() {
   var message = argv.m || 'Update ' + new Date().toISOString();
   return gulp.src('./_site/**/*')
     .pipe(ghPages({
