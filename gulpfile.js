@@ -51,12 +51,12 @@ gulp.task('prod-sass', ['clean-prod'], function() {
         .pipe(gulp.dest('_site/css'))
 });
 
-gulp.task('move-vendor', ['clean-prod'], function() {
+gulp.task('move-vendor', ['prod-js'], function() {
     return gulp.src('./bower_components/selectivizr-new/selectivizr.js')
       .pipe(gulp.dest('_site/js/vendor/'))
 });
 
-gulp.task('prod-js', ['move-vendor','babel','clean-prod'], function() {
+gulp.task('prod-js', ['babel','clean-prod'], function() {
     gulp.src('js/bundle.js')
         .pipe(concat('all.js'))
         .pipe(rename('main.min.js'))
@@ -149,5 +149,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('dev', ['browser-sync', 'watch']);
-gulp.task('build', ['jekyll-prod', 'clean-prod','prod-sass', 'prod-js']);
+gulp.task('build', ['jekyll-prod', 'clean-prod','prod-sass', 'prod-js', 'move-vendor']);
 gulp.task('default', ['dev']);
