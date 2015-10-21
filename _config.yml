@@ -7,4 +7,4 @@ permalink: :title
 
 # Build settings
 markdown: redcarpet
-exclude: [readme.md, .gitignore, .jshintrc, gulpfile.js, package.json, sass, node_modules, vendor, bower.json ]
+exclude: [readme.md, .gitignore, .jshintrc, gulpfile.js, package.json, sass, node_modules, vendor, bower.json, bower_components ]
